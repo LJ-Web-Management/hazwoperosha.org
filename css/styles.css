@@ -12,7 +12,7 @@
   --gray-700:#3c3c3c;
   --white:#ffffff;
   --text-on-amber:#212529;
-  --radius:8px;
+  --radius:3px;
   --shadow-sm:0 1px 2px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.10);
   --shadow-md:0 8px 24px rgba(0,0,0,.12);
   --shadow-lg:0 20px 45px rgba(0,0,0,.18);
@@ -40,7 +40,7 @@ button{font-family:inherit;}
 table{border-collapse:collapse;width:100%;}
 
 .skip-link{
-  position:absolute;left:-999px;top:0;background:var(--navy-900);color:#fff;padding:.75rem 1rem;z-index:200;border-radius:0 0 8px 0;
+  position:absolute;left:-999px;top:0;background:var(--navy-900);color:#fff;padding:.75rem 1rem;z-index:200;border-radius:0 0 3px 0;
 }
 .skip-link:focus{left:0;}
 
@@ -88,7 +88,7 @@ table{border-collapse:collapse;width:100%;}
 }
 .logo{display:flex;align-items:center;gap:.6rem;flex-shrink:0;min-width:0;}
 .logo-icon{height:clamp(26px,5vw,38px);width:auto;max-width:100%;display:block;flex-shrink:0;}
-.logo-icon-footer{background:var(--white);border-radius:4px;padding:6px 8px;}
+.logo-icon-footer{background:var(--white);border-radius:3px;padding:6px 8px;}
 .logo-text{display:flex;flex-direction:column;line-height:1.15;white-space:nowrap;}
 .logo-mark{font-size:.92rem;font-weight:800;letter-spacing:.1px;color:var(--navy-900);}
 .logo-sub{font-size:.62rem;font-weight:600;letter-spacing:.4px;text-transform:uppercase;color:var(--gray-500);}
@@ -140,12 +140,23 @@ table{border-collapse:collapse;width:100%;}
 /* ---------- Hero ---------- */
 .hero{
   background:
-    repeating-linear-gradient(135deg, rgba(255,193,7,.08) 0 18px, rgba(255,193,7,0) 18px 36px),
-    linear-gradient(160deg,rgba(10,10,10,.97) 0%,rgba(26,26,26,.95) 55%,rgba(0,0,0,.97) 100%);
+    linear-gradient(100deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 45%,rgba(0,0,0,.55) 100%),
+    url("../images/hero-workers-desktop.webp");
+  background-size:cover;
+  background-position:center;
   color:var(--white);
   padding:64px 0 88px;
   position:relative;
   overflow:hidden;
+}
+@media (max-width:640px){
+  .hero{
+    background:
+      linear-gradient(178deg,rgba(0,0,0,.65) 0%,rgba(0,0,0,.82) 60%),
+      url("../images/hero-workers.webp");
+    background-size:cover;
+    background-position:center top;
+  }
 }
 .hero-inner{
   display:grid;
@@ -159,7 +170,7 @@ table{border-collapse:collapse;width:100%;}
   backdrop-filter:blur(6px);
   -webkit-backdrop-filter:blur(6px);
   border:1px solid rgba(255,255,255,.1);
-  border-radius:18px;
+  border-radius:3px;
   padding:32px;
   transition:box-shadow .2s ease, transform .2s ease, background-color .2s ease;
 }
@@ -191,7 +202,7 @@ table{border-collapse:collapse;width:100%;}
 .hero-card{
   background:var(--white);
   color:var(--navy-900);
-  border-radius:16px;
+  border-radius:3px;
   padding:28px;
   box-shadow:var(--shadow-lg);
   position:relative;
@@ -200,7 +211,7 @@ table{border-collapse:collapse;width:100%;}
   position:absolute;top:-14px;left:24px;
   background:var(--amber-500);color:var(--navy-900);
   font-size:.72rem;font-weight:700;
-  padding:.35rem .75rem;border-radius:999px;
+  padding:.35rem .75rem;border-radius:3px;
   box-shadow:var(--shadow-sm);
 }
 .hero-card h3{font-size:1.05rem;margin-bottom:1rem;}
@@ -218,7 +229,7 @@ table{border-collapse:collapse;width:100%;}
   background:var(--white);
   border:1px solid var(--gray-200);
   padding:.4rem .85rem;
-  border-radius:999px;
+  border-radius:3px;
   font-size:.8rem;
   font-weight:700;
   color:var(--navy-800);
@@ -258,7 +269,7 @@ table{border-collapse:collapse;width:100%;}
 .finder-wrap{
   background:var(--white);
   border:1px solid var(--gray-200);
-  border-radius:20px;
+  border-radius:3px;
   box-shadow:var(--shadow-lg);
   padding:36px;
 }
@@ -273,7 +284,7 @@ table{border-collapse:collapse;width:100%;}
   text-align:left;
   background:var(--gray-50);
   border:1.5px solid var(--gray-200);
-  border-radius:12px;
+  border-radius:3px;
   padding:16px 18px;
   font-family:inherit;font-size:.92rem;font-weight:700;color:var(--navy-800);
   cursor:pointer;
@@ -291,7 +302,7 @@ table{border-collapse:collapse;width:100%;}
 }
 .finder-result-card{
   border:1.5px solid var(--gray-200);
-  border-radius:14px;
+  border-radius:3px;
   padding:26px 28px;
   margin-bottom:16px;
   background:var(--gray-50);
@@ -301,7 +312,7 @@ table{border-collapse:collapse;width:100%;}
   display:inline-block;
   font-size:.7rem;font-weight:800;letter-spacing:.4px;text-transform:uppercase;
   color:var(--amber-600);background:rgba(242,169,0,.14);
-  padding:.28rem .65rem;border-radius:999px;margin-bottom:.75rem;
+  padding:.28rem .65rem;border-radius:3px;margin-bottom:.75rem;
 }
 .finder-result-card p{font-size:.93rem;margin-bottom:1rem;}
 .finder-result-actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;}
@@ -340,7 +351,7 @@ table{border-collapse:collapse;width:100%;}
 .course-card{
   background:var(--white);
   border:1px solid var(--gray-200);
-  border-radius:16px;
+  border-radius:3px;
   padding:32px;
   box-shadow:var(--shadow-sm);
   display:flex;flex-direction:column;
@@ -351,7 +362,7 @@ table{border-collapse:collapse;width:100%;}
   align-self:flex-start;
   font-size:.72rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
   color:var(--amber-600);background:rgba(242,169,0,.12);
-  padding:.3rem .7rem;border-radius:999px;margin-bottom:1rem;
+  padding:.3rem .7rem;border-radius:3px;margin-bottom:1rem;
 }
 .course-card h3{font-size:1.2rem;margin-bottom:.5rem;}
 .course-card-desc{font-size:.93rem;margin-bottom:1.25rem;}
@@ -401,7 +412,7 @@ table{border-collapse:collapse;width:100%;}
   background:var(--gray-50);
   border:1px solid var(--gray-200);
   border-left:4px solid var(--amber-500);
-  border-radius:10px;
+  border-radius:3px;
   padding:22px 26px;
   margin:32px 0;
 }
@@ -413,7 +424,7 @@ table{border-collapse:collapse;width:100%;}
 .not-gov-box{
   display:flex;gap:14px;align-items:flex-start;
   background:#fdf3e0;border:1px solid #f0dba8;
-  border-radius:12px;padding:20px 22px;
+  border-radius:3px;padding:20px 22px;
   margin:32px 0;
 }
 .not-gov-box .not-gov-icon{font-size:1.3rem;flex-shrink:0;line-height:1;}
@@ -425,7 +436,7 @@ table{border-collapse:collapse;width:100%;}
 .toolkit-card{
   background:var(--white);
   border:1px solid var(--gray-200);
-  border-radius:16px;
+  border-radius:3px;
   padding:30px;
   box-shadow:var(--shadow-sm);
   display:flex;flex-direction:column;
@@ -433,7 +444,7 @@ table{border-collapse:collapse;width:100%;}
 }
 .toolkit-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);}
 .toolkit-card-icon{
-  width:48px;height:48px;border-radius:12px;
+  width:48px;height:48px;border-radius:3px;
   background:rgba(242,169,0,.14);color:var(--amber-600);
   display:flex;align-items:center;justify-content:center;
   font-size:1.4rem;margin-bottom:16px;
@@ -463,7 +474,7 @@ table{border-collapse:collapse;width:100%;}
 /* ---------- State OSHA guide ---------- */
 .state-plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:40px;}
 .state-plan-card{
-  background:var(--white);border:1px solid var(--gray-200);border-radius:16px;
+  background:var(--white);border:1px solid var(--gray-200);border-radius:3px;
   padding:30px;box-shadow:var(--shadow-sm);
 }
 .state-plan-card h3{font-size:1.1rem;}
@@ -479,14 +490,14 @@ table{border-collapse:collapse;width:100%;}
 .state-list-table th,.state-list-table td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--gray-200);font-size:.9rem;}
 .state-list-table th{background:var(--gray-50);font-weight:800;font-size:.76rem;text-transform:uppercase;letter-spacing:.4px;}
 .state-list-table tr:last-child td{border-bottom:none;}
-.state-tag{display:inline-block;font-size:.7rem;font-weight:800;padding:.25rem .6rem;border-radius:999px;}
+.state-tag{display:inline-block;font-size:.7rem;font-weight:800;padding:.25rem .6rem;border-radius:3px;}
 .state-tag-plan{background:rgba(29,91,214,.12);color:var(--blue-600);}
 .state-tag-fed{background:var(--gray-100);color:var(--gray-500);}
 
 /* ---------- Spanish resources ---------- */
 .lang-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .lang-card{
-  border-radius:16px;padding:30px;
+  border-radius:3px;padding:30px;
   border:1px solid var(--gray-200);
   background:var(--white);
   box-shadow:var(--shadow-sm);
@@ -566,7 +577,7 @@ table{border-collapse:collapse;width:100%;}
   color:var(--navy-800);
   background:var(--gray-100);
   padding:.5rem 1rem;
-  border-radius:999px;
+  border-radius:3px;
   transition:background-color .15s ease, color .15s ease;
 }
 .jumpnav a:hover{background:var(--amber-500);color:var(--navy-900);}
@@ -697,7 +708,7 @@ table{border-collapse:collapse;width:100%;}
 .cf-category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .cf-category-card{
   display:flex;flex-direction:column;gap:.4rem;text-align:left;
-  background:var(--white);border:1.5px solid var(--gray-200);border-radius:12px;
+  background:var(--white);border:1.5px solid var(--gray-200);border-radius:3px;
   padding:20px;font-family:inherit;cursor:pointer;
   transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease;
 }
@@ -707,7 +718,7 @@ table{border-collapse:collapse;width:100%;}
 
 .cf-refine-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:20px;}
 .cf-search{
-  width:100%;padding:.85rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;
+  width:100%;padding:.85rem 1rem;border:1.5px solid var(--gray-200);border-radius:3px;
   font-family:inherit;font-size:.95rem;color:var(--navy-900);margin-bottom:16px;
 }
 .cf-search:focus{outline:none;border-color:var(--amber-500);}
@@ -715,7 +726,7 @@ table{border-collapse:collapse;width:100%;}
 .cf-chip{
   font-family:inherit;font-size:.82rem;font-weight:700;
   background:var(--gray-50);border:1.5px solid var(--gray-200);color:var(--navy-800);
-  padding:.5rem 1rem;border-radius:999px;cursor:pointer;
+  padding:.5rem 1rem;border-radius:3px;cursor:pointer;
   transition:background-color .15s ease, border-color .15s ease, color .15s ease;
 }
 .cf-chip:hover{border-color:var(--amber-500);}
@@ -724,7 +735,7 @@ table{border-collapse:collapse;width:100%;}
 .cf-results{display:flex;flex-direction:column;gap:10px;}
 .cf-result-card{
   display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;
-  background:var(--white);border:1.5px solid var(--gray-200);border-radius:10px;
+  background:var(--white);border:1.5px solid var(--gray-200);border-radius:3px;
   padding:16px 20px;text-decoration:none;
   transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease;
 }
@@ -735,19 +746,19 @@ table{border-collapse:collapse;width:100%;}
 }
 .cf-result-tag{
   font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.4px;
-  color:var(--text-on-amber);background:var(--amber-500);padding:.3rem .7rem;border-radius:999px;margin-bottom:.6rem;
+  color:var(--text-on-amber);background:var(--amber-500);padding:.3rem .7rem;border-radius:3px;margin-bottom:.6rem;
 }
 .cf-result-title{font-weight:700;font-size:.95rem;color:var(--navy-900);}
 .cf-result-card.is-single-match .cf-result-title{font-size:1.15rem;margin-bottom:.6rem;}
 .cf-result-cta{font-weight:700;font-size:.85rem;color:var(--amber-600);white-space:nowrap;}
 .cf-empty{
-  background:var(--gray-50);border:1px dashed var(--gray-200);border-radius:10px;
+  background:var(--gray-50);border:1px dashed var(--gray-200);border-radius:3px;
   padding:24px;text-align:center;font-size:.92rem;color:var(--gray-700);
 }
 .cf-empty a,.cf-clear-filters{color:var(--amber-600);font-weight:700;text-decoration:underline;background:none;border:none;font-family:inherit;font-size:inherit;cursor:pointer;padding:0;}
 
 /* ---------- Full directory ---------- */
-.directory-category{margin-bottom:8px;border:1px solid var(--gray-200);border-radius:10px;overflow:hidden;}
+.directory-category{margin-bottom:8px;border:1px solid var(--gray-200);border-radius:3px;overflow:hidden;}
 .directory-category-toggle{
   width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;
   background:var(--gray-50);border:none;padding:18px 22px;
