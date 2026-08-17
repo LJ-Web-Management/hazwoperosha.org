@@ -1,0 +1,34 @@
+# hazwoperosha.org
+
+> HAZWOPER OSHA Compliance Library is a free educational resource hub covering HAZWOPER (29 CFR 1910.120) training requirements: 40-hour, 24-hour, 8-hour annual refresher, supervisor, and emergency response/incident command tracks. It includes an interactive compliance finder, an employer toolkit (training matrix, refresher tracker, onboarding and site-specific checklists, emergency response readiness checklist), a federal-vs-state OSHA guide (including Cal/OSHA), and a Spanish-language resources hub.
+
+HAZWOPER OSHA Compliance Library is a privately operated educational companion site to HAZWOPER-OSHA.com (an IACET-accredited training provider and subsidiary of Industrial Certified Training, LLC) and is not affiliated with OSHA, the U.S. Department of Labor, or any government agency. All course enrollment, pricing, group/SCORM/LMS requests, and purchases are handled on hazwoper-osha.com; this site does not sell courses directly.
+
+## Pages
+
+- [Home / Compliance Finder](https://hazwoperosha.org/): Interactive finder mapping a worker's situation (cleanup site, emergency response, TSDF, occasional site worker, supervisor, or annual refresher) to the HAZWOPER training track that commonly applies, with direct links to the matching course on hazwoper-osha.com.
+- [HAZWOPER Explained](https://hazwoperosha.org/hazwoper-explained/): Plain-language guide to 40-hour, 24-hour, 8-hour refresher, supervisor, and incident command HAZWOPER training under 29 CFR 1910.120, including a side-by-side comparison table and "who needs this" breakdown.
+- [Employer Toolkit](https://hazwoperosha.org/employer-toolkit/): Five printable reference resources — HAZWOPER training matrix, annual refresher tracker, new employee safety onboarding checklist, site-specific training checklist, and emergency response readiness checklist.
+- [State OSHA Guide](https://hazwoperosha.org/state-osha-guide/): How federal OSHA and state-plan states differ on HAZWOPER training, a Cal/OSHA HAZWOPER spotlight, and a reference list of full-plan, public-sector-only, and federal-OSHA states.
+- [Spanish Resources](https://hazwoperosha.org/spanish-resources/): Bilingual (English/Spanish) hub explaining HAZWOPER basics and pointing to bilingual course options on hazwoper-osha.com.
+- [FAQ](https://hazwoperosha.org/frequently-asked-questions/): Answers on HAZWOPER basics, training tracks, refresher/renewal rules, this site's relationship to OSHA and hazwoper-osha.com, and certificates/SCORM-LMS formats.
+- [Privacy Policy](https://hazwoperosha.org/privacy-policy/) / [Terms of Use](https://hazwoperosha.org/terms-of-use/): Site legal pages.
+
+## Enrollment (on hazwoper-osha.com)
+
+- [40-Hour HAZWOPER](https://hazwoper-osha.com/online-courses/osha-40-hour-hazwoper-online)
+- [Cal/OSHA 40-Hour HAZWOPER](https://hazwoper-osha.com/online-courses/cal40-new)
+- [24-Hour HAZWOPER](https://hazwoper-osha.com/online-courses/osha-24-hour-hazwoper-online)
+- [24-Hour HAZWOPER — TSD Operations](https://hazwoper-osha.com/online-courses/24-hour-hazwoper-tsd-operations-p)
+- [8-Hour HAZWOPER Refresher](https://hazwoper-osha.com/online-courses/osha-8-hour-hazwoper-refresher-online)
+- [Cal/OSHA 8-Hour Refresher](https://hazwoper-osha.com/online-courses/cal-osha-8-hour-hazwoper-refresher-training)
+- [8-Hour TSD Operations Refresher](https://hazwoper-osha.com/online-courses/8-hour-hazwoper-tsd-operations-p)
+- [8-Hour HAZWOPER Supervisor Training](https://hazwoper-osha.com/online-courses/osha-8-hour-hazwoper-supervisor-online-training)
+- [8-Hour HAZWOPER Supervisor Refresher](https://hazwoper-osha.com/online-courses/osha-8-hour-hazwoper-supervisor-training-refresher)
+- [8-Hour HAZWOPER Incident Command Training](https://hazwoper-osha.com/online-courses/8-hour-hazwoper-incident-command-training)
+- [OSHA Regulations by State](https://hazwoper-osha.com/states)
+
+## Contact
+
+- Phone: 1-866-429-6742
+- Email: info@hazwoper-osha.com
