@@ -1,0 +1,608 @@
+/* Course Catalog Search - page-specific styles, built on top of css/styles.css tokens */
+
+.cs-app {
+  border: 1px solid var(--gray-200);
+  border-radius: 3px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.cs-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.cs-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--gray-200);
+}
+
+.cs-sidebar-body {
+  position: sticky;
+  top: 76px;
+  padding: 22px;
+}
+
+.cs-sidebar-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--gray-500);
+  margin-bottom: 10px;
+}
+
+.cs-sidebar-title-spaced {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.cs-select {
+  width: 100%;
+  padding: 0.6rem 2rem 0.6rem 0.75rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: var(--navy-900);
+  background: var(--white) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%236c757d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat right 10px center;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.cs-select:focus,
+.cs-search-input:focus {
+  outline: none;
+  border-color: var(--amber-500);
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3);
+}
+
+.cs-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-search-panel {
+  padding: 22px 22px 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.cs-mode-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cs-mode-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: 3px;
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy-800);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.cs-mode-btn:hover {
+  border-color: var(--amber-500);
+}
+
+.cs-mode-btn.is-active {
+  background: var(--amber-500);
+  border-color: var(--amber-500);
+  color: var(--text-on-amber);
+}
+
+.cs-search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cs-search-input-wrap {
+  position: relative;
+  flex: 1 1 240px;
+}
+
+.cs-search-input-wrap svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--gray-500);
+  pointer-events: none;
+}
+
+.cs-search-input {
+  width: 100%;
+  padding: 0.65rem 0.75rem 0.65rem 2.25rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--navy-900);
+  background: var(--white);
+}
+
+.cs-sort-field {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.cs-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 12px 22px;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.cs-result-count {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.cs-result-count strong {
+  color: var(--navy-900);
+}
+
+.cs-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cs-clear-btn {
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  padding: 0.5rem 0.9rem;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy-800);
+  cursor: pointer;
+}
+
+.cs-clear-btn:hover {
+  border-color: var(--amber-500);
+}
+
+.cs-view-toggle {
+  display: flex;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cs-view-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--white);
+  border: none;
+  color: var(--navy-800);
+  cursor: pointer;
+}
+
+.cs-view-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.cs-view-btn + .cs-view-btn {
+  border-left: 1.5px solid var(--gray-200);
+}
+
+.cs-view-btn.is-active {
+  background: var(--amber-500);
+  color: var(--text-on-amber);
+}
+
+.cs-results-wrap {
+  padding: 0;
+}
+
+table.cs-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+
+table.cs-results-table thead th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--gray-500);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 12px 14px;
+  background: var(--gray-50);
+}
+
+table.cs-results-table tbody tr:not(.cs-detail-row) {
+  border-bottom: 1px solid var(--gray-100);
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+table.cs-results-table tbody tr:not(.cs-detail-row):hover {
+  background: var(--gray-50);
+}
+
+table.cs-results-table td {
+  padding: 12px 14px;
+  vertical-align: top;
+}
+
+.cs-course-name-cell {
+  font-weight: 700;
+  color: var(--navy-900);
+  max-width: 320px;
+}
+
+.cs-row-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+.cs-row-tags .cs-pill {
+  font-size: 0.68rem;
+}
+
+.cs-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  background: var(--gray-100);
+  color: var(--navy-800);
+  white-space: nowrap;
+}
+
+.cs-pill-accent {
+  background: rgba(255, 193, 7, 0.2);
+  color: #6b5900;
+}
+
+.cs-detail-row td {
+  background: var(--gray-50);
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.cs-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px 24px;
+}
+
+.cs-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--gray-500);
+  margin-bottom: 3px;
+}
+
+.cs-value {
+  font-size: 0.88rem;
+  color: var(--navy-900);
+}
+
+.cs-mark {
+  background: var(--amber-500);
+  padding: 0 1px;
+  border-radius: 2px;
+}
+
+.cs-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--gray-500);
+}
+
+.cs-empty-state svg {
+  width: 40px;
+  height: 40px;
+  color: var(--gray-200);
+  margin-bottom: 12px;
+}
+
+.cs-results-grid {
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 22px;
+}
+
+.cs-results-grid:not([hidden]) {
+  display: grid;
+}
+
+.cs-course-card {
+  border: 1.5px solid var(--gray-200);
+  border-radius: 3px;
+  padding: 18px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-course-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--amber-500);
+  transform: translateY(-2px);
+}
+
+.cs-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cs-card-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: var(--navy-900);
+}
+
+.cs-card-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.cs-card-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--gray-100);
+  font-size: 0.82rem;
+  color: var(--gray-700);
+}
+
+.cs-card-industries {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  margin-top: 8px;
+}
+
+.cs-card-cta {
+  margin-top: 12px;
+}
+
+.cs-card-cta .btn,
+table.cs-results-table .btn {
+  white-space: nowrap;
+}
+
+/* Modal */
+.cs-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 200;
+}
+
+.cs-modal-overlay:not([hidden]) {
+  display: flex;
+}
+
+.cs-modal {
+  background: var(--white);
+  border-radius: 3px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.cs-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  background: var(--white);
+}
+
+.cs-modal-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.cs-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--gray-500);
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.cs-modal-close:hover {
+  color: var(--navy-900);
+}
+
+.cs-modal-body {
+  padding: 22px;
+}
+
+.cs-modal-section-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--gray-500);
+  margin: 20px 0 10px;
+}
+
+.cs-bundle-type-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  background: var(--amber-500);
+  color: var(--text-on-amber);
+  margin-bottom: 10px;
+}
+
+.cs-bundle-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.cs-bundle-scope {
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  margin-top: 4px;
+}
+
+.cs-bundle-course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-bundle-course-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 3px;
+  cursor: pointer;
+  background: var(--white);
+}
+
+.cs-bundle-course-item:hover {
+  background: var(--gray-50);
+  border-color: var(--amber-500);
+}
+
+.cs-bundle-course-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--navy-900);
+}
+
+.cs-bundle-course-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .cs-layout {
+    flex-direction: column;
+  }
+  .cs-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .cs-sidebar-body {
+    position: static;
+    padding: 18px 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-search-row {
+    flex-direction: column;
+  }
+  .cs-search-input-wrap {
+    flex-basis: auto;
+  }
+  .cs-sort-field {
+    width: 100%;
+  }
+  .cs-toolbar-actions {
+    width: 100%;
+  }
+  table.cs-results-table thead {
+    display: none;
+  }
+  table.cs-results-table,
+  table.cs-results-table tbody,
+  table.cs-results-table tr,
+  table.cs-results-table td {
+    display: block;
+    width: 100%;
+  }
+  table.cs-results-table tbody tr:not(.cs-detail-row) {
+    padding: 12px 14px;
+  }
+  table.cs-results-table tr[hidden] {
+    display: none;
+  }
+  table.cs-results-table td {
+    padding: 4px 0;
+  }
+  table.cs-results-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--gray-500);
+  }
+  table.cs-results-table td[data-label=""]::before {
+    content: none;
+  }
+  .cs-course-name-cell {
+    max-width: none;
+  }
+}

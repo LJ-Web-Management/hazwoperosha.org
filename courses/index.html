@@ -4,22 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Course Catalog &amp; Course Finder | 150+ Safety &amp; Compliance Courses | HAZWOPER OSHA</title>
-<meta name="description" content="Browse the full hazwoper-osha.com course catalog — 19 categories, 150+ OSHA, HAZWOPER, EPA, DOT, and safety compliance courses — or use the Course Finder to answer a few questions and get linked straight to the right course.">
+<title>Course Catalog Search | 1,000+ Safety &amp; Compliance Courses | HAZWOPER OSHA</title>
+<meta name="description" content="Search the full HAZWOPER OSHA Training course catalog — 1,000+ courses and 80 bundles across 59 categories. Filter by category or industry, or search by name, regulation, or tag.">
 <link rel="canonical" href="https://hazwoperosha.org/courses/">
 <link rel="icon" type="image/webp" href="../images/hazwoper-osha-logo.webp">
 <link rel="apple-touch-icon" href="../images/hazwoper-osha-logo.webp">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Course Catalog & Course Finder | 150+ Safety & Compliance Courses">
-<meta property="og:description" content="Browse the full hazwoper-osha.com course catalog, or use the Course Finder to get linked straight to the right course.">
+<meta property="og:title" content="Course Catalog Search | 1,000+ Safety & Compliance Courses">
+<meta property="og:description" content="Search the full HAZWOPER OSHA Training course catalog by category, industry, or keyword.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Course Catalog & Course Finder">
-<meta name="twitter:description" content="Browse 150+ safety and compliance courses, or use the Course Finder to pinpoint the right one.">
+<meta name="twitter:title" content="Course Catalog Search">
+<meta name="twitter:description" content="Search 1,000+ safety and compliance courses by category, industry, or keyword.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/catalog.css">
 </head>
 <body>
 
@@ -75,15 +76,16 @@
   <section class="hero hero-solo" id="top">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">Course Catalog &amp; Finder</p>
-        <h1>Find Your Course <span>From the Full Catalog</span></h1>
+        <p class="eyebrow">Course Catalog Search</p>
+        <h1>Search the Full <span>Course Catalog</span></h1>
         <p class="hero-lead">
-          Every course category from hazwoper-osha.com, in one place. Answer a couple of quick questions
-          in the Course Finder to get linked straight to the exact course page, or browse the full directory below.
+          1,000+ courses and 80 bundles across 59 categories. Filter by category or industry in the sidebar,
+          or search by course name, regulation, or tag &mdash; every result links to its real course page on
+          hazwoper-osha.com, or a direct line to a training advisor.
         </p>
         <div class="hero-cta-row">
-          <a href="#finder" class="btn btn-primary btn-lg">Use the Course Finder</a>
-          <a href="#directory" class="btn btn-outline-light btn-lg">Browse Full Directory</a>
+          <a href="#search" class="btn btn-primary btn-lg">Start Searching</a>
+          <a href="../index.html#finder" class="btn btn-outline-light btn-lg">Use the HAZWOPER Finder</a>
         </div>
       </div>
     </div>
@@ -94,68 +96,91 @@
     <div class="container trust-strip-inner">
       <span>Catalog spans:</span>
       <div class="trust-badges">
-        <span class="badge">19 Course Categories</span>
-        <span class="badge">150+ Individual Courses</span>
-        <span class="badge">All Enrollment on hazwoper-osha.com</span>
+        <span class="badge">59 Categories</span>
+        <span class="badge">1,000+ Courses</span>
+        <span class="badge">80 Bundles</span>
       </div>
     </div>
   </section>
 
-  <!-- COURSE FINDER -->
-  <section class="section" id="finder">
+  <!-- SEARCH TOOL -->
+  <section class="section" id="search">
     <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Course Finder</p>
-        <h2>Which Course Do You Need?</h2>
-        <p class="section-sub">Pick a category, then narrow it down with a search or a couple of filters. Every result links straight to that course's real page on hazwoper-osha.com.</p>
-      </div>
+      <div class="cs-app" id="catalogSearch">
+        <div class="cs-layout">
 
-      <div class="finder-wrap" id="courseFinder">
+          <aside class="cs-sidebar">
+            <div class="cs-sidebar-body">
+              <div class="cs-sidebar-title">Category</div>
+              <select id="cs-category-select" class="cs-select" aria-label="Filter by category"></select>
+              <div class="cs-sidebar-title cs-sidebar-title-spaced">Industry</div>
+              <select id="cs-industry-select" class="cs-select" aria-label="Filter by industry"></select>
+            </div>
+          </aside>
 
-        <div class="cf-step-category">
-          <p class="finder-step-label">Step 1</p>
-          <p class="finder-question">What kind of training are you looking for?</p>
-          <div class="cf-category-grid"></div>
-        </div>
+          <div class="cs-main">
+            <div class="cs-search-panel">
+              <div class="cs-mode-toggle" role="group" aria-label="Search mode">
+                <button type="button" id="cs-mode-courses-btn" class="cs-mode-btn" aria-pressed="true">Courses</button>
+                <button type="button" id="cs-mode-bundles-btn" class="cs-mode-btn" aria-pressed="false">Bundles</button>
+              </div>
+              <div class="cs-search-row">
+                <div class="cs-search-input-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <input type="search" id="cs-search-input" class="cs-search-input" placeholder="Search by course name or tag&hellip;" autocomplete="off">
+                </div>
+              </div>
+            </div>
 
-        <div class="cf-step-refine" hidden>
-          <div class="cf-breadcrumbs">
-            <span>Category:</span>
-            <strong class="cf-breadcrumb-category"></strong>
-            <button type="button" class="cf-change-category">Change category</button>
+            <div class="cs-toolbar">
+              <span class="cs-result-count" id="cs-result-count"></span>
+              <div class="cs-toolbar-actions">
+                <div class="cs-sort-field">
+                  <select id="cs-sort-select" class="cs-select" aria-label="Sort by"></select>
+                </div>
+                <div class="cs-view-toggle" role="group" aria-label="View mode">
+                  <button type="button" id="cs-view-list-btn" class="cs-view-btn" aria-pressed="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    List
+                  </button>
+                  <button type="button" id="cs-view-grid-btn" class="cs-view-btn" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+                    Grid
+                  </button>
+                </div>
+                <button class="cs-clear-btn" id="cs-clear-btn" type="button">Clear filters</button>
+              </div>
+            </div>
+
+            <div class="cs-results-wrap" id="cs-results-wrap">
+              <table class="cs-results-table">
+                <thead id="cs-table-head"></thead>
+                <tbody id="cs-results-body"></tbody>
+              </table>
+              <div class="cs-results-grid" id="cs-results-grid" hidden></div>
+            </div>
+
+            <div class="cs-empty-state" id="cs-empty-state" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <div>No results match your search. Try adjusting the filters.</div>
+            </div>
           </div>
-
-          <p class="finder-step-label">Step 2</p>
-          <p class="finder-question">Narrow it down</p>
-          <input type="text" class="cf-search" placeholder="Search this category by keyword (e.g. &quot;refresher&quot;, &quot;supervisor&quot;, &quot;40 hour&quot;)&hellip;">
-          <div class="cf-chips"></div>
-
-          <p class="cf-results-count"></p>
-          <div class="cf-results"></div>
         </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- HAZWOPER SHORTCUT -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="callout-box" style="max-width:820px;margin:0 auto;">
+      <div class="cs-modal-overlay" id="cs-modal-overlay" hidden>
+        <div class="cs-modal" role="dialog" aria-modal="true" aria-labelledby="cs-modal-title">
+          <div class="cs-modal-header">
+            <h3 id="cs-modal-title"></h3>
+            <button class="cs-modal-close" id="cs-modal-close" type="button" aria-label="Close">&times;</button>
+          </div>
+          <div class="cs-modal-body" id="cs-modal-body"></div>
+        </div>
+      </div>
+
+      <div class="callout-box" style="max-width:820px;margin:32px auto 0;">
         <p><strong>Just here for HAZWOPER training?</strong> Use the role-based <a href="../index.html#finder">HAZWOPER Compliance Finder</a> on the home page instead &mdash; it's built specifically to match your role (cleanup site, emergency response, TSDF, supervisor, or refresher) to the right HAZWOPER course.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- FULL DIRECTORY -->
-  <section class="section" id="directory">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Full Directory</p>
-        <h2>Every Category, Every Course</h2>
-        <p class="section-sub">Click a category to expand its full course list. Every link goes directly to that course's page on hazwoper-osha.com.</p>
-      </div>
-      <div id="courseDirectory"></div>
     </div>
   </section>
 
@@ -163,7 +188,7 @@
   <section class="final-cta">
     <div class="container final-cta-inner">
       <h2>Not Sure Which Course Is Right?</h2>
-      <p>Talk to a training advisor and we'll help you match the course to your role or project.</p>
+      <p>Talk to a training advisor and we'll help you match the course or bundle to your role or project.</p>
       <div class="hero-cta-row">
         <a href="tel:18664296742" class="btn btn-primary btn-lg">Talk to a Training Advisor</a>
         <a href="https://hazwoper-osha.com/" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg">Visit hazwoper-osha.com</a>
@@ -222,7 +247,7 @@
 
   <div class="footer-disclaimer">
     <div class="container">
-      <p>Content on this site is provided for general educational purposes only and is not legal advice. Course listings and links are provided for convenience and pulled from hazwoper-osha.com's public catalog &mdash; confirm current course availability and pricing on hazwoper-osha.com before enrolling.</p>
+      <p>Content on this site is provided for general educational purposes only and is not legal advice. Course and bundle listings are provided for convenience from HAZWOPER OSHA Training's catalog &mdash; confirm current course availability and pricing on hazwoper-osha.com or with a training advisor before enrolling.</p>
     </div>
   </div>
 
@@ -237,8 +262,8 @@
   </div>
 </footer>
 
-<script src="../js/courses-data.js"></script>
-<script src="../js/course-finder.js"></script>
+<script src="../js/catalog-data.js"></script>
+<script src="../js/catalog-search.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
