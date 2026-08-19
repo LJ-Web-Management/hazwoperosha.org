@@ -1,189 +1,24 @@
-/* Course Finder — question-by-question wizard that narrows down to exactly one
-   course from the HAZWOPER / RCRA hazardous-waste portion of the catalog. */
+/* Course Finder — question-by-question wizard that adaptively narrows the
+   full HAZWOPER OSHA Training catalog (1,000+ courses) down to exactly one
+   course. Reads live from window.HOC_MASTER_CATALOG (js/catalog-data.js).
+   Category is always asked first, then the engine picks whichever facet
+   (industry, type, regulator, duration) best splits the remaining
+   candidates at each step, skipping any facet that doesn't discriminate.
+   Once no facet can narrow further, the visitor searches/picks the exact
+   course by name from what's left. */
 (function () {
 
   var TEL = 'tel:18664296742';
   var TEL_LABEL = '1-866-429-6742';
   var BASE_URL = 'https://hazwoper-osha.com/';
+  var NAME_LIST_LIMIT = 40; // sanity cap on rendered list length
 
-  // Course facts for every possible result. Kept separate from the full
-  // 1,000+ course catalog-data.js so the homepage doesn't have to load it.
-  var COURSES = {
-    574: { name: '8-Hour HAZWOPER and Incident Command Refresher Training', citation: '29 CFR 1910.120(q)(8)', duration: '8 Hours', regBody: 'OSHA', url: null },
-    575: { name: 'Cal/OSHA 24-Hour HAZWOPER TSDF RCRA Training', citation: '8 CCR 5192(p) / RCRA', duration: '24 Hours', regBody: 'Cal/OSHA / EPA', url: null },
-    576: { name: 'Cal/OSHA 24-Hour HAZWOPER Training', citation: '8 CCR 5192(e)', duration: '24 Hours', regBody: 'Cal/OSHA', url: 'online-courses/cal-osha-24-hour-hazwoper-training' },
-    577: { name: 'Cal/OSHA 40-Hour HAZWOPER Training', citation: '8 CCR 5192(e)', duration: '40 Hours', regBody: 'Cal/OSHA', url: null },
-    578: { name: 'Cal/OSHA 8-Hour HAZWOPER Refresher Training', citation: '8 CCR 5192(e)(8)', duration: '8 Hours', regBody: 'Cal/OSHA', url: 'online-courses/cal-osha-8-hour-hazwoper-refresher-training' },
-    579: { name: 'Cal/OSHA 8-Hour HAZWOPER TSDF RCRA Refresher Training', citation: '8 CCR 5192(p)(8) / RCRA', duration: '8 Hours', regBody: 'Cal/OSHA / EPA', url: null },
-    580: { name: 'Hazardous Waste Manifest Training', citation: '40 CFR 262 Subpart B (RCRA)', duration: '2 Hours', regBody: 'EPA', url: 'online-courses/hazardous-waste-manifest-training' },
-    581: { name: 'OSHA 24-Hour HAZWOPER Training', citation: '29 CFR 1910.120(e)', duration: '24 Hours', regBody: 'OSHA', url: 'online-courses/osha-24-hour-hazwoper-online' },
-    582: { name: 'OSHA 24-Hour HAZWOPER — RCRA TSD Operations Training', citation: '29 CFR 1910.120(p) / RCRA', duration: '24 Hours', regBody: 'OSHA / EPA', url: 'online-courses/24-hour-hazwoper-tsd-operations-p' },
-    583: { name: 'HAZWOPER Micro-Module: Air Monitoring & Direct-Reading Instruments', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '20 Min', regBody: 'OSHA', url: null },
-    584: { name: 'HAZWOPER Micro-Module: Decontamination Procedures', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '20 Min', regBody: 'OSHA', url: null },
-    585: { name: 'HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '15 Min', regBody: 'OSHA', url: null },
-    586: { name: 'HAZWOPER Micro-Module: Site Characterization & Hazard Assessment', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '20 Min', regBody: 'OSHA', url: null },
-    587: { name: 'OSHA 40-Hour HAZWOPER Training', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '40 Hours', regBody: 'OSHA', url: 'online-courses/osha-40-hour-hazwoper-online' },
-    588: { name: 'OSHA 40-Hour HAZWOPER for Construction (Contaminated Sites)', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '40 Hours', regBody: 'OSHA', url: null },
-    589: { name: 'OSHA 40-Hour HAZWOPER for Emergency Response / Fire-Hazmat Teams', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '40 Hours', regBody: 'OSHA', url: null },
-    590: { name: 'OSHA 40-Hour HAZWOPER for Environmental Remediation', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '40 Hours', regBody: 'OSHA', url: null },
-    591: { name: 'OSHA 40-Hour HAZWOPER for Oil & Gas Spill Response', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '40 Hours', regBody: 'OSHA', url: null },
-    592: { name: 'OSHA 40-Hour HAZWOPER for Utility/Pipeline Emergency Response', citation: '29 CFR 1910.120(e) / 1926.65(e)', duration: '40 Hours', regBody: 'OSHA', url: null },
-    593: { name: 'OSHA 8-Hour HAZWOPER (q) Incident Command Training', citation: '29 CFR 1910.120(q)', duration: '8 Hours', regBody: 'OSHA', url: 'online-courses/8-hour-hazwoper-incident-command-training' },
-    594: { name: 'OSHA 8-Hour HAZWOPER Annual Refresher — RCRA TSD Operations Training', citation: '29 CFR 1910.120(p)(8) / RCRA', duration: '8 Hours', regBody: 'OSHA / EPA', url: 'online-courses/8-hour-hazwoper-tsd-operations-p' },
-    595: { name: 'OSHA 8-Hour HAZWOPER Refresher Training', citation: '29 CFR 1910.120(e)(8)', duration: '8 Hours', regBody: 'OSHA', url: 'online-courses/osha-8-hour-hazwoper-refresher-online' },
-    596: { name: 'OSHA 8-Hour HAZWOPER Supervisor Refresher Training', citation: '29 CFR 1910.120(e)(4)/(e)(8)', duration: '8 Hours', regBody: 'OSHA', url: 'online-courses/osha-8-hour-hazwoper-supervisor-training-refresher' },
-    597: { name: 'OSHA 8-Hour HAZWOPER Supervisor Training', citation: '29 CFR 1910.120(e)(4)', duration: '8 Hours', regBody: 'OSHA', url: 'online-courses/osha-8-hour-hazwoper-supervisor-online-training' },
-    598: { name: 'OSHA 8-Hour HAZWOPER and Safe Ammonia Handling Refresher Training', citation: '29 CFR 1910.120(e)(8) / 1910.111', duration: '8 Hours', regBody: 'OSHA', url: 'online-courses/osha-8-hour-hazwoper-and-safe-ammonia-handling-refresher-training' },
-    599: { name: 'OSHA HAZWOPER and RCRA Hazardous Waste Management Technician Safety Training', citation: '29 CFR 1910.120 / RCRA', duration: '24 Hours', regBody: 'OSHA / EPA', url: 'online-courses/osha-hazwoper-and-rcra-hazardous-waste-management-technician-safety-training' },
-    600: { name: 'RCRA Hazardous Waste Generator Refresher Training', citation: '40 CFR 262.17 (RCRA, annual)', duration: '4 Hours', regBody: 'EPA', url: 'online-courses/rcra-hazardous-waste-generator-refresher-training' },
-    601: { name: 'RCRA Hazardous Waste Generator Training', citation: '40 CFR 262.17 (RCRA)', duration: '8 Hours', regBody: 'EPA', url: 'online-courses/rcra-hazwoper-waste-generator' },
-    602: { name: 'RCRA Universal Waste Handler Training', citation: '40 CFR 273 (RCRA)', duration: '2 Hours', regBody: 'EPA', url: null },
-    1016: { name: 'HAZWOPER Train-the-Trainer Certification', citation: '29 CFR 1910.120(e)', duration: '24 Hours', regBody: 'OSHA', url: null }
-  };
-
-  // Decision tree. Every node is a question; every option either points to
-  // another node (`next`), resolves straight to a course (`course`), or
-  // resolves to different courses depending on an earlier answer
-  // (`courseBy` + `courseMap`, keyed on that earlier answer's value).
-  var NODES = {
-
-    start: {
-      question: 'What are you looking for?',
-      var: 'track',
-      options: [
-        { label: 'HAZWOPER certification training', hint: 'Site cleanup, TSDF operations, emergency response, supervisor, or incident command', value: 'hazwoper', next: 'role' },
-        { label: 'RCRA hazardous waste compliance training', hint: 'Generator, manifest, or universal waste handler training — not HAZWOPER', value: 'rcra', next: 'rcraType' },
-        { label: 'HAZWOPER Train-the-Trainer certification', hint: 'Become authorized to deliver HAZWOPER training yourself', value: 'trainer', course: 1016 },
-        { label: 'A short refresher on one specific HAZWOPER topic', hint: 'Not a full certification course — a focused topic module', value: 'micro', next: 'microTopic' }
-      ]
-    },
-
-    microTopic: {
-      question: 'Which topic do you need?',
-      var: 'microTopic',
-      options: [
-        { label: 'Air monitoring & direct-reading instruments', value: 'air', course: 583 },
-        { label: 'Decontamination procedures', value: 'decon', course: 584 },
-        { label: 'PPE Levels A, B, C & D', value: 'ppe', course: 585 },
-        { label: 'Site characterization & hazard assessment', value: 'site', course: 586 }
-      ]
-    },
-
-    rcraType: {
-      question: 'Which RCRA training do you need?',
-      var: 'rcraType',
-      options: [
-        { label: 'Hazardous waste generator training', hint: 'First time', value: 'gen_new', course: 601 },
-        { label: 'Hazardous waste generator refresher', hint: 'Annual, already trained', value: 'gen_refresher', course: 600 },
-        { label: 'Hazardous waste manifest training', value: 'manifest', course: 580 },
-        { label: 'Universal waste handler training', value: 'universal', course: 602 }
-      ]
-    },
-
-    role: {
-      question: 'Which best describes your role or site?',
-      var: 'role',
-      options: [
-        { label: 'General hazardous waste site worker', hint: 'Cleanup or remediation', value: 'general', next: 'generalState' },
-        { label: 'Treatment, Storage, or Disposal Facility (TSDF) operations', value: 'tsdf', next: 'tsdfState' },
-        { label: 'Combined RCRA + HAZWOPER hazardous waste management technician', value: 'technician', course: 599 },
-        { label: 'Supervisor overseeing HAZWOPER operations', value: 'supervisor', next: 'supervisorStatus' },
-        { label: 'Incident Commander', hint: 'Directs the emergency response', value: 'ic', next: 'icStatus' },
-        { label: 'Ammonia handling / refrigeration site worker', value: 'ammonia', course: 598 }
-      ]
-    },
-
-    generalState: {
-      question: 'What state will the training take place in?',
-      sub: 'California (Cal/OSHA) runs its own HAZWOPER standard; every other state follows the federal OSHA rule.',
-      var: 'state',
-      options: [
-        { label: 'California', value: 'CA', next: 'generalStatus' },
-        { label: 'Any other state', value: 'OTHER', next: 'generalStatus' }
-      ]
-    },
-
-    generalStatus: {
-      question: 'Is this your first HAZWOPER training, or an annual refresher for certification you already hold?',
-      var: 'status',
-      options: [
-        { label: 'First-time / initial certification', value: 'initial', next: 'exposure' },
-        { label: 'Annual refresher', value: 'refresher', courseBy: 'state', courseMap: { CA: 578, OTHER: 595 } }
-      ]
-    },
-
-    exposure: {
-      question: 'Will you have regular, extensive hazardous-substance exposure and eventually work unsupervised, or only occasional/limited exposure for a specific task?',
-      var: 'exposure',
-      options: [
-        { label: 'Regular / extensive exposure', hint: 'Full site worker, works toward unsupervised status', value: 'extensive', next: 'extensiveRoute' },
-        { label: 'Occasional / limited exposure', hint: 'On site occasionally for a specific task', value: 'occasional', courseBy: 'state', courseMap: { CA: 576, OTHER: 581 } }
-      ]
-    },
-
-    extensiveRoute: {
-      // Not shown to the user — resolves silently based on state.
-      silent: true,
-      var: 'state',
-      route: { CA: { course: 577 }, OTHER: { next: 'industry' } }
-    },
-
-    industry: {
-      question: 'Which best matches the work you’ll be doing?',
-      var: 'industry',
-      options: [
-        { label: 'General / all-purpose hazardous waste cleanup', value: 'general', course: 587 },
-        { label: 'Construction on contaminated sites', value: 'construction', course: 588 },
-        { label: 'Emergency response / fire-hazmat team', value: 'emergency', course: 589 },
-        { label: 'Environmental remediation', value: 'environmental', course: 590 },
-        { label: 'Oil & gas spill response', value: 'oilgas', course: 591 },
-        { label: 'Utility / pipeline emergency response', value: 'utility', course: 592 }
-      ]
-    },
-
-    tsdfState: {
-      question: 'What state is the facility in?',
-      var: 'state',
-      options: [
-        { label: 'California', value: 'CA', next: 'tsdfStatus' },
-        { label: 'Any other state', value: 'OTHER', next: 'tsdfStatus' }
-      ]
-    },
-
-    tsdfStatus: {
-      question: 'Is this initial TSDF training, or an annual refresher?',
-      var: 'status',
-      options: [
-        { label: 'Initial TSDF training', value: 'initial', courseBy: 'state', courseMap: { CA: 575, OTHER: 582 } },
-        { label: 'Annual TSDF refresher', value: 'refresher', courseBy: 'state', courseMap: { CA: 579, OTHER: 594 } }
-      ]
-    },
-
-    supervisorStatus: {
-      question: 'Is this your first supervisor training, or an annual refresher?',
-      var: 'status',
-      options: [
-        { label: 'First-time supervisor training', value: 'initial', course: 597 },
-        { label: 'Annual supervisor refresher', value: 'refresher', course: 596 }
-      ]
-    },
-
-    icStatus: {
-      question: 'Is this your first Incident Command training, or an annual refresher?',
-      var: 'status',
-      options: [
-        { label: 'First-time Incident Command training', value: 'initial', course: 593 },
-        { label: 'Annual refresher', value: 'refresher', course: 574 }
-      ]
-    }
-
-  };
-
-  var MAX_STEPS = 6;
-
-  function courseHref(course) {
-    return course.url ? BASE_URL + course.url : TEL;
-  }
+  var FACETS = [
+    { key: 'type', question: 'What type of training are you looking for?', multi: false },
+    { key: 'industryTags', question: 'Which industry or audience fits best?', multi: true },
+    { key: 'regBody', question: 'Which regulator or standard does this need to satisfy?', multi: false },
+    { key: 'duration', question: 'About how much time do you have?', multi: false }
+  ];
 
   function el(tag, className, text) {
     var node = document.createElement(tag);
@@ -192,102 +27,277 @@
     return node;
   }
 
-  function CourseFinder(root) {
-    this.root = root;
-    this.answers = {};
-    this.history = []; // stack of { nodeKey }
-    this.currentKey = 'start';
-    this.resolve('start');
+  function courseHref(course) {
+    return course.url ? BASE_URL + course.url : TEL;
   }
 
-  CourseFinder.prototype.resolve = function (nodeKey) {
-    var node = NODES[nodeKey];
-    if (node.silent) {
-      var routed = node.route[this.answers[node.var]];
-      if (routed.course) {
-        this.showResult(routed.course);
-      } else {
-        this.currentKey = routed.next;
-        this.resolve(routed.next);
-      }
-      return;
+  // Every course must land in at least one group for any facet, otherwise a
+  // course with no value for the chosen facet would vanish from every
+  // option and become unreachable. So a missing/empty value gets its own
+  // explicit bucket instead of being dropped.
+  function facetValues(course, key) {
+    if (key === 'industryTags') {
+      var tags = Array.isArray(course.industryTags) ? course.industryTags : [];
+      return tags.length ? tags : ['Not industry-specific'];
     }
-    this.currentKey = nodeKey;
-    this.render(node);
+    var v = course[key];
+    return (v === undefined || v === null || v === '') ? ['Not specified'] : [v];
+  }
+
+  // Given the current candidate set, find the facet + value groups that
+  // split it best (smallest worst-case remaining group), skipping facets
+  // already answered or that don't actually divide the set.
+  function bestFacetSplit(candidates, usedFacets) {
+    var best = null;
+    FACETS.forEach(function (facet) {
+      if (usedFacets[facet.key]) return;
+      var groups = {};
+      candidates.forEach(function (course) {
+        facetValues(course, facet.key).forEach(function (val) {
+          (groups[val] = groups[val] || []).push(course);
+        });
+      });
+      var keys = Object.keys(groups);
+      if (keys.length < 2) return;
+      var maxGroupSize = 0;
+      keys.forEach(function (k) { if (groups[k].length > maxGroupSize) maxGroupSize = groups[k].length; });
+      if (maxGroupSize >= candidates.length) return; // didn't actually narrow anything
+      if (!best || maxGroupSize < best.maxGroupSize) {
+        best = { facet: facet, groups: groups, keys: keys, maxGroupSize: maxGroupSize };
+      }
+    });
+    return best;
+  }
+
+  function CourseFinder(root) {
+    this.root = root;
+    this.catalog = window.HOC_MASTER_CATALOG;
+    this.trail = []; // breadcrumb labels for display
+    this.history = []; // stack of snapshots for Back
+    this.candidates = this.catalog.courses;
+    this.usedFacets = {};
+    this.showCategoryStep();
+  }
+
+  CourseFinder.prototype.snapshot = function () {
+    return {
+      candidates: this.candidates,
+      usedFacets: Object.assign({}, this.usedFacets),
+      trail: this.trail.slice(),
+      phase: this.phase
+    };
   };
 
-  CourseFinder.prototype.choose = function (node, option) {
-    this.history.push(this.currentKey);
-    this.answers[node.var] = option.value;
-
-    if (typeof option.course === 'number') {
-      this.showResult(option.course);
-    } else if (option.courseBy) {
-      this.showResult(option.courseMap[this.answers[option.courseBy]]);
-    } else {
-      this.resolve(option.next);
-    }
+  CourseFinder.prototype.pushHistory = function () {
+    this.history.push(this.snapshot());
   };
 
   CourseFinder.prototype.back = function () {
     if (!this.history.length) return;
-    var prevKey = this.history.pop();
-    var node = NODES[this.currentKey];
-    if (node && node.var) delete this.answers[node.var];
-    this.currentKey = prevKey;
-    this.render(NODES[prevKey]);
+    var snap = this.history.pop();
+    this.candidates = snap.candidates;
+    this.usedFacets = snap.usedFacets;
+    this.trail = snap.trail;
+    if (snap.phase === 'category') this.showCategoryStep();
+    else this.step();
   };
 
   CourseFinder.prototype.reset = function () {
-    this.answers = {};
+    this.trail = [];
     this.history = [];
-    this.resolve('start');
+    this.candidates = this.catalog.courses;
+    this.usedFacets = {};
+    this.showCategoryStep();
   };
 
-  CourseFinder.prototype.render = function (node) {
-    var self = this;
+  CourseFinder.prototype.step = function () {
+    if (this.candidates.length === 1) {
+      this.showResult(this.candidates[0]);
+      return;
+    }
+    var split = bestFacetSplit(this.candidates, this.usedFacets);
+    if (!split) {
+      this.showNameStep();
+      return;
+    }
+    this.phase = 'facet';
+    this.renderFacetStep(split);
+  };
+
+  // ---------- Chrome shared by every step ----------
+
+  CourseFinder.prototype.renderShell = function (questionText, subText) {
     var wrap = el('div', 'qf-card');
 
     var step = this.history.length + 1;
-    var progressPct = Math.min(100, Math.round((step / MAX_STEPS) * 100));
     var meta = el('div', 'qf-meta');
-    var stepLabel = el('span', 'qf-step-label', 'Question ' + step);
-    meta.appendChild(stepLabel);
+    meta.appendChild(el('span', 'qf-step-label', 'Question ' + step));
     var track = el('div', 'qf-progress-track');
     var bar = el('div', 'qf-progress-bar');
-    bar.style.width = progressPct + '%';
+    bar.style.width = Math.min(100, Math.round((step / 7) * 100)) + '%';
     track.appendChild(bar);
     meta.appendChild(track);
     wrap.appendChild(meta);
 
-    wrap.appendChild(el('h3', 'qf-question', node.question));
-    if (node.sub) wrap.appendChild(el('p', 'qf-sub', node.sub));
+    if (this.trail.length) {
+      var crumbs = el('div', 'qf-crumbs');
+      this.trail.forEach(function (c) { crumbs.appendChild(el('span', 'qf-crumb', c)); });
+      wrap.appendChild(crumbs);
+    }
 
-    var optionsWrap = el('div', 'qf-options');
-    node.options.forEach(function (opt) {
-      var btn = el('button', 'qf-option');
-      btn.type = 'button';
-      var label = el('span', 'qf-option-label', opt.label);
-      btn.appendChild(label);
-      if (opt.hint) btn.appendChild(el('span', 'qf-option-hint', opt.hint));
-      btn.addEventListener('click', function () { self.choose(node, opt); });
-      optionsWrap.appendChild(btn);
-    });
-    wrap.appendChild(optionsWrap);
+    wrap.appendChild(el('h3', 'qf-question', questionText));
+    if (subText) wrap.appendChild(el('p', 'qf-sub', subText));
 
+    return wrap;
+  };
+
+  CourseFinder.prototype.attachFooter = function (wrap) {
+    var self = this;
     if (this.history.length) {
       var backBtn = el('button', 'qf-back', '← Back');
       backBtn.type = 'button';
       backBtn.addEventListener('click', function () { self.back(); });
       wrap.appendChild(backBtn);
     }
-
     this.root.innerHTML = '';
     this.root.appendChild(wrap);
   };
 
-  CourseFinder.prototype.showResult = function (courseId) {
-    var course = COURSES[courseId];
+  // ---------- Step 1: Category ----------
+
+  CourseFinder.prototype.showCategoryStep = function () {
+    this.phase = 'category';
+    var self = this;
+    var categories = this.catalog.categories.slice().sort();
+    var counts = {};
+    this.catalog.courses.forEach(function (c) { counts[c.category] = (counts[c.category] || 0) + 1; });
+
+    var wrap = this.renderShell('What kind of training are you looking for?', 'Search or browse ' + categories.length + ' categories covering the full course catalog.');
+
+    var search = el('input', 'qf-search');
+    search.type = 'search';
+    search.placeholder = 'Search categories… (e.g. confined space, forklift, fall protection)';
+    search.autocomplete = 'off';
+    wrap.appendChild(search);
+
+    var list = el('div', 'qf-list');
+    wrap.appendChild(list);
+
+    function renderList(filterText) {
+      list.innerHTML = '';
+      var q = filterText.trim().toLowerCase();
+      var matches = categories.filter(function (name) { return name.toLowerCase().indexOf(q) !== -1; });
+      if (!matches.length) {
+        list.appendChild(el('div', 'qf-empty', 'No categories match “' + filterText + '”.'));
+        return;
+      }
+      matches.forEach(function (name) {
+        var btn = el('button', 'qf-option qf-option-row');
+        btn.type = 'button';
+        btn.appendChild(el('span', 'qf-option-label', name));
+        btn.appendChild(el('span', 'qf-option-count', counts[name] + (counts[name] === 1 ? ' course' : ' courses')));
+        btn.addEventListener('click', function () { self.chooseCategory(name); });
+        list.appendChild(btn);
+      });
+    }
+
+    search.addEventListener('input', function () { renderList(search.value); });
+    renderList('');
+
+    this.attachFooter(wrap);
+  };
+
+  CourseFinder.prototype.chooseCategory = function (categoryName) {
+    this.pushHistory();
+    this.candidates = this.catalog.courses.filter(function (c) { return c.category === categoryName; });
+    this.trail.push(categoryName);
+    this.step();
+  };
+
+  // ---------- Step 2+: adaptive facet questions ----------
+
+  var FACET_LABELS = {
+    industryTags: function (v) { return v; },
+    type: function (v) { return v; },
+    regBody: function (v) { return v; },
+    duration: function (v) { return v; }
+  };
+
+  CourseFinder.prototype.renderFacetStep = function (split) {
+    var self = this;
+    var facet = split.facet;
+    var wrap = this.renderShell(facet.question);
+
+    var options = el('div', 'qf-options');
+    var sortedKeys = split.keys.slice().sort(function (a, b) { return split.groups[b].length - split.groups[a].length; });
+    sortedKeys.forEach(function (key) {
+      var group = split.groups[key];
+      var btn = el('button', 'qf-option');
+      btn.type = 'button';
+      btn.appendChild(el('span', 'qf-option-label', FACET_LABELS[facet.key](key)));
+      btn.appendChild(el('span', 'qf-option-hint', group.length + (group.length === 1 ? ' match' : ' matches')));
+      btn.addEventListener('click', function () { self.chooseFacetValue(facet.key, key, group); });
+      options.appendChild(btn);
+    });
+    wrap.appendChild(options);
+
+    this.attachFooter(wrap);
+  };
+
+  CourseFinder.prototype.chooseFacetValue = function (facetKey, value, group) {
+    this.pushHistory();
+    this.usedFacets[facetKey] = true;
+    this.candidates = group;
+    this.trail.push(value);
+    this.step();
+  };
+
+  // ---------- Final step: search/pick by name ----------
+
+  CourseFinder.prototype.showNameStep = function () {
+    this.phase = 'name';
+    var self = this;
+    var wrap = this.renderShell('Which of these is it?', this.candidates.length + ' course' + (this.candidates.length === 1 ? '' : 's') + ' left — search by name or pick one below.');
+
+    var search = el('input', 'qf-search');
+    search.type = 'search';
+    search.placeholder = 'Search by course name…';
+    search.autocomplete = 'off';
+    wrap.appendChild(search);
+
+    var list = el('div', 'qf-list');
+    wrap.appendChild(list);
+
+    function renderList(filterText) {
+      list.innerHTML = '';
+      var q = filterText.trim().toLowerCase();
+      var matches = self.candidates.filter(function (c) { return c.name.toLowerCase().indexOf(q) !== -1; });
+      if (!matches.length) {
+        list.appendChild(el('div', 'qf-empty', 'No courses match “' + filterText + '”.'));
+        return;
+      }
+      matches.slice(0, NAME_LIST_LIMIT).forEach(function (course) {
+        var btn = el('button', 'qf-option qf-option-row');
+        btn.type = 'button';
+        btn.appendChild(el('span', 'qf-option-label', course.name));
+        btn.appendChild(el('span', 'qf-option-count', course.duration));
+        btn.addEventListener('click', function () { self.showResult(course); });
+        list.appendChild(btn);
+      });
+      if (matches.length > NAME_LIST_LIMIT) {
+        list.appendChild(el('div', 'qf-empty', '+' + (matches.length - NAME_LIST_LIMIT) + ' more — keep typing to narrow it down.'));
+      }
+    }
+
+    search.addEventListener('input', function () { renderList(search.value); });
+    renderList('');
+
+    this.attachFooter(wrap);
+  };
+
+  // ---------- Result ----------
+
+  CourseFinder.prototype.showResult = function (course) {
     var wrap = el('div', 'qf-card qf-result');
 
     wrap.appendChild(el('span', 'qf-result-tag', 'Your Match'));
@@ -325,7 +335,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     var root = document.getElementById('courseFinder');
-    if (root) new CourseFinder(root);
+    if (root && window.HOC_MASTER_CATALOG) new CourseFinder(root);
   });
 
 })();

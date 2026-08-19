@@ -297,16 +297,21 @@ table{border-collapse:collapse;width:100%;}
   from{opacity:0;transform:translateY(8px);}
   to{opacity:1;transform:translateY(0);}
 }
-.qf-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.qf-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
 .qf-step-label{
   font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.6px;
   color:var(--amber-600);white-space:nowrap;
 }
 .qf-progress-track{flex-grow:1;height:5px;border-radius:3px;background:var(--gray-100);overflow:hidden;}
 .qf-progress-bar{height:100%;background:var(--amber-500);border-radius:3px;transition:width .3s ease;}
+.qf-crumbs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:16px;}
+.qf-crumb{
+  font-size:.74rem;font-weight:700;color:var(--gray-500);
+  background:var(--gray-100);border-radius:3px;padding:.25rem .6rem;
+}
 .qf-question{font-size:1.3rem;margin-bottom:.4rem;}
 .qf-sub{font-size:.9rem;color:var(--gray-500);margin-bottom:1.5rem;}
-.qf-question + .qf-options{margin-top:1.5rem;}
+.qf-question + .qf-options,.qf-question + .qf-search,.qf-sub + .qf-search{margin-top:1.5rem;}
 .qf-options{display:flex;flex-direction:column;gap:12px;}
 .qf-option{
   display:flex;flex-direction:column;align-items:flex-start;gap:.25rem;
@@ -322,6 +327,26 @@ table{border-collapse:collapse;width:100%;}
 .qf-option:hover{border-color:var(--amber-500);background:var(--white);box-shadow:var(--shadow-sm);transform:translateY(-1px);}
 .qf-option-label{font-size:.95rem;font-weight:700;color:var(--navy-800);}
 .qf-option-hint{font-size:.8rem;color:var(--gray-500);font-weight:500;}
+
+.qf-search{
+  width:100%;padding:.85rem 1rem;border:1.5px solid var(--gray-200);border-radius:3px;
+  font-family:inherit;font-size:.95rem;color:var(--navy-900);margin-bottom:14px;
+}
+.qf-search:focus{outline:none;border-color:var(--amber-500);}
+.qf-list{
+  display:flex;flex-direction:column;gap:8px;
+  max-height:360px;overflow-y:auto;padding-right:4px;
+}
+.qf-option-row{
+  flex-direction:row;align-items:center;justify-content:space-between;gap:1rem;padding:12px 16px;
+}
+.qf-option-row .qf-option-label{font-weight:600;}
+.qf-option-count{font-size:.78rem;color:var(--gray-500);font-weight:600;white-space:nowrap;flex-shrink:0;}
+.qf-empty{
+  background:var(--gray-50);border:1px dashed var(--gray-200);border-radius:3px;
+  padding:16px;text-align:center;font-size:.88rem;color:var(--gray-500);
+}
+
 .qf-back{
   margin-top:20px;
   background:none;border:none;color:var(--gray-500);font-weight:700;font-size:.85rem;
