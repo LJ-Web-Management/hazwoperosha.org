@@ -1,19 +1,26 @@
 # hazwoperosha.org
 
-> HAZWOPER OSHA Compliance Library is a free educational resource hub covering HAZWOPER (29 CFR 1910.120) training requirements: 40-hour, 24-hour, 8-hour annual refresher, supervisor, and emergency response/incident command tracks. It includes an interactive compliance finder, an employer toolkit (training matrix, refresher tracker, onboarding and site-specific checklists, emergency response readiness checklist), a federal-vs-state OSHA guide (including Cal/OSHA), and a Spanish-language resources hub.
+> hazwoperosha.org helps you find the exact HAZWOPER (29 CFR 1910.120) or RCRA hazardous-waste training course you
+> need. A question-by-question Course Finder narrows 30+ HAZWOPER/RCRA courses down to a single match based on your
+> role, site type, training status (initial vs. annual refresher), and state. A separate Course Catalog Search
+> covers the full 1,000+ course / 80 bundle library.
 
-HAZWOPER OSHA Compliance Library is a privately operated educational companion site to HAZWOPER-OSHA.com (an IACET-accredited training provider and subsidiary of Industrial Certified Training, LLC) and is not affiliated with OSHA, the U.S. Department of Labor, or any government agency. All course enrollment, pricing, group/SCORM/LMS requests, and purchases are handled on hazwoper-osha.com; this site does not sell courses directly.
+hazwoperosha.org is privately operated by the team behind HAZWOPER-OSHA.com (an IACET-accredited training provider
+and subsidiary of Industrial Certified Training, LLC) and is not affiliated with OSHA, the U.S. Department of
+Labor, or any government agency. All course enrollment, pricing, group/SCORM/LMS requests, and purchases are
+handled on hazwoper-osha.com; this site does not sell courses directly.
 
 ## Pages
 
-- [Home / Compliance Finder](https://hazwoperosha.org/): Interactive finder mapping a worker's situation (cleanup site, emergency response, TSDF, occasional site worker, supervisor, or annual refresher) to the HAZWOPER training track that commonly applies, with direct links to the matching course on hazwoper-osha.com.
-- [Course Catalog Search](https://hazwoperosha.org/courses/): Searchable/filterable tool over HAZWOPER OSHA Training's full course catalog — 1,000+ courses and 80 bundles across 59 categories and 20 industries. Filter by category or industry, search by name/regulation/tag, switch between list and grid views, and view course/bundle detail. Pricing is intentionally not shown publicly; results link to the course's live hazwoper-osha.com page where available, otherwise to a training-advisor contact CTA.
-- [HAZWOPER Explained](https://hazwoperosha.org/hazwoper-explained/): Plain-language guide to 40-hour, 24-hour, 8-hour refresher, supervisor, and incident command HAZWOPER training under 29 CFR 1910.120, including a side-by-side comparison table and "who needs this" breakdown.
-- [Employer Toolkit](https://hazwoperosha.org/employer-toolkit/): Five printable reference resources — HAZWOPER training matrix, annual refresher tracker, new employee safety onboarding checklist, site-specific training checklist, and emergency response readiness checklist.
-- [State OSHA Guide](https://hazwoperosha.org/state-osha-guide/): How federal OSHA and state-plan states differ on HAZWOPER training, a Cal/OSHA HAZWOPER spotlight, and a reference list of full-plan, public-sector-only, and federal-OSHA states.
-- [Spanish Resources](https://hazwoperosha.org/spanish-resources/): Bilingual (English/Spanish) hub explaining HAZWOPER basics and pointing to bilingual course options on hazwoper-osha.com.
-- [FAQ](https://hazwoperosha.org/frequently-asked-questions/): Answers on HAZWOPER basics, training tracks, refresher/renewal rules, this site's relationship to OSHA and hazwoper-osha.com, and certificates/SCORM-LMS formats.
-- [Privacy Policy](https://hazwoperosha.org/privacy-policy/) / [Terms of Use](https://hazwoperosha.org/terms-of-use/): Site legal pages.
+- [Home / Course Finder](https://hazwoperosha.org/): Question-by-question wizard that pinpoints the exact HAZWOPER
+  or RCRA course for a given role (general site worker, TSDF operations, technician, supervisor, incident
+  commander, ammonia handling), training status (initial or annual refresher), exposure level, industry, and state
+  (federal OSHA vs. Cal/OSHA), with a direct link to the matching course on hazwoper-osha.com.
+- [Course Catalog Search](https://hazwoperosha.org/courses/): Searchable/filterable tool over HAZWOPER OSHA
+  Training's full course catalog — 1,000+ courses and 80 bundles across 59 categories and 20 industries. Filter by
+  category or industry, search by name/regulation/tag, switch between list and grid views, and view course/bundle
+  detail. Pricing is intentionally not shown publicly; results link to the course's live hazwoper-osha.com page
+  where available, otherwise to a training-advisor contact CTA.
 
 ## Enrollment (on hazwoper-osha.com)
 
