@@ -1,4 +1,4 @@
-/* Course Finder — question-by-question wizard that adaptively narrows the
+/* Course Finder: question-by-question wizard that adaptively narrows the
    full HAZWOPER OSHA Training catalog (1,000+ courses) down to exactly one
    course. Reads live from window.HOC_MASTER_CATALOG (js/catalog-data.js).
    Category is always asked first, then the engine picks whichever facet
@@ -257,7 +257,7 @@
   CourseFinder.prototype.showNameStep = function () {
     this.phase = 'name';
     var self = this;
-    var wrap = this.renderShell('Which of these is it?', this.candidates.length + ' course' + (this.candidates.length === 1 ? '' : 's') + ' left — search by name or pick one below.');
+    var wrap = this.renderShell('Which of these is it?', this.candidates.length + ' course' + (this.candidates.length === 1 ? '' : 's') + ' left. Search by name or pick one below.');
 
     var search = el('input', 'qf-search');
     search.type = 'search';
@@ -285,7 +285,7 @@
         list.appendChild(btn);
       });
       if (matches.length > NAME_LIST_LIMIT) {
-        list.appendChild(el('div', 'qf-empty', '+' + (matches.length - NAME_LIST_LIMIT) + ' more — keep typing to narrow it down.'));
+        list.appendChild(el('div', 'qf-empty', '+' + (matches.length - NAME_LIST_LIMIT) + ' more. Keep typing to narrow it down.'));
       }
     }
 

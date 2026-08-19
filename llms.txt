@@ -1,8 +1,8 @@
 # hazwoperosha.org
 
 > hazwoperosha.org helps you find the exact training course you need out of HAZWOPER OSHA Training's full catalog.
-> A question-by-question Course Finder adaptively narrows all 1,033 courses across 59 categories — from HAZWOPER
-> to fall protection, confined space, forklift, and hundreds of other topics — down to a single exact match based
+> A question-by-question Course Finder adaptively narrows all 1,033 courses across 59 categories, from HAZWOPER
+> to fall protection, confined space, forklift, and hundreds of other topics, down to a single exact match based
 > on category, industry, regulator, and duration. A separate Course Catalog Search covers the full 1,000+ course /
 > 80 bundle library with manual filters.
 
@@ -15,11 +15,11 @@ handled on hazwoper-osha.com; this site does not sell courses directly.
 
 - [Home / Course Finder](https://hazwoperosha.org/): Question-by-question wizard covering the entire course
   catalog. Asks category first, then adaptively asks whichever of type, industry, regulator, or duration best
-  narrows the remaining candidates, falling back to a searchable name pick once no field can narrow further —
-  every one of the 1,033 courses is reachable. Ends with a direct link to the matching course on
+  narrows the remaining candidates, falling back to a searchable name pick once no field can narrow further.
+  Every one of the 1,033 courses is reachable. Ends with a direct link to the matching course on
   hazwoper-osha.com.
 - [Course Catalog Search](https://hazwoperosha.org/courses/): Searchable/filterable tool over HAZWOPER OSHA
-  Training's full course catalog — 1,000+ courses and 80 bundles across 59 categories and 20 industries. Filter by
+  Training's full course catalog: 1,000+ courses and 80 bundles across 59 categories and 20 industries. Filter by
   category or industry, search by name/regulation/tag, switch between list and grid views, and view course/bundle
   detail. Pricing is intentionally not shown publicly; results link to the course's live hazwoper-osha.com page
   where available, otherwise to a training-advisor contact CTA.
@@ -29,7 +29,7 @@ handled on hazwoper-osha.com; this site does not sell courses directly.
 - [40-Hour HAZWOPER](https://hazwoper-osha.com/online-courses/osha-40-hour-hazwoper-online)
 - [Cal/OSHA 40-Hour HAZWOPER](https://hazwoper-osha.com/online-courses/cal40-new)
 - [24-Hour HAZWOPER](https://hazwoper-osha.com/online-courses/osha-24-hour-hazwoper-online)
-- [24-Hour HAZWOPER — TSD Operations](https://hazwoper-osha.com/online-courses/24-hour-hazwoper-tsd-operations-p)
+- [24-Hour HAZWOPER, TSD Operations](https://hazwoper-osha.com/online-courses/24-hour-hazwoper-tsd-operations-p)
 - [8-Hour HAZWOPER Refresher](https://hazwoper-osha.com/online-courses/osha-8-hour-hazwoper-refresher-online)
 - [Cal/OSHA 8-Hour Refresher](https://hazwoper-osha.com/online-courses/cal-osha-8-hour-hazwoper-refresher-training)
 - [8-Hour TSD Operations Refresher](https://hazwoper-osha.com/online-courses/8-hour-hazwoper-tsd-operations-p)
