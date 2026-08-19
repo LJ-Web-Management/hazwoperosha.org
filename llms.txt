@@ -14,10 +14,10 @@ handled on hazwoper-osha.com; this site does not sell courses directly.
 ## Pages
 
 - [Home / Course Finder](https://hazwoperosha.org/): Question-by-question wizard covering the entire course
-  catalog. Asks category first, then adaptively asks whichever of type, industry, regulator, or duration best
-  narrows the remaining candidates, falling back to a searchable name pick once no field can narrow further.
-  Every one of the 1,033 courses is reachable. Ends with a direct link to the matching course on
-  hazwoper-osha.com.
+  catalog. Every question is a plain click-an-answer multiple choice, no typing to search. Always asks course
+  type (category), regulatory body, and length first, then adaptively asks industry or training type if still
+  needed, falling back to a searchable name pick once nothing can narrow further. Every one of the 1,033 courses
+  is reachable. Ends with a direct link to the matching course on hazwoper-osha.com.
 - [Course Catalog Search](https://hazwoperosha.org/courses/): Searchable/filterable tool over HAZWOPER OSHA
   Training's full course catalog: 1,000+ courses and 80 bundles across 59 categories and 20 industries. Filter by
   category or industry, search by name/regulation/tag, switch between list and grid views, and view course/bundle

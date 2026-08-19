@@ -25,27 +25,30 @@ images/hero-workers*.webp           : real hazwoper-osha.com hero photo (desktop
 
 ## Course Finder
 
-`js/course-finder.js` asks one question at a time and adaptively narrows the *entire* catalog (all 1,033 courses,
-loaded live from `js/catalog-data.js`) down to a single exact match. There's no hand-authored tree, since one
-covering 1,000+ leaves by hand isn't maintainable. The flow is:
+`js/course-finder.js` asks one plain multiple-choice question at a time (click an answer, no typing) and narrows
+the *entire* catalog (all 1,033 courses, loaded live from `js/catalog-data.js`) down to a single exact match.
+There's no hand-authored tree, since one covering 1,000+ leaves by hand isn't maintainable, and no "search for
+your category" step; every question is answered by clicking one of the listed options. The flow is:
 
-1. **Category** (always first): a searchable list of the catalog's 59 categories.
-2. **Adaptive facet questions**: at each step it evaluates the remaining candidates' `type`, `industryTags`,
-   `regBody`, and `duration` fields, and asks whichever one splits them most evenly (smallest worst-case group),
-   skipping any facet that doesn't actually discriminate. A course with no value for a given facet still gets a
-   real, clickable "Not specified" / "Not industry-specific" option; otherwise it would silently become
-   unreachable once that facet is asked.
-3. **Name pick**: once no facet can narrow further, the remaining candidates (which can range from 1 to a few
-   dozen for very homogeneous categories) are shown as a searchable, clickable list so the visitor picks the exact
-   course by name.
+1. **Fixed opening questions**, always asked in this order as long as each one still narrows the remaining
+   courses: **course type** (the catalog's 59 categories, alphabetical since the list is long), **regulatory
+   body** (OSHA, EPA, Cal/OSHA, and the like), then **length** (duration). Category narrows hard, so almost every
+   question after it is a short, clean list.
+2. **Adaptive follow-ups**: if still not down to one course, it asks whichever of `industryTags` or `type` splits
+   the remaining candidates most evenly, skipping either one if it doesn't actually discriminate. A course with no
+   value for a given facet still gets a real, clickable "Not specified" / "Not industry-specific" option;
+   otherwise it would silently become unreachable once that facet is asked.
+3. **Name pick**: once nothing can narrow further, the remaining candidates (which can range from 1 to a few
+   dozen for very homogeneous categories) are shown as a searchable, clickable list, the one place in the wizard
+   where typing makes sense, so the visitor picks the exact course by name.
 
-In practice this converges fast: category plus 2 to 4 facet questions gets to a unique course roughly a quarter of
-the time, and a small searchable name-pick list the rest of the time (never more than a few dozen courses, even in
+In practice this converges fast: roughly a quarter of the time it reaches a unique course from the fixed questions
+alone, and a small searchable name-pick list the rest of the time (never more than a few dozen courses, even in
 the worst case). Every one of the 1,033 courses is reachable with no dead ends, verified by simulating a full run
 through the wizard for each course and checking it lands on the right one.
 
-If the master catalog's field names or shape change, update the `FACETS` array and `facetValues()` in
-`js/course-finder.js` to match.
+If the master catalog's field names or shape change, update `FIXED_ORDER`, `ADAPTIVE_ORDER`, `FACETS`, and
+`facetValues()` in `js/course-finder.js` to match.
 
 ## Course Catalog Search
 

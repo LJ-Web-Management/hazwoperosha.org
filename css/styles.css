@@ -312,7 +312,7 @@ table{border-collapse:collapse;width:100%;}
 .qf-question{font-size:1.3rem;margin-bottom:.4rem;}
 .qf-sub{font-size:.9rem;color:var(--gray-500);margin-bottom:1.5rem;}
 .qf-question + .qf-options,.qf-question + .qf-search,.qf-sub + .qf-search{margin-top:1.5rem;}
-.qf-options{display:flex;flex-direction:column;gap:12px;}
+.qf-options{display:flex;flex-direction:column;gap:12px;max-height:420px;overflow-y:auto;padding-right:4px;}
 .qf-option{
   display:flex;flex-direction:column;align-items:flex-start;gap:.25rem;
   text-align:left;

@@ -1,11 +1,16 @@
-/* Course Finder: question-by-question wizard that adaptively narrows the
-   full HAZWOPER OSHA Training catalog (1,000+ courses) down to exactly one
+/* Course Finder: question-by-question wizard that narrows the full
+   HAZWOPER OSHA Training catalog (1,000+ courses) down to exactly one
    course. Reads live from window.HOC_MASTER_CATALOG (js/catalog-data.js).
-   Category is always asked first, then the engine picks whichever facet
-   (industry, type, regulator, duration) best splits the remaining
-   candidates at each step, skipping any facet that doesn't discriminate.
-   Once no facet can narrow further, the visitor searches/picks the exact
-   course by name from what's left. */
+
+   Every step is a plain multiple-choice question, answered by clicking
+   one of the listed options; there's no "search for your category" step.
+   The course type, regulatory body, and length questions are always
+   asked first (in that order, and they narrow hard: everything after the
+   first question is almost always a short, clean list), then the engine
+   adds an industry or training-type question if one is still needed to
+   narrow further. Once no question can narrow the remaining courses any
+   more, the visitor picks the exact course by name from a short,
+   searchable list of what's left. */
 (function () {
 
   var TEL = 'tel:18664296742';
@@ -13,12 +18,19 @@
   var BASE_URL = 'https://hazwoper-osha.com/';
   var NAME_LIST_LIMIT = 40; // sanity cap on rendered list length
 
-  var FACETS = [
-    { key: 'type', question: 'What type of training are you looking for?', multi: false },
-    { key: 'industryTags', question: 'Which industry or audience fits best?', multi: true },
-    { key: 'regBody', question: 'Which regulator or standard does this need to satisfy?', multi: false },
-    { key: 'duration', question: 'About how much time do you have?', multi: false }
-  ];
+  // Asked in this order, every time, as long as each one still narrows the
+  // remaining courses.
+  var FIXED_ORDER = ['category', 'regBody', 'duration'];
+  // Asked afterward, only if still needed: whichever narrows best first.
+  var ADAPTIVE_ORDER = ['industryTags', 'type'];
+
+  var FACETS = {
+    category: { question: 'What type of course are you looking for?', multi: false },
+    regBody: { question: 'Which regulatory body does this need to satisfy?', multi: false },
+    duration: { question: 'How long should the training be?', multi: false },
+    industryTags: { question: 'Which industry or audience fits best?', multi: true },
+    type: { question: 'What type of training is this?', multi: false }
+  };
 
   function el(tag, className, text) {
     var node = document.createElement(tag);
@@ -44,27 +56,31 @@
     return (v === undefined || v === null || v === '') ? ['Not specified'] : [v];
   }
 
-  // Given the current candidate set, find the facet + value groups that
-  // split it best (smallest worst-case remaining group), skipping facets
-  // already answered or that don't actually divide the set.
-  function bestFacetSplit(candidates, usedFacets) {
-    var best = null;
-    FACETS.forEach(function (facet) {
-      if (usedFacets[facet.key]) return;
-      var groups = {};
-      candidates.forEach(function (course) {
-        facetValues(course, facet.key).forEach(function (val) {
-          (groups[val] = groups[val] || []).push(course);
-        });
+  // Groups the candidates by a facet's values. Returns null if the facet
+  // doesn't actually narrow this candidate set (only one group, or every
+  // course shares the same value).
+  function splitBy(candidates, key) {
+    var groups = {};
+    candidates.forEach(function (course) {
+      facetValues(course, key).forEach(function (val) {
+        (groups[val] = groups[val] || []).push(course);
       });
-      var keys = Object.keys(groups);
-      if (keys.length < 2) return;
-      var maxGroupSize = 0;
-      keys.forEach(function (k) { if (groups[k].length > maxGroupSize) maxGroupSize = groups[k].length; });
-      if (maxGroupSize >= candidates.length) return; // didn't actually narrow anything
-      if (!best || maxGroupSize < best.maxGroupSize) {
-        best = { facet: facet, groups: groups, keys: keys, maxGroupSize: maxGroupSize };
-      }
+    });
+    var keys = Object.keys(groups);
+    if (keys.length < 2) return null;
+    var maxGroupSize = 0;
+    keys.forEach(function (k) { if (groups[k].length > maxGroupSize) maxGroupSize = groups[k].length; });
+    if (maxGroupSize >= candidates.length) return null;
+    return { key: key, groups: groups, keys: keys, maxGroupSize: maxGroupSize };
+  }
+
+  function bestAdaptiveSplit(candidates, usedFacets) {
+    var best = null;
+    ADAPTIVE_ORDER.forEach(function (key) {
+      if (usedFacets[key]) return;
+      var split = splitBy(candidates, key);
+      if (!split) return;
+      if (!best || split.maxGroupSize < best.maxGroupSize) best = split;
     });
     return best;
   }
@@ -76,7 +92,8 @@
     this.history = []; // stack of snapshots for Back
     this.candidates = this.catalog.courses;
     this.usedFacets = {};
-    this.showCategoryStep();
+    this.fixedIndex = 0;
+    this.step();
   }
 
   CourseFinder.prototype.snapshot = function () {
@@ -84,7 +101,7 @@
       candidates: this.candidates,
       usedFacets: Object.assign({}, this.usedFacets),
       trail: this.trail.slice(),
-      phase: this.phase
+      fixedIndex: this.fixedIndex
     };
   };
 
@@ -98,8 +115,8 @@
     this.candidates = snap.candidates;
     this.usedFacets = snap.usedFacets;
     this.trail = snap.trail;
-    if (snap.phase === 'category') this.showCategoryStep();
-    else this.step();
+    this.fixedIndex = snap.fixedIndex;
+    this.step();
   };
 
   CourseFinder.prototype.reset = function () {
@@ -107,7 +124,8 @@
     this.history = [];
     this.candidates = this.catalog.courses;
     this.usedFacets = {};
-    this.showCategoryStep();
+    this.fixedIndex = 0;
+    this.step();
   };
 
   CourseFinder.prototype.step = function () {
@@ -115,13 +133,27 @@
       this.showResult(this.candidates[0]);
       return;
     }
-    var split = bestFacetSplit(this.candidates, this.usedFacets);
-    if (!split) {
-      this.showNameStep();
+
+    while (this.fixedIndex < FIXED_ORDER.length) {
+      var key = FIXED_ORDER[this.fixedIndex];
+      this.fixedIndex++;
+      var split = splitBy(this.candidates, key);
+      if (split) {
+        this.renderFacetStep(split);
+        return;
+      }
+      // This facet doesn't discriminate the current candidates (e.g. every
+      // remaining course has the same duration) - skip it silently and try
+      // the next one in the fixed order.
+    }
+
+    var adaptive = bestAdaptiveSplit(this.candidates, this.usedFacets);
+    if (adaptive) {
+      this.renderFacetStep(adaptive);
       return;
     }
-    this.phase = 'facet';
-    this.renderFacetStep(split);
+
+    this.showNameStep();
   };
 
   // ---------- Chrome shared by every step ----------
@@ -163,80 +195,26 @@
     this.root.appendChild(wrap);
   };
 
-  // ---------- Step 1: Category ----------
-
-  CourseFinder.prototype.showCategoryStep = function () {
-    this.phase = 'category';
-    var self = this;
-    var categories = this.catalog.categories.slice().sort();
-    var counts = {};
-    this.catalog.courses.forEach(function (c) { counts[c.category] = (counts[c.category] || 0) + 1; });
-
-    var wrap = this.renderShell('What kind of training are you looking for?', 'Search or browse ' + categories.length + ' categories covering the full course catalog.');
-
-    var search = el('input', 'qf-search');
-    search.type = 'search';
-    search.placeholder = 'Search categories… (e.g. confined space, forklift, fall protection)';
-    search.autocomplete = 'off';
-    wrap.appendChild(search);
-
-    var list = el('div', 'qf-list');
-    wrap.appendChild(list);
-
-    function renderList(filterText) {
-      list.innerHTML = '';
-      var q = filterText.trim().toLowerCase();
-      var matches = categories.filter(function (name) { return name.toLowerCase().indexOf(q) !== -1; });
-      if (!matches.length) {
-        list.appendChild(el('div', 'qf-empty', 'No categories match “' + filterText + '”.'));
-        return;
-      }
-      matches.forEach(function (name) {
-        var btn = el('button', 'qf-option qf-option-row');
-        btn.type = 'button';
-        btn.appendChild(el('span', 'qf-option-label', name));
-        btn.appendChild(el('span', 'qf-option-count', counts[name] + (counts[name] === 1 ? ' course' : ' courses')));
-        btn.addEventListener('click', function () { self.chooseCategory(name); });
-        list.appendChild(btn);
-      });
-    }
-
-    search.addEventListener('input', function () { renderList(search.value); });
-    renderList('');
-
-    this.attachFooter(wrap);
-  };
-
-  CourseFinder.prototype.chooseCategory = function (categoryName) {
-    this.pushHistory();
-    this.candidates = this.catalog.courses.filter(function (c) { return c.category === categoryName; });
-    this.trail.push(categoryName);
-    this.step();
-  };
-
-  // ---------- Step 2+: adaptive facet questions ----------
-
-  var FACET_LABELS = {
-    industryTags: function (v) { return v; },
-    type: function (v) { return v; },
-    regBody: function (v) { return v; },
-    duration: function (v) { return v; }
-  };
+  // ---------- Multiple-choice facet questions ----------
 
   CourseFinder.prototype.renderFacetStep = function (split) {
     var self = this;
-    var facet = split.facet;
-    var wrap = this.renderShell(facet.question);
+    var facet = FACETS[split.key];
+    var isBrowseList = split.keys.length > 15; // long lists read better A-Z than by popularity
+    var subText = isBrowseList ? 'Scroll to see all ' + split.keys.length + ' options, or pick the closest match.' : null;
+    var wrap = this.renderShell(facet.question, subText);
 
     var options = el('div', 'qf-options');
-    var sortedKeys = split.keys.slice().sort(function (a, b) { return split.groups[b].length - split.groups[a].length; });
-    sortedKeys.forEach(function (key) {
-      var group = split.groups[key];
+    var sortedKeys = isBrowseList
+      ? split.keys.slice().sort()
+      : split.keys.slice().sort(function (a, b) { return split.groups[b].length - split.groups[a].length; });
+    sortedKeys.forEach(function (value) {
+      var group = split.groups[value];
       var btn = el('button', 'qf-option');
       btn.type = 'button';
-      btn.appendChild(el('span', 'qf-option-label', FACET_LABELS[facet.key](key)));
+      btn.appendChild(el('span', 'qf-option-label', value));
       btn.appendChild(el('span', 'qf-option-hint', group.length + (group.length === 1 ? ' match' : ' matches')));
-      btn.addEventListener('click', function () { self.chooseFacetValue(facet.key, key, group); });
+      btn.addEventListener('click', function () { self.chooseFacetValue(split.key, value, group); });
       options.appendChild(btn);
     });
     wrap.appendChild(options);
@@ -255,7 +233,6 @@
   // ---------- Final step: search/pick by name ----------
 
   CourseFinder.prototype.showNameStep = function () {
-    this.phase = 'name';
     var self = this;
     var wrap = this.renderShell('Which of these is it?', this.candidates.length + ' course' + (this.candidates.length === 1 ? '' : 's') + ' left. Search by name or pick one below.');
 
