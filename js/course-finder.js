@@ -13,9 +13,12 @@
    searchable list of what's left. */
 (function () {
 
-  var TEL = 'tel:18664296742';
-  var TEL_LABEL = '1-866-429-6742';
   var BASE_URL = 'https://hazwoper-osha.com/';
+  // Only 132 of the 1,033 catalog courses have a page verified live on
+  // hazwoper-osha.com (course.url). For the rest, link to the site's real,
+  // searchable "All Courses" listing instead of guessing a URL or falling
+  // back to a phone number.
+  var COURSE_LIST_URL = BASE_URL + 'online-courses';
   var NAME_LIST_LIMIT = 40; // sanity cap on rendered list length
 
   // Asked in this order, every time, as long as each one still narrows the
@@ -40,7 +43,7 @@
   }
 
   function courseHref(course) {
-    return course.url ? BASE_URL + course.url : TEL;
+    return course.url ? BASE_URL + course.url : COURSE_LIST_URL;
   }
 
   // "OSHA/EPA", "DOT/FMCSA", etc. mean a course spans multiple regulatory
@@ -452,8 +455,9 @@
     var actions = el('div', 'qf-result-actions');
     var cta = el('a', 'btn btn-primary');
     cta.href = courseHref(course);
-    if (course.url) { cta.target = '_blank'; cta.rel = 'noopener'; cta.textContent = 'View This Course'; }
-    else { cta.textContent = 'Call to Enroll: ' + TEL_LABEL; }
+    cta.target = '_blank';
+    cta.rel = 'noopener';
+    cta.textContent = course.url ? 'View This Course' : 'Find This Course on hazwoper-osha.com';
     actions.appendChild(cta);
 
     var browseAll = el('a', 'btn btn-outline', 'Browse the Full Catalog');

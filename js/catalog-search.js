@@ -7,6 +7,10 @@
 
   var BASE_URL = "https://hazwoper-osha.com/";
   var CONTACT_TEL = "tel:18664296742";
+  // Only some catalog courses have a page verified live on hazwoper-osha.com
+  // (course.url). For the rest, link to the site's real, searchable "All
+  // Courses" listing instead of guessing a URL.
+  var COURSE_LIST_URL = BASE_URL + "online-courses";
 
   var VIEW_STORAGE_KEY = "hoc_catalog_view_v1";
   var MODE_STORAGE_KEY = "hoc_catalog_mode_v1";
@@ -108,7 +112,7 @@
     if (url) {
       return '<a class="btn btn-primary btn-sm" href="' + BASE_URL + url + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">' + (label || "View &amp; Enroll") + " &rarr;</a>";
     }
-    return '<a class="btn btn-outline btn-sm" href="' + CONTACT_TEL + '" onclick="event.stopPropagation()">Call to Enroll &rarr;</a>';
+    return '<a class="btn btn-outline btn-sm" href="' + COURSE_LIST_URL + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">Find on hazwoper-osha.com &rarr;</a>';
   }
 
   var catalogTableHeadHtml =
