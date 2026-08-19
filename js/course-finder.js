@@ -26,7 +26,7 @@
 
   var FACETS = {
     category: { question: 'What type of course are you looking for?', multi: false },
-    regBody: { question: 'Which regulatory body does this need to satisfy?', multi: false },
+    regBody: { question: 'Which regulatory body does this need to satisfy?', multi: true },
     duration: { question: 'How long should the training be?', multi: false },
     industryTags: { question: 'Which industry or audience fits best?', multi: true },
     type: { question: 'What type of training is this?', multi: false }
@@ -43,6 +43,26 @@
     return course.url ? BASE_URL + course.url : TEL;
   }
 
+  // "OSHA/EPA", "DOT/FMCSA", etc. mean a course spans multiple regulatory
+  // bodies, not that its regBody string is one opaque value - split those on
+  // "/" into separate tokens so a course tagged "OSHA/EPA" shows up under
+  // both OSHA and EPA. Two things need protecting from that split:
+  // - "N/A (Voluntary/...)" - the slash there is inside a parenthetical
+  //   description, not a body separator, so N/A values are never split.
+  // - "Cal/OSHA" - a single regulator name that happens to contain a slash
+  //   (distinct from federal OSHA), protected before the generic split and
+  //   restored after.
+  function parseRegBodies(raw) {
+    if (!raw) return ['Not specified'];
+    var s = raw.trim();
+    if (/^N\/A\b/.test(s)) return [s];
+    var protectedStr = s.replace(/Cal\/OSHA/g, 'Cal⁄OSHA');
+    var parenIdx = protectedStr.indexOf('(');
+    if (parenIdx !== -1 && protectedStr.slice(0, parenIdx).indexOf('/') === -1) return [s];
+    if (protectedStr.indexOf('/') === -1) return [s];
+    return protectedStr.split('/').map(function (p) { return p.trim().replace(/Cal⁄OSHA/g, 'Cal/OSHA'); }).filter(Boolean);
+  }
+
   // Every course must land in at least one group for any facet, otherwise a
   // course with no value for the chosen facet would vanish from every
   // option and become unreachable. So a missing/empty value gets its own
@@ -52,8 +72,29 @@
       var tags = Array.isArray(course.industryTags) ? course.industryTags : [];
       return tags.length ? tags : ['Not industry-specific'];
     }
+    if (key === 'regBody') return parseRegBodies(course.regBody);
     var v = course[key];
     return (v === undefined || v === null || v === '') ? ['Not specified'] : [v];
+  }
+
+  function countDistinctValues(candidates, key) {
+    var seen = {};
+    var n = 0;
+    candidates.forEach(function (course) {
+      facetValues(course, key).forEach(function (v) { if (!seen[v]) { seen[v] = true; n++; } });
+    });
+    return n;
+  }
+
+  // A course "satisfies the selection, or satisfies more": it matches as
+  // long as every selected value is among its own facet values, regardless
+  // of whether it also carries additional values beyond the selection.
+  function courseHasAllValues(course, key, selected) {
+    var values = facetValues(course, key);
+    for (var i = 0; i < selected.length; i++) {
+      if (values.indexOf(selected[i]) === -1) return false;
+    }
+    return true;
   }
 
   // Groups the candidates by a facet's values. Returns null if the facet
@@ -137,6 +178,18 @@
     while (this.fixedIndex < FIXED_ORDER.length) {
       var key = FIXED_ORDER[this.fixedIndex];
       this.fixedIndex++;
+
+      if (FACETS[key].multi) {
+        // Multi-select facets narrow via a live match count instead of a
+        // hard split into buckets - only show the step if there's more than
+        // one distinct value left to choose between.
+        if (countDistinctValues(this.candidates, key) > 1) {
+          this.renderMultiFacetStep(key);
+          return;
+        }
+        continue;
+      }
+
       var split = splitBy(this.candidates, key);
       if (split) {
         this.renderFacetStep(split);
@@ -228,6 +281,115 @@
     this.candidates = group;
     this.trail.push(value);
     this.step();
+  };
+
+  // ---------- Multi-select facet questions (e.g. regulatory body) ----------
+  // Rendered as toggleable chips instead of a pick-one list: a course
+  // matches once it carries every currently-checked value, whether or not
+  // it also carries others beyond that (so checking "OSHA" alone still
+  // surfaces a course tagged "OSHA/EPA" - it satisfies OSHA and more).
+  // A live count above the chips shows how many courses match the current
+  // combination, including zero, so an unsatisfiable combination is obvious
+  // before the visitor tries to continue.
+
+  CourseFinder.prototype.renderMultiFacetStep = function (key) {
+    var self = this;
+    var facet = FACETS[key];
+    var candidates = this.candidates;
+    var selected = [];
+
+    var valueCounts = {};
+    candidates.forEach(function (course) {
+      facetValues(course, key).forEach(function (v) { valueCounts[v] = (valueCounts[v] || 0) + 1; });
+    });
+    var allValues = Object.keys(valueCounts).sort(function (a, b) { return valueCounts[b] - valueCounts[a]; });
+
+    var wrap = this.renderShell(facet.question, 'Check one or more. Courses that cover your selection, or cover more than your selection, will match.');
+
+    var countBanner = el('div', 'qf-multi-count');
+    wrap.appendChild(countBanner);
+
+    var filterInput = el('input', 'qf-search');
+    filterInput.type = 'search';
+    filterInput.placeholder = 'Filter the list (e.g. “OSHA”, “EPA”)…';
+    filterInput.autocomplete = 'off';
+    wrap.appendChild(filterInput);
+
+    var options = el('div', 'qf-multi-options');
+    wrap.appendChild(options);
+
+    var footer = el('div', 'qf-multi-footer');
+    var continueBtn = el('button', 'btn btn-primary btn-block');
+    continueBtn.type = 'button';
+    footer.appendChild(continueBtn);
+    wrap.appendChild(footer);
+
+    function matchCount() {
+      if (!selected.length) return candidates.length;
+      return candidates.filter(function (c) { return courseHasAllValues(c, key, selected); }).length;
+    }
+
+    function updateCount() {
+      var n = matchCount();
+      if (!selected.length) {
+        countBanner.className = 'qf-multi-count';
+        countBanner.textContent = candidates.length + ' course' + (candidates.length === 1 ? '' : 's') + ' available. Select one or more to narrow it down.';
+        continueBtn.disabled = true;
+        continueBtn.textContent = 'Select at least one';
+      } else if (n === 0) {
+        countBanner.className = 'qf-multi-count qf-multi-count-empty';
+        countBanner.textContent = '0 courses match ' + selected.join(' + ') + '. That combination isn’t available, try removing a selection.';
+        continueBtn.disabled = true;
+        continueBtn.textContent = 'No matching courses';
+      } else {
+        countBanner.className = 'qf-multi-count qf-multi-count-active';
+        countBanner.textContent = n + ' course' + (n === 1 ? '' : 's') + ' match ' + selected.join(' + ') + '.';
+        continueBtn.disabled = false;
+        continueBtn.textContent = 'See ' + n + ' matching course' + (n === 1 ? '' : 's') + ' →';
+      }
+    }
+
+    function renderChips(filterText) {
+      options.innerHTML = '';
+      var q = filterText.trim().toLowerCase();
+      var visible = q ? allValues.filter(function (v) { return v.toLowerCase().indexOf(q) !== -1; }) : allValues;
+      if (!visible.length) {
+        options.appendChild(el('div', 'qf-empty', 'No options match “' + filterText + '”.'));
+        return;
+      }
+      visible.forEach(function (value) {
+        var chip = el('button', 'qf-multi-option' + (selected.indexOf(value) !== -1 ? ' is-selected' : ''));
+        chip.type = 'button';
+        chip.setAttribute('aria-pressed', selected.indexOf(value) !== -1 ? 'true' : 'false');
+        chip.appendChild(el('span', 'qf-multi-option-check'));
+        chip.appendChild(el('span', 'qf-multi-option-label', value));
+        chip.appendChild(el('span', 'qf-multi-option-hint', valueCounts[value] + (valueCounts[value] === 1 ? ' course' : ' courses')));
+        chip.addEventListener('click', function () {
+          var idx = selected.indexOf(value);
+          if (idx === -1) selected.push(value); else selected.splice(idx, 1);
+          chip.classList.toggle('is-selected');
+          chip.setAttribute('aria-pressed', selected.indexOf(value) !== -1 ? 'true' : 'false');
+          updateCount();
+        });
+        options.appendChild(chip);
+      });
+    }
+
+    filterInput.addEventListener('input', function () { renderChips(filterInput.value); });
+
+    continueBtn.addEventListener('click', function () {
+      var matches = candidates.filter(function (c) { return courseHasAllValues(c, key, selected); });
+      if (!selected.length || !matches.length) return;
+      self.pushHistory();
+      self.usedFacets[key] = true;
+      self.candidates = matches;
+      self.trail.push(selected.join(' + '));
+      self.step();
+    });
+
+    renderChips('');
+    updateCount();
+    this.attachFooter(wrap);
   };
 
   // ---------- Final step: search/pick by name ----------
