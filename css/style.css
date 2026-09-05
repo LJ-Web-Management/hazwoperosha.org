@@ -484,6 +484,7 @@ table.compare td svg { width: 18px; height: 18px; color: var(--green); }
 .footer-col ul li a { font-size: 14.5px; color: rgba(255,255,255,.68); }
 .footer-col ul li a:hover { color: var(--orange); }
 .footer-contact li { font-size: 14.5px; margin-bottom: 8px; color: rgba(255,255,255,.68); }
+.footer-contact li a:hover { color: var(--orange); }
 .footer-col .btn { margin-top: 8px; }
 .footer-bottom {
   display: flex;
