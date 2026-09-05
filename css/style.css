@@ -533,6 +533,8 @@ table.compare td svg { width: 18px; height: 18px; color: var(--green); }
 .radio-card span.desc { font-size: 13px; color: var(--gray-600); }
 .honeypot { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
 
+.typeform-trigger { display: flex; justify-content: center; align-items: center; min-height: 56px; margin: 24px 0; }
+
 .checkbox-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
