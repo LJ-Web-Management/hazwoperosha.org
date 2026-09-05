@@ -65,7 +65,8 @@ p { margin: 0 0 1em; color: var(--gray-600); }
   border-radius: 999px;
   margin-bottom: 16px;
 }
-.section-navy .eyebrow { background: rgba(255,200,0,.2); color: var(--orange); }
+.section-navy .eyebrow,
+.hero .eyebrow { background: rgba(0,0,0,.4); color: var(--orange); }
 .section-head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
 .section-head h2 { font-size: clamp(28px, 3.4vw, 40px); }
 .section-head p { font-size: 18px; }
