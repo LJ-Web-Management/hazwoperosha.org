@@ -535,6 +535,13 @@ table.compare td svg { width: 18px; height: 18px; color: var(--green); }
 
 .typeform-trigger { display: flex; justify-content: center; align-items: center; min-height: 56px; margin: 24px 0; }
 
+.contact-strip { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+.contact-strip-item { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; color: var(--navy); }
+.contact-strip-item svg { width: 20px; height: 20px; color: var(--orange-dark); flex-shrink: 0; }
+.contact-strip-item:hover { color: var(--orange-dark); }
+
+.typeform-inline { min-height: 720px; background: transparent; }
+
 .checkbox-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
