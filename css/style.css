@@ -137,7 +137,9 @@ p { margin: 0 0 1em; color: var(--gray-600); }
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  min-width: 260px;
+  min-width: 300px;
+  max-height: 70vh;
+  overflow-y: auto;
   background: var(--white);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
@@ -421,6 +423,24 @@ table.compare td svg { width: 18px; height: 18px; color: var(--green); }
 .cta-banner-yellow .btn-primary { background: var(--navy); color: var(--orange); box-shadow: none; }
 .cta-banner-yellow .btn-primary:hover { background: #000; color: var(--orange); }
 
+/* Compact course chip grid (category pages) */
+.course-chip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.course-chip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-800);
+  transition: border-color .15s ease, background .15s ease;
+}
+.course-chip:hover { border-color: rgba(255,200,0,.6); background: rgba(255,200,0,.06); }
+.course-chip svg { width: 17px; height: 17px; color: var(--green); flex-shrink: 0; margin-top: 2px; }
+
 /* Course list rows (category pages) */
 .course-list { display: flex; flex-direction: column; gap: 16px; }
 .course-row {
@@ -540,7 +560,7 @@ table.compare td svg { width: 18px; height: 18px; color: var(--green); }
 }
 @media (max-width: 640px) {
   .section { padding: 60px 0; }
-  .grid-3, .grid-4, .plan-grid, .two-col, .stat-row, .benefit-strip, .steps, .radio-cards { grid-template-columns: 1fr; }
+  .grid-3, .grid-4, .plan-grid, .two-col, .stat-row, .benefit-strip, .steps, .radio-cards, .course-chip-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .cta-banner { padding: 36px; flex-direction: column; text-align: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
