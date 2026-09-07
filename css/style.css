@@ -478,7 +478,7 @@ table.compare td svg { width: 18px; height: 18px; color: var(--green); }
 
 /* Footer */
 .site-footer { background: var(--navy-dark); color: rgba(255,255,255,.72); padding: 64px 0 0; }
-.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1.2fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.08); }
 .footer-brand p { color: rgba(255,255,255,.6); font-size: 14px; margin-top: 14px; }
 .footer-col h4 { color: var(--white); font-size: 14px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 18px; }
 .footer-col ul li { margin-bottom: 10px; }
