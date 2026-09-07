@@ -311,7 +311,7 @@ p { margin: 0 0 1em; color: var(--gray-600); }
 .cat-card:hover .cat-card-link svg { transform: translateX(4px); }
 
 /* Steps */
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; counter-reset: step; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px; counter-reset: step; }
 .step { position: relative; padding-top: 8px; }
 .step-num {
   display: inline-flex; align-items: center; justify-content: center;
