@@ -10,4 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var setScrolled = function () {
+      header.classList.toggle("scrolled", window.scrollY > 8);
+    };
+    setScrolled();
+    addEventListener("scroll", setScrolled, { passive: true });
+  }
+
 });
