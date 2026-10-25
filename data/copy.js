@@ -116,6 +116,7 @@ module.exports = ({ BRAND, PHONE, PHONE_HREF, EMAIL, money }) => {
     },
 
     guides: {
+      fullCardDesc: true,
       label: 'Lessons',
       allLink: 'All free lessons',
       cardLabel: 'Lesson',
@@ -130,6 +131,7 @@ module.exports = ({ BRAND, PHONE, PHONE_HREF, EMAIL, money }) => {
       hubLead: 'Plain-English lessons on the hazmat skills behind every HAZWOPER course. Read them in any order, then test yourself with the matching quiz.',
     },
     quizzes: {
+      fullCardDesc: true,
       allLink: 'Practice quizzes',
       hubName: `${BRAND} practice quizzes`,
       hubTitle: `Free Hazmat Practice Quizzes: SDS, ERG, Respirators & Heat Stress | ${BRAND}`,
