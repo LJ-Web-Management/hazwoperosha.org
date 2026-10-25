@@ -301,3 +301,18 @@ ul.todo li::before { content: ""; display: inline-block; width: 16px; height: 16
   .nav-phone { display: none; }
   .quick { grid-template-columns: 1fr; }
 }
+
+/* learning path (home) */
+.path { text-align: left; }
+.steps { list-style: none; padding: 0; margin: 24px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: none; }
+.steps li { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 20px 18px; box-shadow: 0 1px 2px rgba(15,39,66,.04); }
+.steps li::after { content: ""; position: absolute; top: 38px; right: -14px; width: 10px; height: 10px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); transform: rotate(45deg); }
+.steps li:last-child::after { display: none; }
+.step-n { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--teal); color: #fff; font-weight: 700; font-family: var(--serif); margin-bottom: 10px; }
+.steps h3 { margin-bottom: 6px; }
+.steps p { margin: 0; color: #3b4757; font-size: .98rem; }
+@media (max-width: 900px) {
+  .steps { grid-template-columns: 1fr 1fr; }
+  .steps li::after { display: none; }
+}
+@media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }

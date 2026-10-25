@@ -6,9 +6,11 @@ practice quizzes, a glossary, sitewide search and a multi-course cart checkout.
 Live: https://lj-web-management.github.io/hazwoperosha.org/
 
 Sister sites share the same courses, content and checkout with different styling:
-`website-staging` and `hazwoperosha.us`. `tools/build.js`, `assets/*.js` and `data/*` are
-shared between them; `site.config.js`, `assets/style.css` and the images in `assets/` are this
-site's own.
+`website-staging` and `hazwoperosha.us`. `tools/build.js`, the course catalog (`data/source.json`, `data/lms-ids.json`) and the cart/checkout
+scripts are shared. Each site has its own content and purpose so search engines see three
+distinct sites: `data/copy.js`, `data/guides.js`, `data/quizzes.js`, `site.config.js`,
+`assets/style.css` and the images in `assets/` belong to this site only. Don't copy articles
+between the sites.
 
 ## Build
 
@@ -25,6 +27,7 @@ GitHub Pages on every push to `main`.
 
 ```
 site.config.js       brand, URL, theme colour, fonts, logo, order source for this site
+data/copy.js         this site's own wording: home page, FAQ, course-page copy, section names (and tool pages)
 data/source.json     course catalog          data/lms-ids.json  LMS course id per course
 data/guides.js       guide articles          data/glossary.js   glossary terms
 data/quizzes.js      practice quizzes
