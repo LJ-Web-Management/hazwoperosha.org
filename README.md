@@ -46,7 +46,5 @@ hazwoper-osha.com LMS API with all course ids and seat counts. Orders are tagged
 
 ## Custom domain
 
-The custom domain is set: `CNAME` holds `www.hazwoperosha.org` and `url` in `site.config.js` matches.
-If it ever changes, update both,
-add a `CNAME` file containing `hazwoperosha.org`, point the domain's DNS at GitHub Pages, then
-rebuild and push.
+The site is served at https://www.hazwoperosha.org. `CNAME` holds `www.hazwoperosha.org` and `url`
+in `site.config.js` matches it. If the domain ever changes, update both, rebuild and push.
