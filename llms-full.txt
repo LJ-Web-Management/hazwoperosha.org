@@ -1,10 +1,10 @@
 # HazwoperOSHA.org - HAZWOPER guides, glossary and practice questions (full text)
 
-> Source: https://lj-web-management.github.io/hazwoperosha.org/ . Courses: https://lj-web-management.github.io/hazwoperosha.org/#courses . Contact: sales@hazwoper-osha.com, +1-866-429-6742.
+> Source: https://www.hazwoperosha.org/ . Courses: https://www.hazwoperosha.org/#courses . Contact: sales@hazwoper-osha.com, +1-866-429-6742.
 
 ## How to Read a Safety Data Sheet (SDS): All 16 Sections Explained
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/how-to-read-a-safety-data-sheet/
+URL: https://www.hazwoperosha.org/guides/how-to-read-a-safety-data-sheet/
 
 Every hazardous chemical sold in the United States ships with a safety data sheet. OSHA's Hazard Communication Standard (29 CFR 1910.1200) requires manufacturers and importers to write one, and employers to keep it readily accessible to workers on every shift. On a hazardous waste site or during a spill, the SDS is often the fastest way to learn what a chemical can do to you and how to protect yourself.
 
@@ -82,13 +82,13 @@ Test yourself with the SDS and GHS quiz.
 - **Which SDS section lists the PPE to wear?** Section 8, Exposure controls/personal protection, which also lists exposure limits such as OSHA PELs and ACGIH TLVs.
 - **What is the difference between the signal words Danger and Warning?** Danger is used for more severe hazards and Warning for less severe hazards. Only one signal word appears on a label or SDS.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 24 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-24-hour-hazwoper-training/); OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 24 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-training/); OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/)
 
 ---
 
 ## How to Use the DOT Emergency Response Guidebook (ERG)
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/using-the-dot-emergency-response-guidebook/
+URL: https://www.hazwoperosha.org/guides/using-the-dot-emergency-response-guidebook/
 
 The Emergency Response Guidebook (ERG) is published by the U.S. Department of Transportation's Pipeline and Hazardous Materials Safety Administration with Transport Canada and Mexico's transportation agency. It is written for first responders in the first 30 minutes of a transportation incident involving hazardous materials, before more detailed information is available. HAZWOPER awareness-level responders are expected to know how to use it. A new edition comes out about every four years.
 
@@ -170,13 +170,13 @@ Under HAZWOPER paragraph (q)(6)(i), awareness-level responders recognize the rel
 - **What does a highlighted entry in the ERG mean?** It is a toxic inhalation hazard material, a chemical warfare agent, or a material that releases toxic gas in water. Use the green pages for isolation and protective action distances unless it is on fire.
 - **What does the letter P after a guide number mean?** The material may polymerize violently when heated or contaminated.
 
-Related courses: OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/); OSHA 40 Hour HAZWOPER for Emergency Response/Fire-Hazmat Teams (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-for-emergency-response-fire-hazmat-teams/); OSHA 8 Hour HAZWOPER (q) Incident Command Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/)
+Related courses: OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/); OSHA 40 Hour HAZWOPER for Emergency Response/Fire-Hazmat Teams (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-emergency-response-fire-hazmat-teams/); OSHA 8 Hour HAZWOPER (q) Incident Command Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/)
 
 ---
 
 ## Toxicology Basics for Hazmat Workers: Dose, Routes and Health Effects
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/toxicology-basics-for-hazmat-workers/
+URL: https://www.hazwoperosha.org/guides/toxicology-basics-for-hazmat-workers/
 
 Toxicology is the study of how chemicals harm living things. You don't need a degree to use its basic ideas, and they explain most of the safety rules you follow on a hazardous waste site.
 
@@ -248,13 +248,13 @@ Hazardous waste sites usually involve mixtures, which is one reason HAZWOPER lea
 - **What is a target organ?** The organ a chemical mainly damages after it is absorbed, such as the liver, kidneys, nervous system, blood or lungs.
 - **What is a synergistic effect?** When two exposures together cause a greater effect than the sum of each alone, such as smoking combined with asbestos exposure.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 8 Hour HAZWOPER Refresher Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/); OSHA 24 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-24-hour-hazwoper-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 8 Hour HAZWOPER Refresher Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/); OSHA 24 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-training/)
 
 ---
 
 ## Respirator Selection and Fit Testing for HAZWOPER Work
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/respirator-selection-and-fit-testing/
+URL: https://www.hazwoperosha.org/guides/respirator-selection-and-fit-testing/
 
 Respirators are covered by their own OSHA standard, 29 CFR 1910.134, which applies on top of HAZWOPER. Any employer that requires respirators needs a written respiratory protection program run by a qualified program administrator.
 
@@ -320,13 +320,13 @@ Level A and B ensembles use SCBA or supplied air. Level C uses an APR, which is 
 - **What is the assigned protection factor of a half-mask respirator?** Ten, for a filtering facepiece or elastomeric half-mask air-purifying respirator.
 - **How do you calculate maximum use concentration?** Multiply the respirator's assigned protection factor by the exposure limit of the contaminant. Never use an air-purifying respirator at or above IDLH.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained (https://lj-web-management.github.io/hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/); OSHA 8 Hour HAZWOPER Supervisor Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained (https://www.hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/); OSHA 8 Hour HAZWOPER Supervisor Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
 
 ---
 
 ## Heat Stress in Chemical Protective Clothing: Signs, Prevention and Monitoring
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/heat-stress-in-chemical-protective-clothing/
+URL: https://www.hazwoperosha.org/guides/heat-stress-in-chemical-protective-clothing/
 
 On many hazardous waste sites, heat hurts more people than chemicals do. Chemical protective clothing is designed to keep liquids and vapors out, which also stops sweat from evaporating, and evaporation is the body's main way of cooling off. Workers in Level A or B can overheat even on a mild day.
 
@@ -392,13 +392,13 @@ Some states have their own heat illness standards, including California (outdoor
 - **What is the difference between heat exhaustion and heat stroke?** Heat exhaustion causes heavy sweating, weakness and nausea. Heat stroke adds confusion, collapse or seizures and a very high body temperature, and is a medical emergency requiring 911 and immediate cooling.
 - **How is heat stress monitored for workers in protective suits?** Common methods are checking heart rate at the start of rest, body temperature at the end of work, and body weight before and after the shift, then adjusting work-rest cycles.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained (https://lj-web-management.github.io/hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/); OSHA 8 Hour HAZWOPER Supervisor Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained (https://www.hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/); OSHA 8 Hour HAZWOPER Supervisor Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
 
 ---
 
 ## Drum and Container Handling at Hazardous Waste Sites
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/drum-and-container-handling/
+URL: https://www.hazwoperosha.org/guides/drum-and-container-handling/
 
 Drums are where many of the worst accidents at cleanup sites start: a corroded drum splits when lifted, an unknown liquid reacts with another, or a bulging drum ruptures when someone loosens the bung. Paragraph (j) of the HAZWOPER standard sets out rules for handling, transporting, labeling and disposing of drums and containers.
 
@@ -460,13 +460,13 @@ Before excavation, locate buried drums with methods such as ground-penetrating r
 - **What should be ready before moving drums that may leak?** Salvage (overpack) drums, suitable absorbent, appropriate containers and a spill containment plan for the full volume being moved.
 - **What do crystals around a drum bung indicate?** They may indicate shock-sensitive or peroxide-forming material. Treat the drum as potentially explosive and get specialist help.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 40 Hour HAZWOPER for Environmental Remediation (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-for-environmental-remediation/); OSHA 24-Hour HAZWOPER - RCRA TSD Operations Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-24-hour-hazwoper-rcra-tsd-operations-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 40 Hour HAZWOPER for Environmental Remediation (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-environmental-remediation/); OSHA 24-Hour HAZWOPER - RCRA TSD Operations Training (https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-rcra-tsd-operations-training/)
 
 ---
 
 ## Confined Spaces at Hazardous Waste Sites: Permits, Roles and Rescue
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/confined-spaces-at-hazardous-waste-sites/
+URL: https://www.hazwoperosha.org/guides/confined-spaces-at-hazardous-waste-sites/
 
 Tanks, vaults, pits, sumps, sewers and trenches are common at cleanup sites, and the HAZWOPER site safety and health plan must include confined space entry procedures. The detailed rules come from OSHA's confined space standards: 29 CFR 1910.146 for general industry and 29 CFR 1926 Subpart AA for construction.
 
@@ -522,13 +522,13 @@ On a hazardous waste site, a confined space can hold unknown chemicals, so atmos
 - **In what order should confined space air be tested?** Oxygen first, then combustible gases and vapors, then toxic gases and vapors.
 - **Can the attendant enter the space to rescue an entrant?** No. The attendant stays outside and summons rescue. They may only enter if relieved by another attendant and trained and equipped for rescue.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA Air Monitoring and Gas Detection Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-air-monitoring-and-gas-detection-training/); OSHA 8 Hour HAZWOPER Supervisor Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA Air Monitoring and Gas Detection Training (https://www.hazwoperosha.org/courses/osha-air-monitoring-and-gas-detection-training/); OSHA 8 Hour HAZWOPER Supervisor Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
 
 ---
 
 ## Hazardous Chemical Spill Response: Step by Step
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/hazardous-chemical-spill-response-steps/
+URL: https://www.hazwoperosha.org/guides/hazardous-chemical-spill-response-steps/
 
 What you should do about a chemical spill depends first on one question: is it an incidental release or an emergency? The answer decides whether you clean it up or get away and call for help.
 
@@ -596,13 +596,13 @@ Releases of a hazardous substance at or above its reportable quantity within 24 
 - **What number do you call to report a hazardous substance release?** The National Response Center at 1-800-424-8802, for releases at or above the CERCLA reportable quantity. Follow your emergency plan and any state rules as well.
 - **Who can respond to an emergency chemical release?** Only workers trained under HAZWOPER paragraph (q) to the level of the duties they will perform.
 
-Related courses: OSHA Spill Prevention and Response Safety Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/); Spill Response Equipment - Spill Kit Selection & Use (https://lj-web-management.github.io/hazwoperosha.org/courses/spill-response-equipment-spill-kit-selection-and-use/); OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/)
+Related courses: OSHA Spill Prevention and Response Safety Training (https://www.hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/); Spill Response Equipment - Spill Kit Selection & Use (https://www.hazwoperosha.org/courses/spill-response-equipment-spill-kit-selection-and-use/); OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/)
 
 ---
 
 ## HAZWOPER Jobs and Careers: Who Hires, What You Need and How to Start
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/hazwoper-jobs-and-careers/
+URL: https://www.hazwoperosha.org/guides/hazwoper-jobs-and-careers/
 
 A 40-hour HAZWOPER certificate is the entry ticket to a wide range of field jobs in environmental cleanup, emergency response and waste management. Here's where it's used and how people get started.
 
@@ -662,13 +662,13 @@ Experienced workers move into crew lead and site supervisor roles (with the 8 ho
 - **Which HAZWOPER course should I take to get a job?** The 40 hour course qualifies you for the widest range of entry-level field jobs. Employers then arrange supervised field experience.
 - **Do I need a refresher to stay employable?** Yes. Employers expect a refresher within the last 12 months, since OSHA requires 8 hours of refresher training every year.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 40-Hour HAZWOPER Training (Spanish) (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training-spanish/); HAZWOPER Train-the-Trainer Certification (https://lj-web-management.github.io/hazwoperosha.org/courses/hazwoper-train-the-trainer-certification/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 40-Hour HAZWOPER Training (Spanish) (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training-spanish/); HAZWOPER Train-the-Trainer Certification (https://www.hazwoperosha.org/courses/hazwoper-train-the-trainer-certification/)
 
 ---
 
 ## How to Study for the HAZWOPER Final Exam (With the Key Numbers to Know)
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/guides/how-to-study-for-the-hazwoper-exam/
+URL: https://www.hazwoperosha.org/guides/how-to-study-for-the-hazwoper-exam/
 
 A self-paced online course gives you control over your schedule, which is both its best feature and its biggest trap. These habits help you finish on time and walk into the final exam confident.
 
@@ -742,7 +742,7 @@ Download your certificate and wallet card straight away, send a copy to your emp
 - **What is the best way to study for the HAZWOPER exam?** Study in focused blocks, take notes per module, explain topics out loud, and test yourself with practice quizzes rather than only rereading.
 - **What numbers should I memorize for HAZWOPER?** Training hours (40, 24, 8), field days (3 and 1), oxygen limits (19.5% and 23.5%), the 30-day medical surveillance trigger, 30-year record retention, the 15-minute STEL and respirator protection factors.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 24 Hour HAZWOPER Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-24-hour-hazwoper-training/); OSHA 8 Hour HAZWOPER Refresher Training (https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 24 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-training/); OSHA 8 Hour HAZWOPER Refresher Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/)
 
 ---
 
@@ -750,7 +750,7 @@ Related courses: OSHA 40 Hour HAZWOPER Training (https://lj-web-management.githu
 
 ### Safety Data Sheet (SDS) and GHS Label Quiz
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/sds-and-ghs-quiz/
+URL: https://www.hazwoperosha.org/quizzes/sds-and-ghs-quiz/
 
 1. How many sections does a GHS-format safety data sheet have?
    Answer: 16. OSHA 29 CFR 1910.1200 Appendix D requires 16 sections in a fixed order.
@@ -771,7 +771,7 @@ URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/sds-and-ghs-qu
 
 ### DOT Emergency Response Guidebook (ERG) Quiz
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/erg-quiz/
+URL: https://www.hazwoperosha.org/quizzes/erg-quiz/
 
 1. The yellow-bordered pages of the ERG list materials by:
    Answer: UN/NA ID number. Yellow pages are indexed by 4-digit ID number; blue pages by material name.
@@ -792,7 +792,7 @@ URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/erg-quiz/
 
 ### Toxicology Basics Quiz for Hazmat Workers
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/toxicology-quiz/
+URL: https://www.hazwoperosha.org/quizzes/toxicology-quiz/
 
 1. A chemical with a lower LD50 is:
    Answer: More acutely toxic. A smaller dose kills half the test animals, so the chemical is more acutely toxic.
@@ -813,7 +813,7 @@ URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/toxicology-qui
 
 ### Respirator Selection and Fit Testing Quiz
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/respirator-quiz/
+URL: https://www.hazwoperosha.org/quizzes/respirator-quiz/
 
 1. How often must a worker be fit tested for a tight-fitting respirator?
    Answer: At least every 12 months. 1910.134(f)(2) requires fit testing before first use and at least annually.
@@ -834,7 +834,7 @@ URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/respirator-qui
 
 ### Heat Stress in Protective Clothing Quiz
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/heat-stress-quiz/
+URL: https://www.hazwoperosha.org/quizzes/heat-stress-quiz/
 
 1. Why does chemical protective clothing increase heat stress?
    Answer: It stops sweat from evaporating. Impermeable clothing traps heat and moisture, blocking evaporative cooling.
@@ -855,7 +855,7 @@ URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/heat-stress-qu
 
 ### Hazmat Field Safety Quiz: Drums, Confined Spaces and Spills
 
-URL: https://lj-web-management.github.io/hazwoperosha.org/quizzes/hazmat-field-safety-quiz/
+URL: https://www.hazwoperosha.org/quizzes/hazmat-field-safety-quiz/
 
 1. How should an unlabeled drum at a cleanup site be treated?
    Answer: As hazardous until identified. HAZWOPER requires unlabeled drums to be treated as hazardous until characterized.

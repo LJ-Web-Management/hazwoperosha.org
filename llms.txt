@@ -14,88 +14,88 @@
 
 ### Foundation Courses: 40, 24 & 4 Hour
 
-- [OSHA 40 Hour HAZWOPER Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
-- [OSHA 24 Hour HAZWOPER Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-24-hour-hazwoper-training/): 24 Hours, $169.99. Meets 29 CFR 1910.120(e).
-- [OSHA 4-Hour HAZWOPER First Responder Awareness Level Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/): 4 Hours, $61.99. Meets 29 CFR 1910.120(q)(6)(i).
-- [OSHA 40-Hour HAZWOPER Training (Spanish)](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-training-spanish/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e)(3)(i) - Spanish language.
+- [OSHA 40 Hour HAZWOPER Training](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [OSHA 24 Hour HAZWOPER Training](https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-training/): 24 Hours, $169.99. Meets 29 CFR 1910.120(e).
+- [OSHA 4-Hour HAZWOPER First Responder Awareness Level Training](https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/): 4 Hours, $61.99. Meets 29 CFR 1910.120(q)(6)(i).
+- [OSHA 40-Hour HAZWOPER Training (Spanish)](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training-spanish/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e)(3)(i) - Spanish language.
 
 ### Industry 40-Hour Programs
 
-- [OSHA 40 Hour HAZWOPER for Construction (Contaminated Sites)](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-for-construction-contaminated-sites/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
-- [OSHA 40 Hour HAZWOPER for Emergency Response/Fire-Hazmat Teams](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-for-emergency-response-fire-hazmat-teams/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
-- [OSHA 40 Hour HAZWOPER for Environmental Remediation](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-for-environmental-remediation/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
-- [OSHA 40 Hour HAZWOPER for Utility/Pipeline Emergency Response](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-for-utility-pipeline-emergency-response/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [OSHA 40 Hour HAZWOPER for Construction (Contaminated Sites)](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-construction-contaminated-sites/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [OSHA 40 Hour HAZWOPER for Emergency Response/Fire-Hazmat Teams](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-emergency-response-fire-hazmat-teams/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [OSHA 40 Hour HAZWOPER for Environmental Remediation](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-environmental-remediation/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [OSHA 40 Hour HAZWOPER for Utility/Pipeline Emergency Response](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-utility-pipeline-emergency-response/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
 
 ### Stay Current: Refreshers, Supervisor & Incident Command
 
-- [OSHA 8 Hour HAZWOPER Refresher Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/): 8 Hours, $89.99. Meets 29 CFR 1910.120(e)(8).
-- [8 Hour HAZWOPER and Incident Command Refresher Training](https://lj-web-management.github.io/hazwoperosha.org/courses/8-hour-hazwoper-and-incident-command-refresher-training/): 8 Hours, $159.99. Meets 29 CFR 1910.120(q)(8).
-- [Manufacturing Emergency Response Team (ERT) Training](https://lj-web-management.github.io/hazwoperosha.org/courses/manufacturing-emergency-response-team-ert-training/): 8 Hours, $149.99. Meets 29 CFR 1910.120(q).
-- [OSHA 8 Hour HAZWOPER (q) Incident Command Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/): 8 Hours, $179.99. Meets 29 CFR 1910.120(q).
-- [OSHA 8 Hour HAZWOPER Supervisor Refresher Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-refresher-training/): 8 Hours, $149.99. Meets 29 CFR 1910.120(e)(4)/(e)(8).
-- [OSHA 8 Hour HAZWOPER Supervisor Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/): 8 Hours, $179.99. Meets 29 CFR 1910.120(e)(4).
-- [OSHA 8-Hour HAZWOPER and Safe Ammonia Handling Refresher Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-and-safe-ammonia-handling-refresher-training/): 8 Hours, $109.99. Meets 29 CFR 1910.120(e)(8) / 1910.111.
+- [OSHA 8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/): 8 Hours, $89.99. Meets 29 CFR 1910.120(e)(8).
+- [8 Hour HAZWOPER and Incident Command Refresher Training](https://www.hazwoperosha.org/courses/8-hour-hazwoper-and-incident-command-refresher-training/): 8 Hours, $159.99. Meets 29 CFR 1910.120(q)(8).
+- [Manufacturing Emergency Response Team (ERT) Training](https://www.hazwoperosha.org/courses/manufacturing-emergency-response-team-ert-training/): 8 Hours, $149.99. Meets 29 CFR 1910.120(q).
+- [OSHA 8 Hour HAZWOPER (q) Incident Command Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/): 8 Hours, $179.99. Meets 29 CFR 1910.120(q).
+- [OSHA 8 Hour HAZWOPER Supervisor Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-refresher-training/): 8 Hours, $149.99. Meets 29 CFR 1910.120(e)(4)/(e)(8).
+- [OSHA 8 Hour HAZWOPER Supervisor Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/): 8 Hours, $179.99. Meets 29 CFR 1910.120(e)(4).
+- [OSHA 8-Hour HAZWOPER and Safe Ammonia Handling Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-and-safe-ammonia-handling-refresher-training/): 8 Hours, $109.99. Meets 29 CFR 1910.120(e)(8) / 1910.111.
 
 ### California & State-Plan Programs
 
-- [Cal/OSHA 40-Hour HAZWOPER Training (2026)](https://lj-web-management.github.io/hazwoperosha.org/courses/cal-osha-40-hour-hazwoper-training/): 40 Hours, $219.99. Meets 8 CCR 5192(e).
-- [Cal/OSHA 24 hour HAZWOPER TSDF RCRA Training](https://lj-web-management.github.io/hazwoperosha.org/courses/cal-osha-24-hour-hazwoper-tsdf-rcra-training/): 24 Hours, $249.99. Meets 8 CCR 5192(p) / RCRA.
-- [Cal/OSHA 24-Hour HAZWOPER Training](https://lj-web-management.github.io/hazwoperosha.org/courses/cal-osha-24-hour-hazwoper-training/): 24 Hours, $169.99. Meets 8 CCR 5192(e).
-- [8 Hour HAZWOPER Refresher - State-Plan Versions Available](https://lj-web-management.github.io/hazwoperosha.org/courses/8-hour-hazwoper-refresher-state-plan-versions-available/): 8 Hours, $84.99. Meets State-plan equivalents of federal OSHA standard (see parent course).
-- [Cal/OSHA 8-Hour HAZWOPER Refresher Training](https://lj-web-management.github.io/hazwoperosha.org/courses/cal-osha-8-hour-hazwoper-refresher-training/): 8 Hours, $89.99. Meets 8 CCR 5192(e)(8).
-- [Cal/OSHA 8-hour HAZWOPER TSDF RCRA Refresher Training](https://lj-web-management.github.io/hazwoperosha.org/courses/cal-osha-8-hour-hazwoper-tsdf-rcra-refresher-training/): 8 Hours, $109.99. Meets 8 CCR 5192(p)(8) / RCRA.
-- [Cal/OSHA RCRA Hazardous Waste Training](https://lj-web-management.github.io/hazwoperosha.org/courses/cal-osha-rcra-hazardous-waste-training/): 4 Hours, $49.99. Meets 22 CCR Div. 4.5 / 40 CFR 262.17 / 8 CCR 5192.
+- [Cal/OSHA 40-Hour HAZWOPER Training (2026)](https://www.hazwoperosha.org/courses/cal-osha-40-hour-hazwoper-training/): 40 Hours, $219.99. Meets 8 CCR 5192(e).
+- [Cal/OSHA 24 hour HAZWOPER TSDF RCRA Training](https://www.hazwoperosha.org/courses/cal-osha-24-hour-hazwoper-tsdf-rcra-training/): 24 Hours, $249.99. Meets 8 CCR 5192(p) / RCRA.
+- [Cal/OSHA 24-Hour HAZWOPER Training](https://www.hazwoperosha.org/courses/cal-osha-24-hour-hazwoper-training/): 24 Hours, $169.99. Meets 8 CCR 5192(e).
+- [8 Hour HAZWOPER Refresher - State-Plan Versions Available](https://www.hazwoperosha.org/courses/8-hour-hazwoper-refresher-state-plan-versions-available/): 8 Hours, $84.99. Meets State-plan equivalents of federal OSHA standard (see parent course).
+- [Cal/OSHA 8-Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/cal-osha-8-hour-hazwoper-refresher-training/): 8 Hours, $89.99. Meets 8 CCR 5192(e)(8).
+- [Cal/OSHA 8-hour HAZWOPER TSDF RCRA Refresher Training](https://www.hazwoperosha.org/courses/cal-osha-8-hour-hazwoper-tsdf-rcra-refresher-training/): 8 Hours, $109.99. Meets 8 CCR 5192(p)(8) / RCRA.
+- [Cal/OSHA RCRA Hazardous Waste Training](https://www.hazwoperosha.org/courses/cal-osha-rcra-hazardous-waste-training/): 4 Hours, $49.99. Meets 22 CCR Div. 4.5 / 40 CFR 262.17 / 8 CCR 5192.
 
 ### Hazardous Waste (RCRA) Courses
 
-- [OSHA 24-Hour HAZWOPER - RCRA TSD Operations Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-24-hour-hazwoper-rcra-tsd-operations-training/): 24 Hours, $229.99. Meets 29 CFR 1910.120(p) / RCRA.
-- [OSHA HAZWOPER and RCRA Hazardous Waste Management Technician Safety Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-hazwoper-and-rcra-hazardous-waste-management-technician-safety-training/): 24 Hours, $199.99. Meets 29 CFR 1910.120 / RCRA.
-- [EPA RCRA/DOT Combined Hazardous Materials Compliance Training](https://lj-web-management.github.io/hazwoperosha.org/courses/epa-rcra-dot-combined-hazardous-materials-compliance-training/): 8 Hours, $149.99. Meets RCRA + 49 CFR 172.
-- [OSHA 8 Hour HAZWOPER Annual Refresher - RCRA TSD Operations Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-8-hour-hazwoper-annual-refresher-rcra-tsd-operations-training/): 8 Hours, $99.99. Meets 29 CFR 1910.120(p)(8) / RCRA.
-- [RCRA Hazardous Waste Generator Training](https://lj-web-management.github.io/hazwoperosha.org/courses/rcra-hazardous-waste-generator-training/): 8 Hours, $89.99. Meets 40 CFR 262.17 (RCRA).
-- [Hazardous Waste Contingency Plan and Emergency Coordinator Training](https://lj-web-management.github.io/hazwoperosha.org/courses/hazardous-waste-contingency-plan-and-emergency-coordinator-training/): 4 Hours, $99.99. Meets 40 CFR Parts 262 and 264/265.
-- [RCRA Hazardous Waste Generator Refresher Training](https://lj-web-management.github.io/hazwoperosha.org/courses/rcra-hazardous-waste-generator-refresher-training/): 4 Hours, $59.99. Meets 40 CFR 262.17 (RCRA, annual).
-- [Hazardous Waste Manifest Training](https://lj-web-management.github.io/hazwoperosha.org/courses/hazardous-waste-manifest-training/): 2 Hours, $34.99. Meets 40 CFR 262 Subpart B (RCRA).
-- [Hazardous Waste Satellite Accumulation Area Training](https://lj-web-management.github.io/hazwoperosha.org/courses/hazardous-waste-satellite-accumulation-area-training/): 2 Hours, $59.99. Meets 40 CFR 262.15.
-- [RCRA Universal Waste Handler Training](https://lj-web-management.github.io/hazwoperosha.org/courses/rcra-universal-waste-handler-training/): 2 Hours, $34.99. Meets 40 CFR 273 (RCRA).
+- [OSHA 24-Hour HAZWOPER - RCRA TSD Operations Training](https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-rcra-tsd-operations-training/): 24 Hours, $229.99. Meets 29 CFR 1910.120(p) / RCRA.
+- [OSHA HAZWOPER and RCRA Hazardous Waste Management Technician Safety Training](https://www.hazwoperosha.org/courses/osha-hazwoper-and-rcra-hazardous-waste-management-technician-safety-training/): 24 Hours, $199.99. Meets 29 CFR 1910.120 / RCRA.
+- [EPA RCRA/DOT Combined Hazardous Materials Compliance Training](https://www.hazwoperosha.org/courses/epa-rcra-dot-combined-hazardous-materials-compliance-training/): 8 Hours, $149.99. Meets RCRA + 49 CFR 172.
+- [OSHA 8 Hour HAZWOPER Annual Refresher - RCRA TSD Operations Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-annual-refresher-rcra-tsd-operations-training/): 8 Hours, $99.99. Meets 29 CFR 1910.120(p)(8) / RCRA.
+- [RCRA Hazardous Waste Generator Training](https://www.hazwoperosha.org/courses/rcra-hazardous-waste-generator-training/): 8 Hours, $89.99. Meets 40 CFR 262.17 (RCRA).
+- [Hazardous Waste Contingency Plan and Emergency Coordinator Training](https://www.hazwoperosha.org/courses/hazardous-waste-contingency-plan-and-emergency-coordinator-training/): 4 Hours, $99.99. Meets 40 CFR Parts 262 and 264/265.
+- [RCRA Hazardous Waste Generator Refresher Training](https://www.hazwoperosha.org/courses/rcra-hazardous-waste-generator-refresher-training/): 4 Hours, $59.99. Meets 40 CFR 262.17 (RCRA, annual).
+- [Hazardous Waste Manifest Training](https://www.hazwoperosha.org/courses/hazardous-waste-manifest-training/): 2 Hours, $34.99. Meets 40 CFR 262 Subpart B (RCRA).
+- [Hazardous Waste Satellite Accumulation Area Training](https://www.hazwoperosha.org/courses/hazardous-waste-satellite-accumulation-area-training/): 2 Hours, $59.99. Meets 40 CFR 262.15.
+- [RCRA Universal Waste Handler Training](https://www.hazwoperosha.org/courses/rcra-universal-waste-handler-training/): 2 Hours, $34.99. Meets 40 CFR 273 (RCRA).
 
 ### Short Courses: Spills, Monitoring & PPE
 
-- [OSHA 40 Hour HAZWOPER for Oil & Gas Spill Response](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-40-hour-hazwoper-for-oil-and-gas-spill-response/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
-- [OSHA Air Monitoring and Gas Detection Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-air-monitoring-and-gas-detection-training/): 2 Hours, $49.99. Meets 29 CFR 1910.120 / 1910.146 / 1910.1000.
-- [OSHA Spill Prevention and Response Safety Training](https://lj-web-management.github.io/hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/): 2 Hours, $49.99. Meets 29 CFR 1910.120 / 40 CFR 112.
-- [Spill Response Equipment - Absorbent & Containment Booms](https://lj-web-management.github.io/hazwoperosha.org/courses/spill-response-equipment-absorbent-and-containment-booms/): 1 Hour, $24.99. Meets 40 CFR 112 / 29 CFR 1910.120.
-- [Spill Response Equipment - Spill Kit Selection & Use](https://lj-web-management.github.io/hazwoperosha.org/courses/spill-response-equipment-spill-kit-selection-and-use/): 1 Hour, $24.99. Meets 40 CFR 112 / 29 CFR 1910.120.
-- [HAZWOPER Micro-Module: Air Monitoring & Direct-Reading Instruments](https://lj-web-management.github.io/hazwoperosha.org/courses/hazwoper-micro-module-air-monitoring-and-direct-reading-instruments/): 20 Min, $14.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
-- [HAZWOPER Micro-Module: Decontamination Procedures](https://lj-web-management.github.io/hazwoperosha.org/courses/hazwoper-micro-module-decontamination-procedures/): 20 Min, $14.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
-- [HAZWOPER Micro-Module: Site Characterization & Hazard Assessment](https://lj-web-management.github.io/hazwoperosha.org/courses/hazwoper-micro-module-site-characterization-and-hazard-assessment/): 20 Min, $14.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
-- [HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained](https://lj-web-management.github.io/hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/): 15 Min, $12.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [OSHA 40 Hour HAZWOPER for Oil & Gas Spill Response](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-oil-and-gas-spill-response/): 40 Hours, $249.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [OSHA Air Monitoring and Gas Detection Training](https://www.hazwoperosha.org/courses/osha-air-monitoring-and-gas-detection-training/): 2 Hours, $49.99. Meets 29 CFR 1910.120 / 1910.146 / 1910.1000.
+- [OSHA Spill Prevention and Response Safety Training](https://www.hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/): 2 Hours, $49.99. Meets 29 CFR 1910.120 / 40 CFR 112.
+- [Spill Response Equipment - Absorbent & Containment Booms](https://www.hazwoperosha.org/courses/spill-response-equipment-absorbent-and-containment-booms/): 1 Hour, $24.99. Meets 40 CFR 112 / 29 CFR 1910.120.
+- [Spill Response Equipment - Spill Kit Selection & Use](https://www.hazwoperosha.org/courses/spill-response-equipment-spill-kit-selection-and-use/): 1 Hour, $24.99. Meets 40 CFR 112 / 29 CFR 1910.120.
+- [HAZWOPER Micro-Module: Air Monitoring & Direct-Reading Instruments](https://www.hazwoperosha.org/courses/hazwoper-micro-module-air-monitoring-and-direct-reading-instruments/): 20 Min, $14.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [HAZWOPER Micro-Module: Decontamination Procedures](https://www.hazwoperosha.org/courses/hazwoper-micro-module-decontamination-procedures/): 20 Min, $14.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [HAZWOPER Micro-Module: Site Characterization & Hazard Assessment](https://www.hazwoperosha.org/courses/hazwoper-micro-module-site-characterization-and-hazard-assessment/): 20 Min, $14.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
+- [HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained](https://www.hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/): 15 Min, $12.99. Meets 29 CFR 1910.120(e) / 1926.65(e).
 
 ### Teach HAZWOPER
 
-- [HAZWOPER Train-the-Trainer Certification](https://lj-web-management.github.io/hazwoperosha.org/courses/hazwoper-train-the-trainer-certification/): 24 Hours, $399.99. Meets 29 CFR 1910.120(e).
+- [HAZWOPER Train-the-Trainer Certification](https://www.hazwoperosha.org/courses/hazwoper-train-the-trainer-certification/): 24 Hours, $399.99. Meets 29 CFR 1910.120(e).
 
 ## Lessons
 
-- [How to Read a Safety Data Sheet (SDS): All 16 Sections Explained](https://lj-web-management.github.io/hazwoperosha.org/guides/how-to-read-a-safety-data-sheet/): A section-by-section lesson on reading a GHS safety data sheet: hazard identification, pictograms, signal words, first aid, PPE, exposure limits, stability and spill response.
-- [How to Use the DOT Emergency Response Guidebook (ERG)](https://lj-web-management.github.io/hazwoperosha.org/guides/using-the-dot-emergency-response-guidebook/): Lesson on the DOT Emergency Response Guidebook: the yellow, blue, orange and green sections, UN/NA numbers, placards, highlighted materials and isolation distances.
-- [Toxicology Basics for Hazmat Workers: Dose, Routes and Health Effects](https://lj-web-management.github.io/hazwoperosha.org/guides/toxicology-basics-for-hazmat-workers/): Plain-English toxicology for hazardous waste and hazmat workers: dose-response, LD50 and LC50, local and systemic effects, target organs, carcinogens, sensitizers and synergy.
-- [Respirator Selection and Fit Testing for HAZWOPER Work](https://lj-web-management.github.io/hazwoperosha.org/guides/respirator-selection-and-fit-testing/): How to choose a respirator under OSHA 1910.134: assigned protection factors, maximum use concentration, cartridges and filters, fit testing, seal checks and change schedules.
-- [Heat Stress in Chemical Protective Clothing: Signs, Prevention and Monitoring](https://lj-web-management.github.io/hazwoperosha.org/guides/heat-stress-in-chemical-protective-clothing/): Why chemical protective clothing causes heat stress, the signs of heat exhaustion and heat stroke, work-rest cycles, hydration, acclimatization and physiological monitoring.
-- [Drum and Container Handling at Hazardous Waste Sites](https://lj-web-management.github.io/hazwoperosha.org/guides/drum-and-container-handling/): How HAZWOPER 1910.120(j) governs handling drums and containers: inspection, unlabeled drums, bulging and leaking drums, overpacks, opening, sampling, staging and buried drums.
-- [Confined Spaces at Hazardous Waste Sites: Permits, Roles and Rescue](https://lj-web-management.github.io/hazwoperosha.org/guides/confined-spaces-at-hazardous-waste-sites/): Permit-required confined spaces under OSHA 1910.146 and 1926 Subpart AA on hazardous waste sites: definitions, atmospheric testing order, entrant, attendant and supervisor roles, and rescue.
-- [Hazardous Chemical Spill Response: Step by Step](https://lj-web-management.github.io/hazwoperosha.org/guides/hazardous-chemical-spill-response-steps/): Step-by-step hazardous chemical spill response: incidental vs emergency releases, protecting yourself, isolating the area, identifying the material, containment, spill kits and reporting to the National Response Center.
-- [HAZWOPER Jobs and Careers: Who Hires, What You Need and How to Start](https://lj-web-management.github.io/hazwoperosha.org/guides/hazwoper-jobs-and-careers/): Careers that require HAZWOPER training: environmental technicians, remediation crews, emergency spill responders, TSDF operators, industrial cleaning and field scientists, plus how to get started.
-- [How to Study for the HAZWOPER Final Exam (With the Key Numbers to Know)](https://lj-web-management.github.io/hazwoperosha.org/guides/how-to-study-for-the-hazwoper-exam/): A study plan for the HAZWOPER final exam: how to pace a self-paced course, active recall, practice quizzes, and a table of the key numbers every HAZWOPER student should know.
+- [How to Read a Safety Data Sheet (SDS): All 16 Sections Explained](https://www.hazwoperosha.org/guides/how-to-read-a-safety-data-sheet/): A section-by-section lesson on reading a GHS safety data sheet: hazard identification, pictograms, signal words, first aid, PPE, exposure limits, stability and spill response.
+- [How to Use the DOT Emergency Response Guidebook (ERG)](https://www.hazwoperosha.org/guides/using-the-dot-emergency-response-guidebook/): Lesson on the DOT Emergency Response Guidebook: the yellow, blue, orange and green sections, UN/NA numbers, placards, highlighted materials and isolation distances.
+- [Toxicology Basics for Hazmat Workers: Dose, Routes and Health Effects](https://www.hazwoperosha.org/guides/toxicology-basics-for-hazmat-workers/): Plain-English toxicology for hazardous waste and hazmat workers: dose-response, LD50 and LC50, local and systemic effects, target organs, carcinogens, sensitizers and synergy.
+- [Respirator Selection and Fit Testing for HAZWOPER Work](https://www.hazwoperosha.org/guides/respirator-selection-and-fit-testing/): How to choose a respirator under OSHA 1910.134: assigned protection factors, maximum use concentration, cartridges and filters, fit testing, seal checks and change schedules.
+- [Heat Stress in Chemical Protective Clothing: Signs, Prevention and Monitoring](https://www.hazwoperosha.org/guides/heat-stress-in-chemical-protective-clothing/): Why chemical protective clothing causes heat stress, the signs of heat exhaustion and heat stroke, work-rest cycles, hydration, acclimatization and physiological monitoring.
+- [Drum and Container Handling at Hazardous Waste Sites](https://www.hazwoperosha.org/guides/drum-and-container-handling/): How HAZWOPER 1910.120(j) governs handling drums and containers: inspection, unlabeled drums, bulging and leaking drums, overpacks, opening, sampling, staging and buried drums.
+- [Confined Spaces at Hazardous Waste Sites: Permits, Roles and Rescue](https://www.hazwoperosha.org/guides/confined-spaces-at-hazardous-waste-sites/): Permit-required confined spaces under OSHA 1910.146 and 1926 Subpart AA on hazardous waste sites: definitions, atmospheric testing order, entrant, attendant and supervisor roles, and rescue.
+- [Hazardous Chemical Spill Response: Step by Step](https://www.hazwoperosha.org/guides/hazardous-chemical-spill-response-steps/): Step-by-step hazardous chemical spill response: incidental vs emergency releases, protecting yourself, isolating the area, identifying the material, containment, spill kits and reporting to the National Response Center.
+- [HAZWOPER Jobs and Careers: Who Hires, What You Need and How to Start](https://www.hazwoperosha.org/guides/hazwoper-jobs-and-careers/): Careers that require HAZWOPER training: environmental technicians, remediation crews, emergency spill responders, TSDF operators, industrial cleaning and field scientists, plus how to get started.
+- [How to Study for the HAZWOPER Final Exam (With the Key Numbers to Know)](https://www.hazwoperosha.org/guides/how-to-study-for-the-hazwoper-exam/): A study plan for the HAZWOPER final exam: how to pace a self-paced course, active recall, practice quizzes, and a table of the key numbers every HAZWOPER student should know.
 
 ## Free practice quizzes
 
-- [Safety Data Sheet (SDS) and GHS Label Quiz](https://lj-web-management.github.io/hazwoperosha.org/quizzes/sds-and-ghs-quiz/): 8 questions with answers.
-- [DOT Emergency Response Guidebook (ERG) Quiz](https://lj-web-management.github.io/hazwoperosha.org/quizzes/erg-quiz/): 8 questions with answers.
-- [Toxicology Basics Quiz for Hazmat Workers](https://lj-web-management.github.io/hazwoperosha.org/quizzes/toxicology-quiz/): 8 questions with answers.
-- [Respirator Selection and Fit Testing Quiz](https://lj-web-management.github.io/hazwoperosha.org/quizzes/respirator-quiz/): 8 questions with answers.
-- [Heat Stress in Protective Clothing Quiz](https://lj-web-management.github.io/hazwoperosha.org/quizzes/heat-stress-quiz/): 8 questions with answers.
-- [Hazmat Field Safety Quiz: Drums, Confined Spaces and Spills](https://lj-web-management.github.io/hazwoperosha.org/quizzes/hazmat-field-safety-quiz/): 8 questions with answers.
+- [Safety Data Sheet (SDS) and GHS Label Quiz](https://www.hazwoperosha.org/quizzes/sds-and-ghs-quiz/): 8 questions with answers.
+- [DOT Emergency Response Guidebook (ERG) Quiz](https://www.hazwoperosha.org/quizzes/erg-quiz/): 8 questions with answers.
+- [Toxicology Basics Quiz for Hazmat Workers](https://www.hazwoperosha.org/quizzes/toxicology-quiz/): 8 questions with answers.
+- [Respirator Selection and Fit Testing Quiz](https://www.hazwoperosha.org/quizzes/respirator-quiz/): 8 questions with answers.
+- [Heat Stress in Protective Clothing Quiz](https://www.hazwoperosha.org/quizzes/heat-stress-quiz/): 8 questions with answers.
+- [Hazmat Field Safety Quiz: Drums, Confined Spaces and Spills](https://www.hazwoperosha.org/quizzes/hazmat-field-safety-quiz/): 8 questions with answers.
 
 ## FAQ
 
@@ -110,4 +110,4 @@
 
 ## Full text
 
-The full text of every guide, the glossary and all quiz questions with answers is at https://lj-web-management.github.io/hazwoperosha.org/llms-full.txt
+The full text of every guide, the glossary and all quiz questions with answers is at https://www.hazwoperosha.org/llms-full.txt

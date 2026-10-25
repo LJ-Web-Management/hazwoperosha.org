@@ -5,7 +5,7 @@ const RED = '#c8102e';
 const shield = (fill, check) => `<svg class="wm-mark" viewBox="0 0 34 38" width="30" height="34" aria-hidden="true"><path d="M17 2 32 7v11c0 9.5-6.4 15.6-15 18C8.4 33.6 2 27.5 2 18V7Z" fill="${fill}"/><path d="M10.5 19.5 15 24l9-10" fill="none" stroke="${check}" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
 module.exports = {
-  url: 'https://lj-web-management.github.io/hazwoperosha.org',
+  url: 'https://www.hazwoperosha.org',
   brand: 'HazwoperOSHA.org',
   legalName: 'HAZWOPER OSHA Training LLC',
   orderFrom: 'hazwoperosha-org',
