@@ -15,6 +15,15 @@ module.exports = {
   // Google Analytics 4 (gtag.js). checkout.js and quiz.js send events through window.gtag.
   headExtra: '<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2MZHM31RK"></script>\n'
     + '<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'G-H2MZHM31RK\');</script>\n'
+    // Microsoft Clarity
+    + `<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z3cea3et53");
+</script>
+`
     + '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">\n',
   logo: (rel, where) => `<span class="wm">${where === 'footer' ? shield(RED, '#fff') : shield('#fff', RED)}<span class="wm-text">Hazwoper<b>OSHA</b><small>.org</small></span></span>`,
