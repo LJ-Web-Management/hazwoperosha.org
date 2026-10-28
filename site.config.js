@@ -12,7 +12,10 @@ module.exports = {
   themeColor: RED,
   shareImage: 'assets/share.png',
   sameAs: ['https://hazwoper-osha.com/'],
-  headExtra: '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+  // Google Analytics 4 (gtag.js). checkout.js and quiz.js send events through window.gtag.
+  headExtra: '<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2MZHM31RK"></script>\n'
+    + '<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'G-H2MZHM31RK\');</script>\n'
+    + '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">\n',
   logo: (rel, where) => `<span class="wm">${where === 'footer' ? shield(RED, '#fff') : shield('#fff', RED)}<span class="wm-text">Hazwoper<b>OSHA</b><small>.org</small></span></span>`,
 };
