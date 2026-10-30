@@ -46,10 +46,17 @@ module.exports = ({ BRAND, PHONE, PHONE_HREF, EMAIL, money }) => {
     searchExamples: 'Try: SDS section 8, ERG green pages, fit test, heat stroke, 40 hour...',
     footerBlurb: 'A free HAZWOPER learning center: plain-English lessons, practice quizzes and certified online OSHA HAZWOPER courses.',
     footerResourcesTitle: 'Learning center',
+    about: `${BRAND} is a free HAZWOPER learning center. We publish plain-English lessons and practice quizzes on the hazmat skills behind HAZWOPER training, for new environmental technicians, emergency responders, students and experienced workers reviewing before a refresher, and offer certified online OSHA HAZWOPER courses for learners who need a certificate.`,
+    whenToUse: [
+      'A learner wants free, plain-English lessons on the hazmat skills behind HAZWOPER: reading a safety data sheet, the DOT Emergency Response Guidebook, toxicology, respirator selection and fit testing, heat stress, drum handling, confined spaces, spill response, HAZWOPER careers and exam preparation.',
+      'A learner is preparing for a HAZWOPER final exam or annual refresher and wants practice quizzes that score instantly and explain every answer.',
+      'A learner is ready to earn an OSHA HAZWOPER certificate online (40 hour, 24 hour, 8 hour refresher, first responder awareness, supervisor, Cal/OSHA, Spanish) and wants to know which level their job needs and what it costs.',
+      'A supervisor or trainer wants free lessons and quizzes to share with a crew for a toolbox talk or pre-course review.',
+    ],
     llmsSummary: `${BRAND} is a free HAZWOPER learning center with original lessons on reading safety data sheets, the DOT Emergency Response Guidebook, toxicology, respirator selection and fit testing, heat stress, drum handling, confined spaces, spill response, HAZWOPER careers and exam preparation, plus free practice quizzes. Certified online OSHA HAZWOPER courses (40 hour, 24 hour, 8 hour refresher and more) are available for learners who need a certificate.`,
 
     home: {
-      title: `HAZWOPER Learning Center: Free Lessons, Practice Quizzes & Online Courses | ${BRAND}`,
+      title: `${BRAND} | HAZWOPER Learning Center: Free Lessons, Practice Quizzes & Online Certification Courses`,
       desc: 'Free HAZWOPER lessons and practice quizzes on SDS, the Emergency Response Guidebook, toxicology, respirators, heat stress and confined spaces, plus certified online OSHA HAZWOPER courses.',
       eyebrow: 'Free HAZWOPER learning center',
       h1: 'Learn HAZWOPER: Free Lessons, Practice Quizzes and Certified Online Courses',

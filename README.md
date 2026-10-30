@@ -19,7 +19,8 @@ node tools/build.js
 ```
 
 Generated pages (`index.html`, `courses/`, `guides/`, `quizzes/`, `search/`, `checkout.html`,
-`sitemap.xml`, `llms.txt`, `llms-full.txt`, `404.html`, `assets/config.js`,
+`sitemap.xml`, `llms.txt`, `llms-full.txt`, `404.html`, `404.md`, `courses.json`, `about/`,
+`contact/`, `privacy/`, every page's `index.md`, `assets/config.js`,
 `assets/search-index.js`) are committed. `.github/workflows/pages.yml` rebuilds and deploys to
 GitHub Pages on every push to `main`.
 
@@ -36,7 +37,44 @@ assets/style.css     this site's design
 assets/cart.js       cart (localStorage) + header badge
 assets/checkout.js   checkout: Stripe card, then one add_order call with every course id in the cart
 assets/quiz.js, assets/site-search.js, assets/search.js
+edge/                Cloudflare Worker for Markdown content negotiation (see AI agents)
+tests/               build checks: node --test tests/*.test.js
 ```
+
+## AI agents
+
+`tools/build.js` also writes what AI agents and the Is Agentic (is-agentic.com) checks look for:
+
+- `about/`, `contact/`, `privacy/`: trust pages linked from every footer. Company address and the
+  pages' "last updated" date (`ADDRESS`, `TRUST_UPDATED`) are at the top of `tools/build.js`;
+  `about` (opening paragraph) can be set per site in `data/copy.js`. The privacy page lists the
+  analytics found in `site.config.js`, so update it if tracking changes.
+- An `Organization` JSON-LD block (address, contactPoint) first on every page; the `@graph`
+  refers to it by `@id`.
+- `index.md` next to every content page, converted from the page's `<main>` and linked with
+  `<link rel="alternate" type="text/markdown">`; `404.md`; `courses.json` (catalog with
+  page, Markdown and checkout links).
+- `llms.txt` sections "When to use" (`whenToUse` in `data/copy.js`) and "How agents can use
+  this site".
+
+`node --test tests/*.test.js` checks all of this after a build, and the deploy workflow runs it
+before publishing.
+
+### Markdown content negotiation (`edge/`)
+
+GitHub Pages can't vary a response on the `Accept` header, so `Accept: text/markdown` requests
+for `/` and Markdown 404 bodies need a layer in front of it. `edge/worker.mjs` is a Cloudflare
+Worker that does this the way https://acceptmarkdown.com describes: q-value parsing,
+`Content-Type: text/markdown; charset=utf-8`, `Vary: Accept`, 406 for unsupported types, a
+`404.md` body for unknown paths, and a `Link` header from each HTML page to its Markdown version.
+To switch it on:
+
+1. Put the domain's DNS on Cloudflare, with `www` as a proxied CNAME to
+   `lj-web-management.github.io` and SSL/TLS mode "Full".
+2. `cd edge && npx wrangler login && npx wrangler deploy` (route and zone are in `edge/wrangler.toml`).
+3. Check: `curl -sS -i -H 'Accept: text/markdown' https://www.hazwoperosha.org/` returns Markdown with
+   `Vary: Accept`, `curl -sS -i -H 'Accept: text/html' https://www.hazwoperosha.org/` returns HTML, and
+   `curl -sS -i -H 'Accept: text/markdown' https://www.hazwoperosha.org/no-such-page` returns 404 with Markdown.
 
 ## Checkout
 
