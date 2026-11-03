@@ -1,6 +1,6 @@
 # Hazardous Chemical Spill Response: Step by Step
 
-Free lesson · 2 min read · Updated 2026-10-30
+Free lesson · 2 min read · Updated 2026-11-03
 
 What you should do about a chemical spill depends first on one question: is it an **incidental release** or an **emergency**? The answer decides whether you clean it up or get away and call for help.
 

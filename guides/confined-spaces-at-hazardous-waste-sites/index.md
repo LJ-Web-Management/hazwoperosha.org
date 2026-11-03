@@ -1,6 +1,6 @@
 # Confined Spaces at Hazardous Waste Sites: Permits, Roles and Rescue
 
-Free lesson · 2 min read · Updated 2026-10-30
+Free lesson · 2 min read · Updated 2026-11-03
 
 Tanks, vaults, pits, sumps, sewers and trenches are common at cleanup sites, and the HAZWOPER site safety and health plan must include confined space entry procedures. The detailed rules come from OSHA's confined space standards: 29 CFR 1910.146 for general industry and 29 CFR 1926 Subpart AA for construction.
 

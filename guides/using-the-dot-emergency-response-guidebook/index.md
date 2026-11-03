@@ -1,6 +1,6 @@
 # How to Use the DOT Emergency Response Guidebook (ERG)
 
-Free lesson · 2 min read · Updated 2026-10-30
+Free lesson · 2 min read · Updated 2026-11-03
 
 The **Emergency Response Guidebook (ERG)** is published by the U.S. Department of Transportation's Pipeline and Hazardous Materials Safety Administration with Transport Canada and Mexico's transportation agency. It is written for first responders in the first 30 minutes of a transportation incident involving hazardous materials, before more detailed information is available. HAZWOPER awareness-level responders are expected to know how to use it. A new edition comes out about every four years.
 

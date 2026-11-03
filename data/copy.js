@@ -45,6 +45,10 @@ module.exports = ({ BRAND, PHONE, PHONE_HREF, EMAIL, money }) => {
     searchPlaceholder: 'Search lessons, quizzes, courses...',
     searchExamples: 'Try: SDS section 8, ERG green pages, fit test, heat stroke, 40 hour...',
     footerBlurb: 'A free HAZWOPER learning center: plain-English lessons, practice quizzes and certified online OSHA HAZWOPER courses.',
+    // Main product terms, most important first. They become the homepage's meta keywords, WebSite JSON-LD
+    // keywords and Organization knowsAbout; search checks pair the brand with them ("HazwoperOSHA HAZWOPER
+    // learning center"), so each one must also appear in the homepage title or text (tests/site.test.js).
+    keywords: ['HAZWOPER learning center', 'HAZWOPER training', 'online HAZWOPER courses', '40 hour HAZWOPER', '8 hour HAZWOPER refresher', 'first responder awareness'],
     footerResourcesTitle: 'Learning center',
     about: `${BRAND} is a free HAZWOPER learning center. We publish plain-English lessons and practice quizzes on the hazmat skills behind HAZWOPER training, for new environmental technicians, emergency responders, students and experienced workers reviewing before a refresher, and offer certified online OSHA HAZWOPER courses for learners who need a certificate.`,
     whenToUse: [
