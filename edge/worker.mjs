@@ -105,7 +105,8 @@ export async function handle(request, origin) {
   const mdUrl = new URL(markdownPath(url.pathname), url);
   if (chosen === 'text/markdown') {
     const md = await origin(new Request(mdUrl, request));
-    if (md.status === 200) return withVary(md, { 'Content-Type': MARKDOWN });
+    // 304: the client revalidated the Markdown it already has (If-None-Match carries the .md ETag).
+    if (md.status === 200 || md.status === 304) return withVary(md, { 'Content-Type': MARKDOWN });
     const page = await origin(request);
     if (page.status === 404) return markdownNotFound(url, request.method, origin);
     // The page exists but has no Markdown version (checkout, search): HTML if the client allows it.

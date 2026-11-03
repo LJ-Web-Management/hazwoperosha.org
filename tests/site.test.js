@@ -55,6 +55,27 @@ test('homepage metadata: lang, canonical, og:image, og:type and a brand-first ti
   assert.ok(new URL(SITE_URL).hostname.replace(/^www\./, '').toLowerCase() === BRAND.toLowerCase(), 'brand matches the domain');
 });
 
+test('homepage names its main product terms in meta keywords, WebSite keywords and Organization knowsAbout, and uses them on the page', () => {
+  const meta = /<meta name="keywords" content="([^"]+)">/.exec(INDEX);
+  assert.ok(meta, 'homepage has a meta keywords tag');
+  const terms = meta[1].split(', ');
+  assert.ok(terms.length >= 3);
+  const [org, rest] = jsonLd(INDEX);
+  assert.deepEqual(org.knowsAbout, terms, 'Organization.knowsAbout lists the same terms');
+  assert.equal(rest['@graph'].find(n => n['@type'] === 'WebSite').keywords, meta[1], 'WebSite.keywords lists the same terms');
+  const title = /<title>([^<]+)<\/title>/.exec(INDEX)[1].replace(/&amp;/g, '&');
+  const page = `${title} ${visibleText(INDEX)}`.toLowerCase();
+  for (const t of terms) assert.ok(page.includes(t.toLowerCase()), `"${t}" appears in the homepage title or text`);
+  assert.ok(title.toLowerCase().includes(terms[0].toLowerCase()), `the main term "${terms[0]}" is in the title`);
+  for (const f of HTML_FILES.filter(f => f !== 'index.html')) assert.doesNotMatch(read(f), /<meta name="keywords"/, `${f}: keywords only on the homepage`);
+});
+
+test('IndexNow key file at the site root holds the key and nothing else', () => {
+  const key = require('../site.config.js').indexNowKey;
+  assert.match(key, /^[a-zA-Z0-9-]{8,128}$/);
+  assert.equal(read(`${key}.txt`), key);
+});
+
 test('every page with JSON-LD leads with a complete Organization block', () => {
   for (const f of HTML_FILES.filter(f => read(f).includes('application/ld+json'))) {
     const [org, rest] = jsonLd(read(f));

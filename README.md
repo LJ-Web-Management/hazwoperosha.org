@@ -21,7 +21,7 @@ node tools/build.js
 Generated pages (`index.html`, `courses/`, `guides/`, `quizzes/`, `search/`, `checkout.html`,
 `sitemap.xml`, `llms.txt`, `llms-full.txt`, `404.html`, `404.md`, `courses.json`, `about/`,
 `contact/`, `privacy/`, every page's `index.md`, `assets/config.js`,
-`assets/search-index.js`) are committed. `.github/workflows/pages.yml` rebuilds and deploys to
+`assets/search-index.js`, the IndexNow key file `<indexNowKey>.txt`) are committed. `.github/workflows/pages.yml` rebuilds and deploys to
 GitHub Pages on every push to `main`.
 
 ## Files
@@ -33,12 +33,14 @@ data/source.json     course catalog          data/lms-ids.json  LMS course id pe
 data/guides.js       guide articles          data/glossary.js   glossary terms
 data/quizzes.js      practice quizzes
 tools/build.js       generator
+tools/check-live.mjs agent-readiness checks against the deployed site (see AI agents)
+tools/indexnow.mjs   sends the sitemap URLs to IndexNow search engines after each deploy
 assets/style.css     this site's design
 assets/cart.js       cart (localStorage) + header badge
 assets/checkout.js   checkout: Stripe card, then one add_order call with every course id in the cart
 assets/quiz.js, assets/site-search.js, assets/search.js
 edge/                Cloudflare Worker for Markdown content negotiation (see AI agents)
-tests/               build checks: node --test tests/*.test.js
+tests/               build, worker and tool checks: node --test tests/*.test.js
 ```
 
 ## AI agents
@@ -56,9 +58,18 @@ tests/               build checks: node --test tests/*.test.js
   page, Markdown and checkout links).
 - `llms.txt` sections "When to use" (`whenToUse` in `data/copy.js`) and "How agents can use
   this site".
+- Main product terms (`keywords` in `data/copy.js`, most important first) as the homepage's
+  `<meta name="keywords">`, the WebSite JSON-LD `keywords` and the Organization `knowsAbout`.
+  Brand-discoverability checks search the brand plus these terms (for example "HazwoperOSHA
+  HAZWOPER learning center"), so keep each term in the homepage title or text; a test enforces it.
+- IndexNow (https://www.indexnow.org): the key in `site.config.js` (`indexNowKey`, public by design)
+  is published as `/<key>.txt`, and after each deploy `tools/indexnow.mjs` sends every sitemap URL to
+  Bing and the other IndexNow engines. `node tools/indexnow.mjs --dry-run` prints the request.
 
 `node --test tests/*.test.js` checks all of this after a build, and the deploy workflow runs it
-before publishing.
+before publishing. `node tools/check-live.mjs [https://hazwoperosha.org]` runs the same checks the
+audits run against the live site (Markdown negotiation on `/`, Markdown 404s, llms.txt, sitemap,
+robots.txt, courses.json, the IndexNow key) and exits non-zero if any fail.
 
 ### Markdown content negotiation (`edge/`)
 
@@ -67,14 +78,29 @@ for `/` and Markdown 404 bodies need a layer in front of it. `edge/worker.mjs` i
 Worker that does this the way https://acceptmarkdown.com describes: q-value parsing,
 `Content-Type: text/markdown; charset=utf-8`, `Vary: Accept`, 406 for unsupported types, a
 `404.md` body for unknown paths, and a `Link` header from each HTML page to its Markdown version.
-To switch it on:
 
-1. Put the domain's DNS on Cloudflare, with `www` as a proxied CNAME to
-   `lj-web-management.github.io` and SSL/TLS mode "Full".
-2. `cd edge && npx wrangler login && npx wrangler deploy` (route and zone are in `edge/wrangler.toml`).
-3. Check: `curl -sS -i -H 'Accept: text/markdown' https://www.hazwoperosha.org/` returns Markdown with
-   `Vary: Accept`, `curl -sS -i -H 'Accept: text/html' https://www.hazwoperosha.org/` returns HTML, and
-   `curl -sS -i -H 'Accept: text/markdown' https://www.hazwoperosha.org/no-such-page` returns 404 with Markdown.
+Until it is deployed, the live site fails the Markdown negotiation check and gets only partial
+credit for 404s: GitHub Pages answers `Accept: text/markdown` with HTML and `Vary: Accept-Encoding`.
+The domain's DNS is at GoDaddy (`ns65/ns66.domaincontrol.com`), so the Worker can't run yet. To
+switch it on:
+
+1. Add `hazwoperosha.org` to Cloudflare (the same account as hazwoperosha.us) and change the
+   nameservers at GoDaddy to the two Cloudflare assigns. Keep the records: apex `A` to
+   `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`, and `www` as a
+   CNAME to `lj-web-management.github.io`, both proxied. Set SSL/TLS mode to "Full".
+2. Create a Cloudflare API token from the "Edit Cloudflare Workers" template, limited to that
+   account and the `hazwoperosha.org` zone. Add it to this repository as the Actions secret
+   `CLOUDFLARE_API_TOKEN`, and the account ID as `CLOUDFLARE_ACCOUNT_ID`.
+3. Run the "Deploy edge worker" workflow (Actions tab, Run workflow). It also runs on every push to
+   `main` that changes `edge/`. It tests the Worker, deploys it with the route in
+   `edge/wrangler.toml`, then runs `tools/check-live.mjs` against https://hazwoperosha.org. Without
+   the secret it only tests the Worker. To deploy by hand instead:
+   `cd edge && npx wrangler login && npx wrangler deploy`.
+4. Check: `node tools/check-live.mjs https://hazwoperosha.org`, or the audit's own commands:
+   `curl -sS -L -i -H 'Accept: text/markdown' https://hazwoperosha.org/` returns Markdown with
+   `Vary: Accept`, `curl -sS -L -i -H 'Accept: text/html' https://hazwoperosha.org/` returns HTML, and
+   `curl -sS -L -i -H 'Accept: text/markdown' https://hazwoperosha.org/no-such-page` returns 404 with a
+   Markdown body.
 
 ## Checkout
 

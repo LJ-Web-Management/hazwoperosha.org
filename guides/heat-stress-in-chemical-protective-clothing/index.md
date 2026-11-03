@@ -1,6 +1,6 @@
 # Heat Stress in Chemical Protective Clothing: Signs, Prevention and Monitoring
 
-Free lesson · 3 min read · Updated 2026-10-30
+Free lesson · 3 min read · Updated 2026-11-03
 
 On many hazardous waste sites, heat hurts more people than chemicals do. Chemical protective clothing is designed to keep liquids and vapors out, which also stops sweat from evaporating, and evaporation is the body's main way of cooling off. Workers in Level A or B can overheat even on a mild day.
 

@@ -1,6 +1,6 @@
 # Toxicology Basics for Hazmat Workers: Dose, Routes and Health Effects
 
-Free lesson · 2 min read · Updated 2026-10-30
+Free lesson · 2 min read · Updated 2026-11-03
 
 Toxicology is the study of how chemicals harm living things. You don't need a degree to use its basic ideas, and they explain most of the safety rules you follow on a hazardous waste site.
 

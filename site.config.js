@@ -12,6 +12,9 @@ module.exports = {
   themeColor: RED,
   shareImage: 'assets/share.png',
   sameAs: ['https://hazwoper-osha.com/'],
+  // IndexNow key (https://www.indexnow.org/documentation). Public by design: tools/build.js publishes it as
+  // /<key>.txt and tools/indexnow.mjs sends it with the sitemap URLs after each deploy.
+  indexNowKey: 'a501cac3214e2d4bf214e62e7d294bd7',
   // Google Analytics 4 (gtag.js). checkout.js and quiz.js send events through window.gtag.
   headExtra: '<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2MZHM31RK"></script>\n'
     + '<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'G-H2MZHM31RK\');</script>\n'

@@ -5,31 +5,7 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.join(__dirname, '..');
-const SITE_URL = /<link rel="canonical" href="([^"]+?)\/?">/.exec(fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8'))[1];
-const TYPES = { '.html': 'text/html; charset=utf-8', '.md': 'text/markdown; charset=utf-8', '.txt': 'text/plain; charset=utf-8',
-  '.xml': 'application/xml', '.json': 'application/json; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'application/javascript; charset=utf-8', '.png': 'image/png' };
-
-// GitHub Pages stand-in: directories redirect to a trailing slash and serve index.html; anything else
-// missing is a 404 with 404.html.
-const originCalls = [];
-async function pages(request) {
-  originCalls.push(new URL(request.url).pathname);
-  const url = new URL(request.url);
-  const file = path.join(ROOT, decodeURIComponent(url.pathname));
-  let target = null;
-  if (file.startsWith(ROOT) && fs.existsSync(file)) {
-    if (fs.statSync(file).isDirectory()) {
-      if (!url.pathname.endsWith('/')) return new Response(null, { status: 301, headers: { Location: url.pathname + '/', 'Vary': 'Accept-Encoding' } });
-      if (fs.existsSync(path.join(file, 'index.html'))) target = path.join(file, 'index.html');
-    } else target = file;
-  }
-  const status = target ? 200 : 404;
-  target = target || path.join(ROOT, '404.html');
-  return new Response(request.method === 'HEAD' ? null : fs.readFileSync(target), {
-    status, headers: { 'Content-Type': TYPES[path.extname(target)] || 'application/octet-stream', 'Vary': 'Accept-Encoding' },
-  });
-}
+const { ROOT, SITE_URL, pages, originCalls, etagOf } = require('./github-pages.js');
 
 let worker;
 before(async () => { worker = await import('../edge/worker.mjs'); });
@@ -130,6 +106,18 @@ test('a page without a Markdown version falls back to HTML only when HTML is acc
   assert.equal(ok.status, 200);
   assert.match(ok.headers.get('content-type'), /^text\/html/);
   assert.equal((await get('/checkout.html', 'text/markdown')).status, 406);
+});
+
+test('revalidating a Markdown copy gets 304 for the Markdown, not HTML or 406', async () => {
+  const etag = etagOf(path.join(ROOT, 'index.md'));
+  const res = await worker.handle(new Request(SITE_URL + '/', { headers: { accept: 'text/markdown', 'if-none-match': etag } }), pages);
+  assert.equal(res.status, 304);
+  assert.equal(res.headers.get('etag'), etag);
+  assert.equal(res.headers.get('content-type'), 'text/markdown; charset=utf-8');
+  assert.ok(varyAccept(res));
+  const stale = await worker.handle(new Request(SITE_URL + '/', { headers: { accept: 'text/markdown', 'if-none-match': '"stale"' } }), pages);
+  assert.equal(stale.status, 200);
+  assert.equal(await stale.text(), fs.readFileSync(path.join(ROOT, 'index.md'), 'utf8'));
 });
 
 test('HEAD requests negotiate without a body', async () => {

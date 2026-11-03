@@ -1,6 +1,6 @@
 # Respirator Selection and Fit Testing for HAZWOPER Work
 
-Free lesson · 2 min read · Updated 2026-10-30
+Free lesson · 2 min read · Updated 2026-11-03
 
 Respirators are covered by their own OSHA standard, **29 CFR 1910.134**, which applies on top of HAZWOPER. Any employer that requires respirators needs a written respiratory protection program run by a qualified program administrator.
 

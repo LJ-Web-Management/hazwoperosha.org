@@ -33,9 +33,16 @@ jobs:
         run: |
           mkdir _site
           cp -r index.html index.md checkout.html 404.html 404.md robots.txt sitemap.xml llms.txt llms-full.txt courses.json .nojekyll CNAME assets courses guides quizzes search about contact privacy _site/
+          KEY=$(node -p "require('./site.config.js').indexNowKey || ''")
+          if [ -n "$KEY" ]; then cp "$KEY.txt" _site/; fi
       - uses: actions/configure-pages@v5
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
       - id: deployment
         uses: actions/deploy-pages@v4
+      # Bing and the other IndexNow engines hear about every sitemap URL as soon as it is live. A failed
+      # ping is logged but never fails the deploy.
+      - name: Submit URLs to IndexNow
+        continue-on-error: true
+        run: node tools/indexnow.mjs

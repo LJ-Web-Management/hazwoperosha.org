@@ -58,6 +58,8 @@ const jsonLd = obj => `<script type="application/ld+json">${JSON.stringify(obj).
 const COPY = fs.existsSync(path.join(ROOT, 'data/copy.js'))
   ? require('../data/copy.js')({ BRAND, PHONE, PHONE_HREF, EMAIL, money }) : {};
 const HOME = COPY.home || {};
+// Main product terms (most important first): homepage meta keywords, WebSite keywords and Organization knowsAbout.
+const KEYWORDS = COPY.keywords || ['HAZWOPER training', 'OSHA HAZWOPER certification', '40 hour HAZWOPER', '24 hour HAZWOPER', '8 hour HAZWOPER refresher', 'RCRA hazardous waste training'];
 const COURSE_COPY = COPY.course || {};
 const GUIDE_COPY = COPY.guides || {};
 const QUIZ_COPY = COPY.quizzes || {};
@@ -125,7 +127,7 @@ const FAQ = COPY.faq || [
 ];
 
 // ---------- layout ----------
-function head({ title, desc, canonical, extra = '', depth = 0 }) {
+function head({ title, desc, canonical, extra = '', depth = 0, keywords }) {
   const rel = depth ? '../'.repeat(depth) : '';
   return `<!doctype html>
 <html lang="en">
@@ -143,7 +145,7 @@ ${GA_ID ? `<!-- Google tag (gtag.js) -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<link rel="canonical" href="${canonical}">
+${keywords ? `<meta name="keywords" content="${esc(keywords.join(', '))}">\n` : ''}<link rel="canonical" href="${canonical}">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${BRAND}">
@@ -380,7 +382,7 @@ const quizzesFor = slug => QUIZZES.filter(q => q.course === slug);
 const orgLd = {
   '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: BRAND, legalName: LEGAL_NAME, url: SITE_URL + '/',
   description: COPY.footerBlurb || 'Online OSHA HAZWOPER, RCRA and hazardous materials training for workers, supervisors and employers across the United States.',
-  sameAs: SAME_AS, logo: `${SITE_URL}/${SHARE_IMAGE}`,
+  sameAs: SAME_AS, logo: `${SITE_URL}/${SHARE_IMAGE}`, knowsAbout: KEYWORDS,
   email: EMAIL, telephone: PHONE, areaServed: 'US',
   address: { '@type': 'PostalAddress', ...ADDRESS },
   contactPoint: { '@type': 'ContactPoint', telephone: PHONE, email: EMAIL, contactType: 'sales', areaServed: 'US', availableLanguage: ['English', 'Spanish'] },
@@ -406,7 +408,7 @@ function buildIndex() {
   const title = HOME.title || `${BRAND} | HAZWOPER Training Online: OSHA 40, 24 & 8 Hour Certification`;
   const desc = HOME.desc || `Online OSHA HAZWOPER training: 40 hour from ${money(249.99)}, 24 hour, 8 hour refresher, supervisor, first responder, Cal/OSHA, Spanish and RCRA. ${total} courses, instant certificates, 29 CFR 1910.120 compliant.`;
   const ld = ldBlocks([
-    { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: SITE_URL + '/', name: `${BRAND} - HAZWOPER Courses`, publisher: { '@id': `${SITE_URL}/#organization` } },
+    { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: SITE_URL + '/', name: `${BRAND} - HAZWOPER Courses`, keywords: KEYWORDS.join(', '), publisher: { '@id': `${SITE_URL}/#organization` } },
     { '@type': 'ItemList', name: 'HAZWOPER Training Courses', numberOfItems: total,
       itemListElement: courses.map((c, i) => ({ '@type': 'ListItem', position: i + 1, item: courseLd(c) })) },
     faqLd(FAQ),
@@ -425,7 +427,7 @@ function buildIndex() {
 </section>`;
   }).join('\n');
 
-  const html = head({ title, desc, canonical: SITE_URL + '/', extra: ld }) + `
+  const html = head({ title, desc, canonical: SITE_URL + '/', extra: ld, keywords: KEYWORDS }) + `
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -985,6 +987,12 @@ function buildExtras() {
 ${urls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${TODAY}</lastmod><priority>${u.pri}</priority></url>`).join('\n')}
 </urlset>
 `);
+  // IndexNow key file (https://www.indexnow.org/documentation): the key alone, UTF-8, at /<key>.txt. It lets
+  // tools/indexnow.mjs tell Bing and the other IndexNow search engines about this host's URLs.
+  if (SITE.indexNowKey) {
+    if (!/^[a-zA-Z0-9-]{8,128}$/.test(SITE.indexNowKey)) throw new Error('site.config.js indexNowKey must be 8 to 128 characters of a-z, A-Z, 0-9 and -');
+    fs.writeFileSync(path.join(ROOT, `${SITE.indexNowKey}.txt`), SITE.indexNowKey);
+  }
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *
 Allow: /
 
