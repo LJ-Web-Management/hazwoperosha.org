@@ -1,6 +1,6 @@
 # How to Study for the HAZWOPER Final Exam (With the Key Numbers to Know)
 
-Free lesson · 2 min read · Updated 2026-11-03
+Free lesson · 2 min read · Updated 2026-11-10
 
 A self-paced online course gives you control over your schedule, which is both its best feature and its biggest trap. These habits help you finish on time and walk into the final exam confident.
 
@@ -75,7 +75,7 @@ This guide summarizes federal OSHA, Cal/OSHA and EPA rules for training purposes
 
 [OSHA 8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/)
 
-8 Hours · **$89.99**
+8 Hours · **$59.99**
 
 ## Test yourself
 

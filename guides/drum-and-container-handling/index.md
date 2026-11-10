@@ -1,6 +1,6 @@
 # Drum and Container Handling at Hazardous Waste Sites
 
-Free lesson · 2 min read · Updated 2026-11-03
+Free lesson · 2 min read · Updated 2026-11-10
 
 Drums are where many of the worst accidents at cleanup sites start: a corroded drum splits when lifted, an unknown liquid reacts with another, or a bulging drum ruptures when someone loosens the bung. Paragraph (j) of the HAZWOPER standard sets out rules for handling, transporting, labeling and disposing of drums and containers.
 
@@ -62,10 +62,6 @@ This guide summarizes federal OSHA, Cal/OSHA and EPA rules for training purposes
 ## Earn a certificate
 
 [OSHA 40 Hour HAZWOPER Training](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/)
-
-40 Hours · **$249.99**
-
-[OSHA 40 Hour HAZWOPER for Environmental Remediation](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-environmental-remediation/)
 
 40 Hours · **$249.99**
 

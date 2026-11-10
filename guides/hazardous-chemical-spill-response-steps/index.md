@@ -1,6 +1,6 @@
 # Hazardous Chemical Spill Response: Step by Step
 
-Free lesson · 2 min read · Updated 2026-11-03
+Free lesson · 2 min read · Updated 2026-11-10
 
 What you should do about a chemical spill depends first on one question: is it an **incidental release** or an **emergency**? The answer decides whether you clean it up or get away and call for help.
 
@@ -64,11 +64,7 @@ This guide summarizes federal OSHA, Cal/OSHA and EPA rules for training purposes
 
 [OSHA Spill Prevention and Response Safety Training](https://www.hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/)
 
-2 Hours · **$49.99**
-
-[Spill Response Equipment - Spill Kit Selection & Use](https://www.hazwoperosha.org/courses/spill-response-equipment-spill-kit-selection-and-use/)
-
-1 Hour · **$24.99**
+2 Hours · **$29.99**
 
 [OSHA 4-Hour HAZWOPER First Responder Awareness Level Training](https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/)
 

@@ -1,6 +1,6 @@
 # Confined Spaces at Hazardous Waste Sites: Permits, Roles and Rescue
 
-Free lesson · 2 min read · Updated 2026-11-03
+Free lesson · 2 min read · Updated 2026-11-10
 
 Tanks, vaults, pits, sumps, sewers and trenches are common at cleanup sites, and the HAZWOPER site safety and health plan must include confined space entry procedures. The detailed rules come from OSHA's confined space standards: 29 CFR 1910.146 for general industry and 29 CFR 1926 Subpart AA for construction.
 
@@ -71,7 +71,7 @@ This guide summarizes federal OSHA, Cal/OSHA and EPA rules for training purposes
 
 [OSHA 8 Hour HAZWOPER Supervisor Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
 
-8 Hours · **$179.99**
+8 Hours · **$69.99**
 
 ## Test yourself
 

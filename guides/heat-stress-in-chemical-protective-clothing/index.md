@@ -1,6 +1,6 @@
 # Heat Stress in Chemical Protective Clothing: Signs, Prevention and Monitoring
 
-Free lesson · 3 min read · Updated 2026-11-03
+Free lesson · 3 min read · Updated 2026-11-10
 
 On many hazardous waste sites, heat hurts more people than chemicals do. Chemical protective clothing is designed to keep liquids and vapors out, which also stops sweat from evaporating, and evaporation is the body's main way of cooling off. Workers in Level A or B can overheat even on a mild day.
 
@@ -68,13 +68,9 @@ This guide summarizes federal OSHA, Cal/OSHA and EPA rules for training purposes
 
 40 Hours · **$249.99**
 
-[HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained](https://www.hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/)
-
-15 Min · **$12.99**
-
 [OSHA 8 Hour HAZWOPER Supervisor Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
 
-8 Hours · **$179.99**
+8 Hours · **$69.99**
 
 ## Test yourself
 

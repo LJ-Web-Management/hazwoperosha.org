@@ -1,6 +1,6 @@
 # How to Use the DOT Emergency Response Guidebook (ERG)
 
-Free lesson · 2 min read · Updated 2026-11-03
+Free lesson · 2 min read · Updated 2026-11-10
 
 The **Emergency Response Guidebook (ERG)** is published by the U.S. Department of Transportation's Pipeline and Hazardous Materials Safety Administration with Transport Canada and Mexico's transportation agency. It is written for first responders in the first 30 minutes of a transportation incident involving hazardous materials, before more detailed information is available. HAZWOPER awareness-level responders are expected to know how to use it. A new edition comes out about every four years.
 
@@ -81,13 +81,9 @@ This guide summarizes federal OSHA, Cal/OSHA and EPA rules for training purposes
 
 4 Hours · **$61.99**
 
-[OSHA 40 Hour HAZWOPER for Emergency Response/Fire-Hazmat Teams](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-emergency-response-fire-hazmat-teams/)
-
-40 Hours · **$249.99**
-
 [OSHA 8 Hour HAZWOPER (q) Incident Command Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/)
 
-8 Hours · **$179.99**
+8 Hours · **$199.99**
 
 ## Test yourself
 

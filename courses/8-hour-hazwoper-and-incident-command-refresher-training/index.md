@@ -10,9 +10,9 @@ Study 8 Hour HAZWOPER and Incident Command Refresher Training online with the Ha
 - **Certificate:** Instant, printable + wallet card
 - **Language:** English
 
-$159.99
+$249.99
 
-[Enroll Now · $159.99](https://www.hazwoperosha.org/checkout.html?item=8-hour-hazwoper-and-incident-command-refresher-training)
+[Enroll Now · $249.99](https://www.hazwoperosha.org/checkout.html?item=8-hour-hazwoper-and-incident-command-refresher-training)
 
 - Access right after enrollment
 - Study at your own pace
@@ -45,12 +45,12 @@ OSHA 8-Hour HAZWOPER & Incident Command Refresher Training
 
 ## Keep learning: related courses
 
-- [OSHA 8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/) · 8 Hours · $89.99 - 29 CFR 1910.120(e)(8)
+- [OSHA 8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/) · 8 Hours · $59.99 - 29 CFR 1910.120(e)(8)
 - [Manufacturing Emergency Response Team (ERT) Training](https://www.hazwoperosha.org/courses/manufacturing-emergency-response-team-ert-training/) · 8 Hours · $149.99 - 29 CFR 1910.120(q)
-- [OSHA 8 Hour HAZWOPER (q) Incident Command Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/) · 8 Hours · $179.99 - 29 CFR 1910.120(q)
-- [OSHA 8 Hour HAZWOPER Supervisor Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-refresher-training/) · 8 Hours · $149.99 - 29 CFR 1910.120(e)(4)/(e)(8)
-- [OSHA 8 Hour HAZWOPER Supervisor Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/) · 8 Hours · $179.99 - 29 CFR 1910.120(e)(4)
-- [OSHA 8-Hour HAZWOPER and Safe Ammonia Handling Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-and-safe-ammonia-handling-refresher-training/) · 8 Hours · $109.99 - 29 CFR 1910.120(e)(8) / 1910.111
+- [OSHA 8 Hour HAZWOPER (q) Incident Command Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/) · 8 Hours · $199.99 - 29 CFR 1910.120(q)
+- [OSHA 8 Hour HAZWOPER Supervisor Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-refresher-training/) · 8 Hours · $69.99 - 29 CFR 1910.120(e)(4)/(e)(8)
+- [OSHA 8 Hour HAZWOPER Supervisor Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/) · 8 Hours · $69.99 - 29 CFR 1910.120(e)(4)
+- [OSHA 8-Hour HAZWOPER and Safe Ammonia Handling Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-and-safe-ammonia-handling-refresher-training/) · 8 Hours · $89.99 - 29 CFR 1910.120(e)(8) / 1910.111
 
 ---
 
