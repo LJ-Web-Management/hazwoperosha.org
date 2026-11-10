@@ -1,6 +1,6 @@
 # Toxicology Basics for Hazmat Workers: Dose, Routes and Health Effects
 
-Free lesson · 2 min read · Updated 2026-11-03
+Free lesson · 2 min read · Updated 2026-11-10
 
 Toxicology is the study of how chemicals harm living things. You don't need a degree to use its basic ideas, and they explain most of the safety rules you follow on a hazardous waste site.
 
@@ -76,7 +76,7 @@ This guide summarizes federal OSHA, Cal/OSHA and EPA rules for training purposes
 
 [OSHA 8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/)
 
-8 Hours · **$89.99**
+8 Hours · **$59.99**
 
 [OSHA 24 Hour HAZWOPER Training](https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-training/)
 

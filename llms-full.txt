@@ -170,7 +170,7 @@ Under HAZWOPER paragraph (q)(6)(i), awareness-level responders recognize the rel
 - **What does a highlighted entry in the ERG mean?** It is a toxic inhalation hazard material, a chemical warfare agent, or a material that releases toxic gas in water. Use the green pages for isolation and protective action distances unless it is on fire.
 - **What does the letter P after a guide number mean?** The material may polymerize violently when heated or contaminated.
 
-Related courses: OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/); OSHA 40 Hour HAZWOPER for Emergency Response/Fire-Hazmat Teams (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-emergency-response-fire-hazmat-teams/); OSHA 8 Hour HAZWOPER (q) Incident Command Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/)
+Related courses: OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/); OSHA 8 Hour HAZWOPER (q) Incident Command Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/)
 
 ---
 
@@ -320,7 +320,7 @@ Level A and B ensembles use SCBA or supplied air. Level C uses an APR, which is 
 - **What is the assigned protection factor of a half-mask respirator?** Ten, for a filtering facepiece or elastomeric half-mask air-purifying respirator.
 - **How do you calculate maximum use concentration?** Multiply the respirator's assigned protection factor by the exposure limit of the contaminant. Never use an air-purifying respirator at or above IDLH.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained (https://www.hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/); OSHA 8 Hour HAZWOPER Supervisor Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 8 Hour HAZWOPER Supervisor Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
 
 ---
 
@@ -392,7 +392,7 @@ Some states have their own heat illness standards, including California (outdoor
 - **What is the difference between heat exhaustion and heat stroke?** Heat exhaustion causes heavy sweating, weakness and nausea. Heat stroke adds confusion, collapse or seizures and a very high body temperature, and is a medical emergency requiring 911 and immediate cooling.
 - **How is heat stress monitored for workers in protective suits?** Common methods are checking heart rate at the start of rest, body temperature at the end of work, and body weight before and after the shift, then adjusting work-rest cycles.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained (https://www.hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/); OSHA 8 Hour HAZWOPER Supervisor Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 8 Hour HAZWOPER Supervisor Training (https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
 
 ---
 
@@ -460,7 +460,7 @@ Before excavation, locate buried drums with methods such as ground-penetrating r
 - **What should be ready before moving drums that may leak?** Salvage (overpack) drums, suitable absorbent, appropriate containers and a spill containment plan for the full volume being moved.
 - **What do crystals around a drum bung indicate?** They may indicate shock-sensitive or peroxide-forming material. Treat the drum as potentially explosive and get specialist help.
 
-Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 40 Hour HAZWOPER for Environmental Remediation (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-environmental-remediation/); OSHA 24-Hour HAZWOPER - RCRA TSD Operations Training (https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-rcra-tsd-operations-training/)
+Related courses: OSHA 40 Hour HAZWOPER Training (https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/); OSHA 24-Hour HAZWOPER - RCRA TSD Operations Training (https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-rcra-tsd-operations-training/)
 
 ---
 
@@ -596,7 +596,7 @@ Releases of a hazardous substance at or above its reportable quantity within 24 
 - **What number do you call to report a hazardous substance release?** The National Response Center at 1-800-424-8802, for releases at or above the CERCLA reportable quantity. Follow your emergency plan and any state rules as well.
 - **Who can respond to an emergency chemical release?** Only workers trained under HAZWOPER paragraph (q) to the level of the duties they will perform.
 
-Related courses: OSHA Spill Prevention and Response Safety Training (https://www.hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/); Spill Response Equipment - Spill Kit Selection & Use (https://www.hazwoperosha.org/courses/spill-response-equipment-spill-kit-selection-and-use/); OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/)
+Related courses: OSHA Spill Prevention and Response Safety Training (https://www.hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/); OSHA 4-Hour HAZWOPER First Responder Awareness Level Training (https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/)
 
 ---
 

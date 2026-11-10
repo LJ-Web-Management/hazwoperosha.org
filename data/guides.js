@@ -72,7 +72,7 @@ module.exports = [
     title: 'How to Use the DOT Emergency Response Guidebook (ERG)',
     short: 'Using the ERG',
     desc: 'Lesson on the DOT Emergency Response Guidebook: the yellow, blue, orange and green sections, UN/NA numbers, placards, highlighted materials and isolation distances.',
-    related: ['osha-4-hour-hazwoper-first-responder-awareness-level-training', 'osha-40-hour-hazwoper-for-emergency-response-fire-hazmat-teams', 'osha-8-hour-hazwoper-q-incident-command-training'],
+    related: ['osha-4-hour-hazwoper-first-responder-awareness-level-training', 'osha-8-hour-hazwoper-q-incident-command-training'],
     quiz: 'erg-quiz',
     body: `
 <p>The <strong>Emergency Response Guidebook (ERG)</strong> is published by the U.S. Department of Transportation's Pipeline and Hazardous Materials Safety Administration with Transport Canada and Mexico's transportation agency. It is written for first responders in the first 30 minutes of a transportation incident involving hazardous materials, before more detailed information is available. HAZWOPER awareness-level responders are expected to know how to use it. A new edition comes out about every four years.</p>
@@ -207,7 +207,7 @@ module.exports = [
     title: 'Respirator Selection and Fit Testing for HAZWOPER Work',
     short: 'Respirators & fit testing',
     desc: 'How to choose a respirator under OSHA 1910.134: assigned protection factors, maximum use concentration, cartridges and filters, fit testing, seal checks and change schedules.',
-    related: ['osha-40-hour-hazwoper-training', 'hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained', 'osha-8-hour-hazwoper-supervisor-training'],
+    related: ['osha-40-hour-hazwoper-training', 'osha-8-hour-hazwoper-supervisor-training'],
     quiz: 'respirator-quiz',
     body: `
 <p>Respirators are covered by their own OSHA standard, <strong>29 CFR 1910.134</strong>, which applies on top of HAZWOPER. Any employer that requires respirators needs a written respiratory protection program run by a qualified program administrator.</p>
@@ -270,7 +270,7 @@ module.exports = [
     title: 'Heat Stress in Chemical Protective Clothing: Signs, Prevention and Monitoring',
     short: 'Heat stress in PPE',
     desc: 'Why chemical protective clothing causes heat stress, the signs of heat exhaustion and heat stroke, work-rest cycles, hydration, acclimatization and physiological monitoring.',
-    related: ['osha-40-hour-hazwoper-training', 'hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained', 'osha-8-hour-hazwoper-supervisor-training'],
+    related: ['osha-40-hour-hazwoper-training', 'osha-8-hour-hazwoper-supervisor-training'],
     quiz: 'heat-stress-quiz',
     body: `
 <p>On many hazardous waste sites, heat hurts more people than chemicals do. Chemical protective clothing is designed to keep liquids and vapors out, which also stops sweat from evaporating, and evaporation is the body's main way of cooling off. Workers in Level A or B can overheat even on a mild day.</p>
@@ -329,7 +329,7 @@ module.exports = [
     title: 'Drum and Container Handling at Hazardous Waste Sites',
     short: 'Drum & container handling',
     desc: 'How HAZWOPER 1910.120(j) governs handling drums and containers: inspection, unlabeled drums, bulging and leaking drums, overpacks, opening, sampling, staging and buried drums.',
-    related: ['osha-40-hour-hazwoper-training', 'osha-40-hour-hazwoper-for-environmental-remediation', 'osha-24-hour-hazwoper-rcra-tsd-operations-training'],
+    related: ['osha-40-hour-hazwoper-training', 'osha-24-hour-hazwoper-rcra-tsd-operations-training'],
     quiz: 'hazmat-field-safety-quiz',
     body: `
 <p>Drums are where many of the worst accidents at cleanup sites start: a corroded drum splits when lifted, an unknown liquid reacts with another, or a bulging drum ruptures when someone loosens the bung. Paragraph (j) of the HAZWOPER standard sets out rules for handling, transporting, labeling and disposing of drums and containers.</p>
@@ -440,7 +440,7 @@ module.exports = [
     title: 'Hazardous Chemical Spill Response: Step by Step',
     short: 'Spill response steps',
     desc: 'Step-by-step hazardous chemical spill response: incidental vs emergency releases, protecting yourself, isolating the area, identifying the material, containment, spill kits and reporting to the National Response Center.',
-    related: ['osha-spill-prevention-and-response-safety-training', 'spill-response-equipment-spill-kit-selection-and-use', 'osha-4-hour-hazwoper-first-responder-awareness-level-training'],
+    related: ['osha-spill-prevention-and-response-safety-training', 'osha-4-hour-hazwoper-first-responder-awareness-level-training'],
     quiz: 'hazmat-field-safety-quiz',
     body: `
 <p>What you should do about a chemical spill depends first on one question: is it an <strong>incidental release</strong> or an <strong>emergency</strong>? The answer decides whether you clean it up or get away and call for help.</p>

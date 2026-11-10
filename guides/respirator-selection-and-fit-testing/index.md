@@ -1,6 +1,6 @@
 # Respirator Selection and Fit Testing for HAZWOPER Work
 
-Free lesson · 2 min read · Updated 2026-11-03
+Free lesson · 2 min read · Updated 2026-11-10
 
 Respirators are covered by their own OSHA standard, **29 CFR 1910.134**, which applies on top of HAZWOPER. Any employer that requires respirators needs a written respiratory protection program run by a qualified program administrator.
 
@@ -70,13 +70,9 @@ This guide summarizes federal OSHA, Cal/OSHA and EPA rules for training purposes
 
 40 Hours · **$249.99**
 
-[HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained](https://www.hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/)
-
-15 Min · **$12.99**
-
 [OSHA 8 Hour HAZWOPER Supervisor Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/)
 
-8 Hours · **$179.99**
+8 Hours · **$69.99**
 
 ## Test yourself
 

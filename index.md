@@ -14,7 +14,7 @@ Build real hazmat knowledge before, during and after your HAZWOPER course. Read 
 ## Start here
 
 - [40 Hour HAZWOPER Training](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/) · $249.99
-- [8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/) · $89.99
+- [8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/) · $59.99
 - [4-Hour HAZWOPER First Responder Awareness Level Training](https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/) · $61.99
 - [HAZWOPER Train-the-Trainer Certification](https://www.hazwoperosha.org/courses/hazwoper-train-the-trainer-certification/) · $399.99
 
@@ -33,7 +33,7 @@ New to hazmat work? Read [HAZWOPER jobs and careers](https://www.hazwoperosha.or
    Enroll in the [40 hour HAZWOPER course](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training/) ($249.99) or the level your job needs, and use [our exam study guide](https://www.hazwoperosha.org/guides/how-to-study-for-the-hazwoper-exam/).
 4. **Stay current**
    
-   Come back each year for the [8 hour refresher](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/) ($89.99) and keep your skills sharp with new lessons.
+   Come back each year for the [8 hour refresher](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/) ($59.99) and keep your skills sharp with new lessons.
 
 ## Certified Online HAZWOPER Courses
 
@@ -46,51 +46,37 @@ Start here. These courses set the base level of HAZWOPER knowledge for site work
 - [OSHA 4-Hour HAZWOPER First Responder Awareness Level Training](https://www.hazwoperosha.org/courses/osha-4-hour-hazwoper-first-responder-awareness-level-training/) · 4 Hours · $61.99 - 29 CFR 1910.120(q)(6)(i)
 - [OSHA 40-Hour HAZWOPER Training (Spanish)](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-training-spanish/) · 40 Hours · $249.99 - 29 CFR 1910.120(e)(3)(i) - Spanish language
 
-## Industry 40-Hour Programs
-
-The complete 40-hour course taught through the hazards of one industry.
-
-- [OSHA 40 Hour HAZWOPER for Construction (Contaminated Sites)](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-construction-contaminated-sites/) · 40 Hours · $249.99 - 29 CFR 1910.120(e) / 1926.65(e)
-- [OSHA 40 Hour HAZWOPER for Emergency Response/Fire-Hazmat Teams](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-emergency-response-fire-hazmat-teams/) · 40 Hours · $249.99 - 29 CFR 1910.120(e) / 1926.65(e)
-- [OSHA 40 Hour HAZWOPER for Environmental Remediation](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-environmental-remediation/) · 40 Hours · $249.99 - 29 CFR 1910.120(e) / 1926.65(e)
-- [OSHA 40 Hour HAZWOPER for Utility/Pipeline Emergency Response](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-utility-pipeline-emergency-response/) · 40 Hours · $249.99 - 29 CFR 1910.120(e) / 1926.65(e)
-
 ## Stay Current: Refreshers, Supervisor & Incident Command
 
 The yearly refresher plus leadership courses for supervisors and incident commanders.
 
-- [OSHA 8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/) · 8 Hours · $89.99 - 29 CFR 1910.120(e)(8)
-- [8 Hour HAZWOPER and Incident Command Refresher Training](https://www.hazwoperosha.org/courses/8-hour-hazwoper-and-incident-command-refresher-training/) · 8 Hours · $159.99 - 29 CFR 1910.120(q)(8)
+- [OSHA 8 Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-refresher-training/) · 8 Hours · $59.99 - 29 CFR 1910.120(e)(8)
+- [8 Hour HAZWOPER and Incident Command Refresher Training](https://www.hazwoperosha.org/courses/8-hour-hazwoper-and-incident-command-refresher-training/) · 8 Hours · $249.99 - 29 CFR 1910.120(q)(8)
 - [Manufacturing Emergency Response Team (ERT) Training](https://www.hazwoperosha.org/courses/manufacturing-emergency-response-team-ert-training/) · 8 Hours · $149.99 - 29 CFR 1910.120(q)
-- [OSHA 8 Hour HAZWOPER (q) Incident Command Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/) · 8 Hours · $179.99 - 29 CFR 1910.120(q)
-- [OSHA 8 Hour HAZWOPER Supervisor Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-refresher-training/) · 8 Hours · $149.99 - 29 CFR 1910.120(e)(4)/(e)(8)
-- [OSHA 8 Hour HAZWOPER Supervisor Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/) · 8 Hours · $179.99 - 29 CFR 1910.120(e)(4)
-- [OSHA 8-Hour HAZWOPER and Safe Ammonia Handling Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-and-safe-ammonia-handling-refresher-training/) · 8 Hours · $109.99 - 29 CFR 1910.120(e)(8) / 1910.111
+- [OSHA 8 Hour HAZWOPER (q) Incident Command Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-q-incident-command-training/) · 8 Hours · $199.99 - 29 CFR 1910.120(q)
+- [OSHA 8 Hour HAZWOPER Supervisor Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-refresher-training/) · 8 Hours · $69.99 - 29 CFR 1910.120(e)(4)/(e)(8)
+- [OSHA 8 Hour HAZWOPER Supervisor Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-supervisor-training/) · 8 Hours · $69.99 - 29 CFR 1910.120(e)(4)
+- [OSHA 8-Hour HAZWOPER and Safe Ammonia Handling Refresher Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-and-safe-ammonia-handling-refresher-training/) · 8 Hours · $89.99 - 29 CFR 1910.120(e)(8) / 1910.111
 
 ## California & State-Plan Programs
 
 Versions written for workers in states that run their own OSHA programs.
 
-- [Cal/OSHA 40-Hour HAZWOPER Training (2026)](https://www.hazwoperosha.org/courses/cal-osha-40-hour-hazwoper-training/) · 40 Hours · $219.99 - 8 CCR 5192(e)
-- [Cal/OSHA 24 hour HAZWOPER TSDF RCRA Training](https://www.hazwoperosha.org/courses/cal-osha-24-hour-hazwoper-tsdf-rcra-training/) · 24 Hours · $249.99 - 8 CCR 5192(p) / RCRA
-- [Cal/OSHA 24-Hour HAZWOPER Training](https://www.hazwoperosha.org/courses/cal-osha-24-hour-hazwoper-training/) · 24 Hours · $169.99 - 8 CCR 5192(e)
-- [8 Hour HAZWOPER Refresher - State-Plan Versions Available](https://www.hazwoperosha.org/courses/8-hour-hazwoper-refresher-state-plan-versions-available/) · 8 Hours · $84.99 - State-plan equivalents of federal OSHA standard (see parent course)
-- [Cal/OSHA 8-Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/cal-osha-8-hour-hazwoper-refresher-training/) · 8 Hours · $89.99 - 8 CCR 5192(e)(8)
-- [Cal/OSHA 8-hour HAZWOPER TSDF RCRA Refresher Training](https://www.hazwoperosha.org/courses/cal-osha-8-hour-hazwoper-tsdf-rcra-refresher-training/) · 8 Hours · $109.99 - 8 CCR 5192(p)(8) / RCRA
-- [Cal/OSHA RCRA Hazardous Waste Training](https://www.hazwoperosha.org/courses/cal-osha-rcra-hazardous-waste-training/) · 4 Hours · $49.99 - 22 CCR Div. 4.5 / 40 CFR 262.17 / 8 CCR 5192
+- [Cal/OSHA 40-Hour HAZWOPER Training (2026)](https://www.hazwoperosha.org/courses/cal-osha-40-hour-hazwoper-training/) · 40 Hours · $229.99 - 8 CCR 5192(e)
+- [Cal/OSHA 24-Hour HAZWOPER Training](https://www.hazwoperosha.org/courses/cal-osha-24-hour-hazwoper-training/) · 24 Hours · $189.99 - 8 CCR 5192(e)
+- [Cal/OSHA 8-Hour HAZWOPER Refresher Training](https://www.hazwoperosha.org/courses/cal-osha-8-hour-hazwoper-refresher-training/) · 8 Hours · $149.99 - 8 CCR 5192(e)(8)
 
 ## Hazardous Waste (RCRA) Courses
 
 For the people who generate, store, ship and track hazardous waste.
 
 - [OSHA 24-Hour HAZWOPER - RCRA TSD Operations Training](https://www.hazwoperosha.org/courses/osha-24-hour-hazwoper-rcra-tsd-operations-training/) · 24 Hours · $229.99 - 29 CFR 1910.120(p) / RCRA
-- [OSHA HAZWOPER and RCRA Hazardous Waste Management Technician Safety Training](https://www.hazwoperosha.org/courses/osha-hazwoper-and-rcra-hazardous-waste-management-technician-safety-training/) · 24 Hours · $199.99 - 29 CFR 1910.120 / RCRA
-- [EPA RCRA/DOT Combined Hazardous Materials Compliance Training](https://www.hazwoperosha.org/courses/epa-rcra-dot-combined-hazardous-materials-compliance-training/) · 8 Hours · $149.99 - RCRA + 49 CFR 172
-- [OSHA 8 Hour HAZWOPER Annual Refresher - RCRA TSD Operations Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-annual-refresher-rcra-tsd-operations-training/) · 8 Hours · $99.99 - 29 CFR 1910.120(p)(8) / RCRA
-- [RCRA Hazardous Waste Generator Training](https://www.hazwoperosha.org/courses/rcra-hazardous-waste-generator-training/) · 8 Hours · $89.99 - 40 CFR 262.17 (RCRA)
+- [OSHA HAZWOPER and RCRA Hazardous Waste Management Technician Safety Training](https://www.hazwoperosha.org/courses/osha-hazwoper-and-rcra-hazardous-waste-management-technician-safety-training/) · 24 Hours · $349.99 - 29 CFR 1910.120 / RCRA
+- [OSHA 8 Hour HAZWOPER Annual Refresher - RCRA TSD Operations Training](https://www.hazwoperosha.org/courses/osha-8-hour-hazwoper-annual-refresher-rcra-tsd-operations-training/) · 8 Hours · $89.99 - 29 CFR 1910.120(p)(8) / RCRA
+- [RCRA Hazardous Waste Generator Training](https://www.hazwoperosha.org/courses/rcra-hazardous-waste-generator-training/) · 8 Hours · $134.99 - 40 CFR 262.17 (RCRA)
 - [Hazardous Waste Contingency Plan and Emergency Coordinator Training](https://www.hazwoperosha.org/courses/hazardous-waste-contingency-plan-and-emergency-coordinator-training/) · 4 Hours · $99.99 - 40 CFR Parts 262 and 264/265
-- [RCRA Hazardous Waste Generator Refresher Training](https://www.hazwoperosha.org/courses/rcra-hazardous-waste-generator-refresher-training/) · 4 Hours · $59.99 - 40 CFR 262.17 (RCRA, annual)
-- [Hazardous Waste Manifest Training](https://www.hazwoperosha.org/courses/hazardous-waste-manifest-training/) · 2 Hours · $34.99 - 40 CFR 262 Subpart B (RCRA)
+- [RCRA Hazardous Waste Generator Refresher Training](https://www.hazwoperosha.org/courses/rcra-hazardous-waste-generator-refresher-training/) · 4 Hours · $124.99 - 40 CFR 262.17 (RCRA, annual)
+- [Hazardous Waste Manifest Training](https://www.hazwoperosha.org/courses/hazardous-waste-manifest-training/) · 2 Hours · $58.99 - 40 CFR 262 Subpart B (RCRA)
 - [Hazardous Waste Satellite Accumulation Area Training](https://www.hazwoperosha.org/courses/hazardous-waste-satellite-accumulation-area-training/) · 2 Hours · $59.99 - 40 CFR 262.15
 - [RCRA Universal Waste Handler Training](https://www.hazwoperosha.org/courses/rcra-universal-waste-handler-training/) · 2 Hours · $34.99 - 40 CFR 273 (RCRA)
 
@@ -98,15 +84,8 @@ For the people who generate, store, ship and track hazardous waste.
 
 Focused modules for building one skill at a time.
 
-- [OSHA 40 Hour HAZWOPER for Oil & Gas Spill Response](https://www.hazwoperosha.org/courses/osha-40-hour-hazwoper-for-oil-and-gas-spill-response/) · 40 Hours · $249.99 - 29 CFR 1910.120(e) / 1926.65(e)
 - [OSHA Air Monitoring and Gas Detection Training](https://www.hazwoperosha.org/courses/osha-air-monitoring-and-gas-detection-training/) · 2 Hours · $49.99 - 29 CFR 1910.120 / 1910.146 / 1910.1000
-- [OSHA Spill Prevention and Response Safety Training](https://www.hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/) · 2 Hours · $49.99 - 29 CFR 1910.120 / 40 CFR 112
-- [Spill Response Equipment - Absorbent & Containment Booms](https://www.hazwoperosha.org/courses/spill-response-equipment-absorbent-and-containment-booms/) · 1 Hour · $24.99 - 40 CFR 112 / 29 CFR 1910.120
-- [Spill Response Equipment - Spill Kit Selection & Use](https://www.hazwoperosha.org/courses/spill-response-equipment-spill-kit-selection-and-use/) · 1 Hour · $24.99 - 40 CFR 112 / 29 CFR 1910.120
-- [HAZWOPER Micro-Module: Air Monitoring & Direct-Reading Instruments](https://www.hazwoperosha.org/courses/hazwoper-micro-module-air-monitoring-and-direct-reading-instruments/) · 20 Min · $14.99 - 29 CFR 1910.120(e) / 1926.65(e)
-- [HAZWOPER Micro-Module: Decontamination Procedures](https://www.hazwoperosha.org/courses/hazwoper-micro-module-decontamination-procedures/) · 20 Min · $14.99 - 29 CFR 1910.120(e) / 1926.65(e)
-- [HAZWOPER Micro-Module: Site Characterization & Hazard Assessment](https://www.hazwoperosha.org/courses/hazwoper-micro-module-site-characterization-and-hazard-assessment/) · 20 Min · $14.99 - 29 CFR 1910.120(e) / 1926.65(e)
-- [HAZWOPER Micro-Module: PPE Levels A, B, C & D Explained](https://www.hazwoperosha.org/courses/hazwoper-micro-module-ppe-levels-a-b-c-and-d-explained/) · 15 Min · $12.99 - 29 CFR 1910.120(e) / 1926.65(e)
+- [OSHA Spill Prevention and Response Safety Training](https://www.hazwoperosha.org/courses/osha-spill-prevention-and-response-safety-training/) · 2 Hours · $29.99 - 29 CFR 1910.120 / 40 CFR 112
 
 ## Teach HAZWOPER
 

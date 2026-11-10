@@ -124,7 +124,7 @@ test('every content page has a Markdown version linked from its <head>', () => {
     assert.ok(body.includes(`Page: ${alt[1].replace(/index\.md$/, '')}`), `${md} names its page`);
     count++;
   }
-  assert.ok(count > 50);
+  assert.ok(count > 40); // 26 courses after the 16 with no LMS match were removed (2026-11-10)
 });
 
 test('404: noindex HTML page plus a Markdown body that points agents to llms.txt and the sitemap', () => {

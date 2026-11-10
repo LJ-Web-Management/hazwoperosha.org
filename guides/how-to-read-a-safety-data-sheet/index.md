@@ -1,6 +1,6 @@
 # How to Read a Safety Data Sheet (SDS): All 16 Sections Explained
 
-Free lesson · 3 min read · Updated 2026-11-03
+Free lesson · 3 min read · Updated 2026-11-10
 
 Every hazardous chemical sold in the United States ships with a **safety data sheet**. OSHA's Hazard Communication Standard (29 CFR 1910.1200) requires manufacturers and importers to write one, and employers to keep it readily accessible to workers on every shift. On a hazardous waste site or during a spill, the SDS is often the fastest way to learn what a chemical can do to you and how to protect yourself.
 
