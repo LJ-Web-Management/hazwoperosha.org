@@ -35,6 +35,8 @@ const YEAR = new Date().getFullYear();
 
 const src = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/source.json'), 'utf8'));
 const LMS_IDS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/lms-ids.json'), 'utf8'));
+// Removed pages and the live page each one now points to (see buildRedirects).
+const REDIRECTS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/redirects.json'), 'utf8'));
 const GUIDES = require('../data/guides.js');
 const GLOSSARY = require('../data/glossary.js');
 const QUIZZES = require('../data/quizzes.js');
@@ -162,6 +164,7 @@ ${HEAD_EXTRA}<link rel="stylesheet" href="${rel}assets/style.css">
 ${extra}
 </head>
 <body>
+<!--email_off-->
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
@@ -208,6 +211,7 @@ function foot(depth = 0, scripts = ['cart.js', 'search.js']) {
   <p class="wrap legal">&copy; ${YEAR} ${LEGAL_NAME} · All rights reserved${TRUST_PAGES.map(pg => ` · <a href="${rel}${pg.slug}/">${esc(pg.short)}</a>`).join('')}</p>
 </footer>
 ${scripts.map(f => `<script src="${rel}assets/${f}" defer></script>`).join('\n')}
+<!--/email_off-->
 </body>
 </html>
 `;
@@ -938,6 +942,40 @@ function writePage(file, html, md = true) {
   fs.writeFileSync(out, html);
 }
 
+// ---------- redirects for removed pages ----------
+// GitHub Pages cannot answer with a 301. A page that was removed keeps a small stub at its old address
+// that sends browsers and search engines to the closest live page (canonical link plus an instant
+// refresh), so old links and search results don't end on the 404 page. data/redirects.json maps the old
+// folder to the live one, both relative to the site root. Stubs stay out of the sitemap and have no
+// Markdown version. Runs last, after every live page is written.
+function buildRedirects() {
+  for (const [from, to] of Object.entries(REDIRECTS)) {
+    if (from.startsWith('_')) continue;
+    for (const p of [from, to]) if (!/^([a-z0-9-]+\/)+$/.test(p)) throw new Error(`data/redirects.json: "${p}" must be a folder path ending in /`);
+    const out = path.join(ROOT, from, 'index.html');
+    const dest = path.join(ROOT, to, 'index.html');
+    if (fs.existsSync(out)) throw new Error(`data/redirects.json: ${from} is a live page`);
+    if (!fs.existsSync(dest)) throw new Error(`data/redirects.json: ${from} points to ${to}, which is not a page`);
+    const url = `${SITE_URL}/${to}`;
+    const title = /<title>([^<]*)<\/title>/.exec(fs.readFileSync(dest, 'utf8'))[1];
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    fs.writeFileSync(out, `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${title}</title>
+<link rel="canonical" href="${url}">
+<meta http-equiv="refresh" content="0; url=${url}">
+</head>
+<body>
+<p>This page has moved: <a href="${url}">${title}</a></p>
+</body>
+</html>
+`);
+  }
+}
+
 // ---------- sitewide search ----------
 // Paths are relative to the site root; search.html resolves them.
 function buildSearch() {
@@ -995,6 +1033,7 @@ ${urls.map(u => `  <url><loc>${u.loc}</loc><lastmod>${TODAY}</lastmod><priority>
   }
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
 
 # AI and answer-engine crawlers are welcome
 User-agent: GPTBot
@@ -1244,4 +1283,5 @@ TRUST_PAGES.forEach(buildPage);
 buildSearch();
 buildExtras();
 buildCheckout();
+buildRedirects();
 console.log(`Built index + ${courses.length} course, ${ALL_GUIDES.length} guide, ${QUIZZES.length} quiz and ${PAGES.length} tool pages for ${SITE_URL}`);

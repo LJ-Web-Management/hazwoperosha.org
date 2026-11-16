@@ -20,7 +20,10 @@ function walk(dir, ext, out = []) {
   }
   return out;
 }
-const HTML_FILES = walk('.', '.html');
+// Redirect stubs for removed pages (data/redirects.json) are not content pages.
+const isRedirect = f => /<meta http-equiv="refresh"/.test(read(f));
+const REDIRECT_FILES = walk('.', '.html').filter(isRedirect);
+const HTML_FILES = walk('.', '.html').filter(f => !isRedirect(f));
 // Maps a site URL to the file GitHub Pages serves for it, or null if it is not on this site.
 const fileFor = u => {
   if (!u.startsWith(SITE_URL + '/')) return null;
@@ -171,6 +174,32 @@ test('sitemap.xml lists every indexable page with a lastmod date, and nothing el
   for (const u of urls) assert.ok(exists(fileFor(u)), u);
   const indexable = HTML_FILES.filter(f => !/<meta name="robots" content="noindex/.test(read(f))).map(f => `${SITE_URL}/${f.replace(/index\.html$/, '')}`);
   assert.deepEqual([...urls].sort(), indexable.sort());
+});
+
+test('removed pages redirect to a live page that is in the sitemap', () => {
+  const map = Object.entries(require('../data/redirects.json')).filter(([from]) => !from.startsWith('_'));
+  assert.equal(REDIRECT_FILES.length, map.length, 'one stub per entry in data/redirects.json');
+  const xml = read('sitemap.xml');
+  for (const [from, to] of map) {
+    const html = read(`${from}index.html`);
+    const url = `${SITE_URL}/${to}`;
+    assert.ok(html.includes(`<link rel="canonical" href="${url}">`), `${from} names ${to} as canonical`);
+    assert.ok(html.includes(`<meta http-equiv="refresh" content="0; url=${url}">`), `${from} redirects to ${to}`);
+    assert.ok(html.includes(`<a href="${url}">`), `${from} links ${to} for visitors without the refresh`);
+    assert.doesNotMatch(html, /noindex/, `${from} is a redirect, not a noindex page`);
+    assert.ok(exists(`${to}index.html`) && !isRedirect(`${to}index.html`), `${to} is a live page`);
+    assert.ok(xml.includes(`<loc>${url}</loc>`), `${to} is in the sitemap`);
+    assert.ok(!xml.includes(`<loc>${SITE_URL}/${from}</loc>`), `${from} is not in the sitemap`);
+    assert.ok(!exists(`${from}index.md`), `${from} has no Markdown version`);
+  }
+});
+
+test('pages keep Cloudflare from rewriting email links into /cdn-cgi/ URLs', () => {
+  for (const f of HTML_FILES) {
+    const html = read(f);
+    assert.ok(html.indexOf('<!--email_off-->') > html.indexOf('<body>') && html.indexOf('<!--/email_off-->') > html.indexOf('<!--email_off-->'), f);
+  }
+  assert.match(read('robots.txt'), /^User-agent: \*\nAllow: \/\nDisallow: \/cdn-cgi\/\n/);
 });
 
 test('robots.txt lets search and AI agents in and points to the sitemap', () => {

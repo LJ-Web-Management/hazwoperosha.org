@@ -30,6 +30,7 @@ GitHub Pages on every push to `main`.
 site.config.js       brand, URL, theme colour, fonts, logo, order source for this site
 data/copy.js         this site's own wording: home page, FAQ, course-page copy, section names (and tool pages)
 data/source.json     course catalog          data/lms-ids.json  LMS course id per course
+data/redirects.json  removed pages and the live page each old address redirects to
 data/guides.js       guide articles          data/glossary.js   glossary terms
 data/quizzes.js      practice quizzes
 tools/build.js       generator
